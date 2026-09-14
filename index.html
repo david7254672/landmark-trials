@@ -5,21 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Landmark Trials</title>
 <meta name="description" content="Point-of-care quick reference of landmark haematology and oncology trials">
-<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#111418" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f8f7f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Trials">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
 <style>
 :root {
-  --bg: #f6f7f9; --card: #fff; --text: #16191d; --muted: #5c6570; --line: #e2e5ea;
-  --accent: #1f5fbf; --accent-bg: #e8f0fc;
+  --bg: #f8f7f4; --text: #1b1b1b; --soft: #4b4e53; --muted: #7c7f84; --line: #e2e0db; --chip: #fff;
+  --accent: #8a2a2a; --accent-bg: #f4e7e5;
   --flag: #7a4a00; --flag-bg: #fff4dc; --flag-line: #f0d49a;
+  --serif: "Iowan Old Style", Charter, Georgia, "Times New Roman", serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111418; --card: #1a1e24; --text: #e8eaed; --muted: #9aa3ad; --line: #2c323a;
-    --accent: #7fb0ff; --accent-bg: #1d2a3d;
+    --bg: #131211; --text: #ece9e4; --soft: #c2bdb6; --muted: #8f8a84; --line: #2d2b28; --chip: #1d1c1a;
+    --accent: #e3948a; --accent-bg: #3a2320;
     --flag: #ffcf7a; --flag-bg: #33280f; --flag-line: #5c4717;
   }
 }
@@ -30,89 +31,98 @@ body {
   margin: 0; background: var(--bg); color: var(--text);
   font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
+button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; cursor: pointer; }
 .wrap { max-width: 760px; margin: 0 auto; }
 
 header {
   position: sticky; top: 0; z-index: 2; background: var(--bg);
   border-bottom: 1px solid var(--line);
-  padding: calc(8px + env(safe-area-inset-top)) 12px 6px;
+  padding: calc(8px + env(safe-area-inset-top)) 14px 0;
 }
-.search { position: relative; margin: 0; }
+.bar { display: flex; align-items: center; gap: 10px; padding-bottom: 8px; }
+.search { position: relative; flex: 1; margin: 0; }
 #q {
   width: 100%; font: inherit; font-size: 16px; /* 16px stops iOS zooming on focus */
-  padding: 10px 40px 10px 12px; border: 1px solid var(--line); border-radius: 10px;
-  background: var(--card); color: var(--text); -webkit-appearance: none; appearance: none;
+  padding: 9px 38px 9px 12px; border: 1px solid var(--line); border-radius: 10px;
+  background: var(--chip); color: var(--text); -webkit-appearance: none; appearance: none;
 }
 #q::-webkit-search-cancel-button { display: none; }
 #q:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
 #clear {
-  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
-  width: 36px; height: 36px; border: 0; background: none; color: var(--muted);
-  font-size: 22px; cursor: pointer;
+  position: absolute; right: 2px; top: 50%; transform: translateY(-50%);
+  width: 36px; height: 36px; border: 0; background: none; color: var(--muted); font-size: 22px;
 }
-.filters { display: flex; gap: 6px; margin-top: 8px; overflow-x: auto; scrollbar-width: none; }
-.filters::-webkit-scrollbar { display: none; }
-select, .toggle {
-  flex: none; font: inherit; font-size: 14px; color: var(--text); background: var(--card);
-  border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px;
-}
-select { max-width: 62vw; }
-.toggle { cursor: pointer; white-space: nowrap; }
-.toggle[aria-pressed="true"], select.active { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
-.facets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-.facets select { flex: 1 1 auto; min-width: 0; max-width: 100%; }
-#count { font-size: 13px; color: var(--muted); margin: 6px 2px 0; }
+#index { border: 0; background: none; color: var(--accent); font-size: 16px; font-weight: 500; padding: 6px 2px; }
+#index[aria-pressed="true"] { visibility: hidden; }
 
-main { padding: 4px 12px calc(24px + env(safe-area-inset-bottom)); }
-h2 {
-  font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
-  color: var(--muted); margin: 18px 4px 6px;
+.scope-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+#site { font-weight: 650; }
+#count { font-size: 13.5px; color: var(--muted); white-space: nowrap; }
+.chips {
+  display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none;
+  margin: 0 -14px; padding: 7px 14px 10px;
 }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin: 8px 0; }
-.top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-.name { font-size: 17px; font-weight: 650; margin: 0; }
-.badge { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; }
-.pmid { margin-left: auto; font-size: 13px; color: var(--accent); text-decoration: none; white-space: nowrap; }
-.nopmid { margin-left: auto; font-size: 12px; color: var(--muted); }
-.meta { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
-dl { margin: 8px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 5px 12px; }
-dt { font-size: 12px; color: var(--muted); padding-top: 2px; }
-dd { margin: 0; white-space: pre-line; overflow-wrap: anywhere; }
-dd.res { font-weight: 600; }
-dd a { color: var(--accent); }
+.chips::-webkit-scrollbar { display: none; }
+.chip-group { display: flex; gap: 6px; flex: none; }
+.chip-group + .chip-group { border-left: 1px solid var(--line); padding-left: 8px; }
+.chip {
+  flex: none; white-space: nowrap; font-size: 14.5px; color: var(--soft);
+  background: var(--chip); border: 1px solid var(--line); border-radius: 999px; padding: 5px 13px;
+}
+.chip[aria-pressed="true"] { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+
+main { padding: 0 14px calc(24px + env(safe-area-inset-bottom)); }
+.group {
+  color: var(--accent); font-size: 14.5px; font-weight: 600; margin: 18px 2px 0;
+  padding-bottom: 8px; border-bottom: 1px solid var(--line);
+}
+.card { border-bottom: 1px solid var(--line); }
+.head { display: block; width: 100%; text-align: left; background: none; border: 0; padding: 13px 2px; }
+.name { font-family: var(--serif); font-size: 19px; font-weight: 700; line-height: 1.25; margin: 0 0 2px; }
+.flag-mark { color: var(--flag); font-size: 14px; font-family: -apple-system, sans-serif; }
+.meta { font-size: 13.5px; color: var(--muted); }
+.arms { color: var(--soft); margin-top: 3px; }
+.headline { font-weight: 600; margin-top: 4px; }
+.body { padding: 0 2px 16px; }
+.more-results { list-style: none; margin: -4px 0 12px; padding: 0; }
+.more-results li { border-left: 3px solid var(--line); color: var(--soft); padding: 1px 0 1px 12px; margin: 5px 0; }
+dl { display: grid; grid-template-columns: 5.6em 1fr; gap: 7px 12px; margin: 0; }
+dt { font-size: 13.5px; color: var(--muted); padding-top: 1px; }
+dd { margin: 0; overflow-wrap: anywhere; }
+dd a, .ref a { color: var(--accent); }
 .flags {
-  margin-top: 10px; font-size: 13px; color: var(--flag); background: var(--flag-bg);
+  margin-top: 12px; font-size: 13.5px; color: var(--flag); background: var(--flag-bg);
   border: 1px solid var(--flag-line); border-radius: 8px; padding: 6px 10px; white-space: pre-line;
 }
+.ref { font-size: 13.5px; color: var(--muted); margin-top: 12px; }
+
+.index h2 { font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); margin: 18px 2px 8px; }
+.sites { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 8px; }
+.site {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 8px; text-align: left;
+  background: var(--chip); border: 1px solid var(--line); border-radius: 12px; padding: 11px 12px;
+}
+.site .n { color: var(--muted); font-size: 13.5px; }
 .empty { text-align: center; color: var(--muted); padding: 40px 0; }
 footer { text-align: center; font-size: 12px; color: var(--muted); padding: 8px 0 24px; }
 footer a { color: inherit; }
-@media (max-width: 480px) {
-  dl { grid-template-columns: 1fr; gap: 0; }
-  dt { padding-top: 6px; }
-}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
-    <form class="search" role="search">
-      <input id="q" type="search" placeholder="Search trial, drug, setting…" aria-label="Search trials"
-             autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
-      <button id="clear" type="button" aria-label="Clear search" hidden>×</button>
-    </form>
-    <div class="filters">
-      <select id="tumour" aria-label="Tumour site"></select>
-      <button class="toggle" type="button" data-key="pmid" aria-pressed="false">Has PMID</button>
-      <button class="toggle" type="button" data-key="flagged" aria-pressed="false">Flagged</button>
+    <div class="bar">
+      <form class="search" role="search">
+        <input id="q" type="search" placeholder="Search trials, drugs, populations" aria-label="Search trials"
+               autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
+        <button id="clear" type="button" aria-label="Clear search" hidden>×</button>
+      </form>
+      <button id="index" type="button">Index</button>
     </div>
-    <div class="facets" hidden>
-      <select data-facet="subsite" aria-label="Subsite" hidden></select>
-      <select data-facet="setting" aria-label="Setting" hidden></select>
-      <select data-facet="line" aria-label="Line of therapy" hidden></select>
-      <select data-facet="subgroup" aria-label="Subgroup" hidden></select>
+    <div id="scope" hidden>
+      <div class="scope-row"><span id="site"></span><span id="count"></span></div>
+      <div id="chips" class="chips"></div>
     </div>
-    <p id="count"></p>
   </div>
 </header>
 
@@ -128,12 +138,14 @@ const SEARCH_FIELDS = ['trial', 'tumour', 'subsite', 'setting', 'line', 'subgrou
   'intervention', 'results', 'pe', 'comment', 'extra', 'flags'];
 const CHUNK = 40;
 
-// Within-site filters, shown once a tumour site is chosen, with the label for "no filter".
-const FACETS = { subsite: 'All subsites', setting: 'All settings', line: 'All lines', subgroup: 'All subgroups' };
-const FACET_KEYS = Object.keys(FACETS);
+// Within-site filters, offered as chips once a tumour site is chosen.
+const FACET_KEYS = ['subsite', 'setting', 'line', 'subgroup'];
+const TOGGLES = { flagged: ['⚑ Flagged', t => t.flags], pmid: ['Has PMID', t => t.pm] };
+const TOGGLE_KEYS = Object.keys(TOGGLES);
 
 const state = { q: '', tumour: '', subsite: '', setting: '', line: '', subgroup: '', flagged: false, pmid: false };
 let trials = [], matches = [], shown = 0, lastGroup = null, searching = false;
+const expanded = new Set();
 
 // Lower-case, strip accents, treat punctuation as spaces so "keynote 057" finds "KEYNOTE-057".
 const norm = s => s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')
@@ -146,89 +158,107 @@ function el(tag, cls, text) {
   return e;
 }
 
-function context(t) {
-  return [t.tumour, t.subsite, t.setting, t.line, t.subgroup].filter(Boolean).join(' · ');
-}
-
+// Value counts in reference order, so chips follow the order of the original workbook.
 function counts(list, field) {
   const m = new Map();
   for (const t of list) if (t[field]) m.set(t[field], (m.get(t[field]) || 0) + 1);
-  return [...m].sort((a, b) => a[0].localeCompare(b[0]));
+  return m;
 }
 
-function fillSelect(sel, allLabel, entries) {
-  sel.replaceChildren(new Option(allLabel, ''));
-  for (const [value, n] of entries) sel.add(new Option(`${value} (${n})`, value));
-}
+const isIndex = () => !state.tumour && !state.q && !TOGGLE_KEYS.some(k => state[k]);
 
-function buildTumours() {
-  const entries = counts(trials, 'tumour');
-  if (!entries.some(([v]) => v === state.tumour)) state.tumour = '';
-  fillSelect($('#tumour'), `All sites (${trials.length})`, entries);
-}
+// Every filter except `skip`, so a chip row can be built from trials matching the others.
+const passes = (t, skip) =>
+  (!state.tumour || t.tumour === state.tumour) &&
+  FACET_KEYS.every(f => f === skip || !state[f] || t[f] === state[f]) &&
+  TOGGLE_KEYS.every(k => k === skip || !state[k] || TOGGLES[k][1](t));
 
-// Each facet's options come from trials matching the site and the *other* facets, so every
-// option leads to at least one trial and its count is accurate. Facets the site doesn't use stay hidden.
-function buildFacets() {
+// Drop selections that can't apply (e.g. from an old bookmark): first values the site doesn't
+// have, then, if the combination still matches nothing, the most specific facets first.
+function sanitiseFacets() {
+  if (!trials.some(t => t.tumour === state.tumour)) state.tumour = '';
   const inSite = trials.filter(t => t.tumour === state.tumour);
-
-  // Drop selections that can't apply (e.g. from an old bookmark) before building options,
-  // or one bad value would empty every other dropdown: first values the site doesn't have,
-  // then, if the combination still matches nothing, the most specific facets first.
   for (const f of FACET_KEYS) if (state[f] && !inSite.some(t => t[f] === state[f])) state[f] = '';
-  const matchesAll = t => FACET_KEYS.every(g => !state[g] || t[g] === state[g]);
   for (const f of [...FACET_KEYS].reverse()) {
-    if (inSite.some(matchesAll)) break;
+    if (inSite.some(t => FACET_KEYS.every(g => !state[g] || t[g] === state[g]))) break;
     state[f] = '';
   }
-
-  let anyShown = false;
-  for (const f of FACET_KEYS) {
-    const pool = inSite.filter(t => FACET_KEYS.every(g => g === f || !state[g] || t[g] === state[g]));
-    const entries = counts(pool, f);
-    const sel = $(`[data-facet="${f}"]`);
-    fillSelect(sel, FACETS[f], entries);
-    sel.value = state[f];
-    sel.classList.toggle('active', Boolean(state[f]));
-    sel.hidden = entries.length === 0;
-    anyShown = anyShown || entries.length > 0;
-  }
-  $('.facets').hidden = !anyShown;
 }
 
-function syncControls() {
-  $('#q').value = state.q;
-  $('#tumour').value = state.tumour;
-  document.querySelectorAll('.toggle').forEach(b => b.setAttribute('aria-pressed', state[b.dataset.key]));
+function chip(label, pressed, onClick) {
+  const b = el('button', 'chip', label);
+  b.type = 'button';
+  b.setAttribute('aria-pressed', pressed);
+  b.addEventListener('click', onClick);
+  return b;
 }
 
-function card(t) {
-  const c = el('article', 'card');
-
-  const top = el('div', 'top');
-  top.append(el('h3', 'name', t.trial || '(unnamed trial)'));
-  if (t.phase) top.append(el('span', 'badge', t.phase));
-  if (t.pm) {
-    const a = el('a', 'pmid', `PMID ${t.pm}`);
-    a.href = `https://pubmed.ncbi.nlm.nih.gov/${t.pm}/`;
-    a.target = '_blank'; a.rel = 'noopener';
-    top.append(a);
-  } else {
-    top.append(el('span', 'nopmid', 'no PMID'));
+// One group of chips per facet the site uses. Options come from trials matching the other
+// selections, so every chip leads somewhere; a value shared by every trial narrows nothing and is left out.
+function buildChips(hits) {
+  const box = $('#chips');
+  box.replaceChildren();
+  if (state.tumour) {
+    for (const f of FACET_KEYS) {
+      const pool = hits.filter(t => passes(t, f));
+      const m = counts(pool, f);
+      if (!state[f] && (m.size === 0 || (m.size === 1 && m.values().next().value === pool.length))) continue;
+      const group = el('div', 'chip-group');
+      for (const v of m.keys()) {
+        group.append(chip(v, state[f] === v, () => { state[f] = state[f] === v ? '' : v; refresh(); }));
+      }
+      box.append(group);
+    }
   }
-  c.append(top);
+  const toggles = el('div', 'chip-group');
+  for (const [k, [label, test]] of Object.entries(TOGGLES)) {
+    const n = hits.filter(t => passes(t, k) && test(t)).length;
+    if (state[k] || (state.tumour && n)) {
+      toggles.append(chip(`${label} ${n}`, state[k], () => { state[k] = !state[k]; refresh(); }));
+    }
+  }
+  if (toggles.childElementCount) box.append(toggles);
+  box.hidden = !box.childElementCount;
+  box.scrollLeft = 0;
+}
 
-  // Group headings carry the context when browsing; search results mix groups, so show it per card.
-  if (searching) c.append(el('div', 'meta', context(t)));
+function renderIndex() {
+  const box = el('div', 'index');
+  box.append(el('h2', null, 'Tumour sites'));
+  const grid = el('div', 'sites');
+  for (const [site, n] of [...counts(trials, 'tumour')].sort((a, b) => a[0].localeCompare(b[0]))) {
+    const b = el('button', 'site');
+    b.type = 'button';
+    b.append(el('span', null, site), el('span', 'n', n));
+    b.addEventListener('click', () => { state.tumour = site; refresh(); });
+    grid.append(b);
+  }
+  box.append(grid, el('h2', null, 'All sites'));
+  const extras = el('div', 'sites');
+  for (const [k, [label, test]] of Object.entries(TOGGLES)) {
+    const b = el('button', 'site');
+    b.type = 'button';
+    b.append(el('span', null, label), el('span', 'n', trials.filter(test).length));
+    b.addEventListener('click', () => { state[k] = true; refresh(); });
+    extras.append(b);
+  }
+  box.append(extras);
+  $('#list').append(box);
+}
 
+const trail = (t, withSite) =>
+  [withSite && t.tumour, t.subsite, t.setting, t.line, t.subgroup].filter(Boolean).join(' › ');
+
+function fillBody(body, t, rest) {
+  if (rest.length) {
+    const ul = el('ul', 'more-results');
+    for (const r of rest) ul.append(el('li', null, r));
+    body.append(ul);
+  }
   const dl = el('dl');
-  const row = (label, value, cls) => {
-    if (value) dl.append(el('dt', null, label), el('dd', cls, value));
-  };
-  row('Population', t.population);
-  row('Intervention', t.intervention);
-  row('Results', t.results, 'res');
-  row('Primary endpoint', t.pe);
+  const row = (label, value) => { if (value) dl.append(el('dt', null, label), el('dd', null, value)); };
+  row('Patients', t.population);
+  row('Endpoint', t.pe);
   row('Comment', t.comment);
   row('Also', t.extra);
   row('Reference', t.rf);
@@ -239,9 +269,51 @@ function card(t) {
     dd.append(a);
     dl.append(el('dt', null, 'Link'), dd);
   }
-  c.append(dl);
+  if (dl.childElementCount) body.append(dl);
+  if (t.flags) body.append(el('div', 'flags', '⚑ ' + t.flags.split(/;\s*/).join('\n⚑ ')));
 
-  if (t.flags) c.append(el('div', 'flags', '⚑ ' + t.flags.split(/;\s*/).join('\n⚑ ')));
+  const ref = el('div', 'ref');
+  if (t.pm) {
+    const a = el('a', null, `PMID ${t.pm}`);
+    a.href = `https://pubmed.ncbi.nlm.nih.gov/${t.pm}/`;
+    a.target = '_blank'; a.rel = 'noopener';
+    ref.append(a);
+  } else {
+    ref.append(t.rf || t.link ? 'No PMID' : 'No reference recorded yet');
+  }
+  ref.append(` · ${t.src}`);
+  body.append(ref);
+}
+
+// Collapsed: name, context, arms and the lead result. A tap reveals the rest, built on first open.
+function card(t) {
+  const c = el('article', 'card');
+  const head = el('button', 'head');
+  head.type = 'button';
+
+  const name = el('h3', 'name', t.trial || '(unnamed trial)');
+  if (t.flags) name.append(' ', el('span', 'flag-mark', '⚑'));
+  head.append(name);
+  const meta = [trail(t, searching || !state.tumour), t.phase].filter(Boolean).join(' · ');
+  if (meta) head.append(el('div', 'meta', meta));
+  if (t.intervention) head.append(el('div', 'arms', t.intervention));
+  const [lead, ...rest] = t.results.split(/;\s*/).map(s => s.trim()).filter(Boolean);
+  head.append(el('div', 'headline', lead || 'No results recorded'));
+
+  const body = el('div', 'body');
+  const setOpen = open => {
+    head.setAttribute('aria-expanded', open);
+    if (open && !body.childElementCount) fillBody(body, t, rest);
+    body.hidden = !open;
+  };
+  setOpen(expanded.has(t._i));
+  head.addEventListener('click', () => {
+    const open = !expanded.has(t._i);
+    open ? expanded.add(t._i) : expanded.delete(t._i);
+    setOpen(open);
+  });
+
+  c.append(head, body);
   return c;
 }
 
@@ -251,8 +323,8 @@ function renderMore() {
   for (; shown < end; shown++) {
     const t = matches[shown];
     if (!searching) {
-      const group = context(t);
-      if (group !== lastGroup) frag.append(el('h2', null, group));
+      const group = trail(t, !state.tumour);
+      if (group && group !== lastGroup) frag.append(el('h2', 'group', group));
       lastGroup = group;
     }
     frag.append(card(t));
@@ -261,16 +333,22 @@ function renderMore() {
 }
 
 function update() {
+  sanitiseFacets();
   const tokens = norm(state.q).split(/\s+/).filter(Boolean);
   searching = tokens.length > 0;
+  const hits = searching ? trials.filter(t => tokens.every(k => t._hay.includes(k) || t._compact.includes(k))) : trials;
 
-  matches = trials.filter(t =>
-    (!state.tumour || t.tumour === state.tumour) &&
-    FACET_KEYS.every(f => !state[f] || t[f] === state[f]) &&
-    (!state.flagged || t.flags) &&
-    (!state.pmid || t.pm) &&
-    tokens.every(k => t._hay.includes(k) || t._compact.includes(k)));
+  const index = isIndex();
+  $('#scope').hidden = index;
+  $('#index').setAttribute('aria-pressed', index);
+  $('#q').value = state.q;
+  $('#clear').hidden = !state.q;
+  $('#list').replaceChildren();
+  shown = 0; lastGroup = null; matches = [];
+  writeHash();
+  if (index) return renderIndex();
 
+  matches = hits.filter(t => passes(t));
   if (searching) {
     // Trial-name hits first, then everything else in reference order.
     const q = tokens.join('');
@@ -279,13 +357,11 @@ function update() {
     matches.sort((a, b) => rank(a) - rank(b) || a._i - b._i);
   }
 
-  $('#count').textContent = `${matches.length} ${matches.length === 1 ? 'trial' : 'trials'}`;
-  $('#clear').hidden = !state.q;
-  shown = 0; lastGroup = null;
-  $('#list').replaceChildren();
+  $('#site').textContent = state.tumour || 'All sites';
+  $('#count').textContent = `${matches.length} ${matches.length === 1 ? 'entry' : 'entries'}`;
+  buildChips(hits);
   if (!matches.length) $('#list').append(el('p', 'empty', 'No trials match.'));
   renderMore();
-  writeHash();
 }
 
 function readHash() {
@@ -293,8 +369,7 @@ function readHash() {
   state.q = p.get('q') || '';
   state.tumour = p.get('site') || '';
   for (const f of FACET_KEYS) state[f] = p.get(f) || '';
-  state.flagged = p.has('flagged');
-  state.pmid = p.has('pmid');
+  for (const k of TOGGLE_KEYS) state[k] = p.has(k);
 }
 
 function writeHash() {
@@ -302,18 +377,9 @@ function writeHash() {
   if (state.q) p.set('q', state.q);
   if (state.tumour) p.set('site', state.tumour);
   for (const f of FACET_KEYS) if (state[f]) p.set(f, state[f]);
-  if (state.flagged) p.set('flagged', '');
-  if (state.pmid) p.set('pmid', '');
+  for (const k of TOGGLE_KEYS) if (state[k]) p.set(k, '');
   const h = p.toString();
   history.replaceState(null, '', h ? '#' + h : location.pathname + location.search);
-}
-
-function applyHash() {
-  readHash();
-  buildTumours();
-  buildFacets();
-  syncControls();
-  update();
 }
 
 function refresh() { update(); window.scrollTo(0, 0); }
@@ -325,23 +391,13 @@ $('#q').addEventListener('input', e => {
   typing = setTimeout(refresh, 120);
 });
 $('.search').addEventListener('submit', e => { e.preventDefault(); $('#q').blur(); });
-$('#clear').addEventListener('click', () => { state.q = ''; $('#q').value = ''; refresh(); $('#q').focus(); });
-$('#tumour').addEventListener('change', e => {
-  state.tumour = e.target.value;
+$('#clear').addEventListener('click', () => { state.q = ''; refresh(); $('#q').focus(); });
+$('#index').addEventListener('click', () => {
+  Object.assign(state, { q: '', tumour: '' });
   for (const f of FACET_KEYS) state[f] = '';
-  buildFacets();
+  for (const k of TOGGLE_KEYS) state[k] = false;
   refresh();
 });
-document.querySelectorAll('[data-facet]').forEach(sel => sel.addEventListener('change', () => {
-  state[sel.dataset.facet] = sel.value;
-  buildFacets();
-  refresh();
-}));
-document.querySelectorAll('.toggle').forEach(b => b.addEventListener('click', () => {
-  state[b.dataset.key] = !state[b.dataset.key];
-  b.setAttribute('aria-pressed', state[b.dataset.key]);
-  refresh();
-}));
 
 // Render in chunks as the user scrolls. Re-observing forces a fresh check in case the
 // sentinel is still on screen after a chunk is added.
@@ -361,12 +417,11 @@ fetch('data/trials.json', { cache: 'no-cache' })
       const hay = norm(SEARCH_FIELDS.map(f => t[f]).join(' | '));
       return { ...t, _i: i, _hay: hay, _compact: hay.replace(/\s+/g, ''), _name: norm(t.trial).replace(/\s+/g, '') };
     });
-    $('[data-key="pmid"]').textContent = `Has PMID (${trials.filter(t => t.pm).length})`;
-    $('[data-key="flagged"]').textContent = `Flagged (${trials.filter(t => t.flags).length})`;
-    applyHash();
+    readHash();
+    update();
     observer.observe(more);
     // replaceState in writeHash doesn't fire this, so it only runs for bookmarks and edited URLs.
-    window.addEventListener('hashchange', () => { applyHash(); window.scrollTo(0, 0); });
+    window.addEventListener('hashchange', () => { readHash(); refresh(); });
   })
   .catch(err => $('#list').replaceChildren(el('p', 'empty', `Could not load trials (${err.message}).`)));
 
