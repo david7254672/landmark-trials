@@ -6,9 +6,10 @@ Last updated: 13 September 2026
 
 - **900 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **95 entries carry a PMID** (was 28). The rest have no reference yet.
+- **105 entries carry a PMID** (was 28). The rest have no reference yet.
 - **No entries flagged** (was 64 before the flag pass).
 - **Bladder verified**: all 44 entries.
+- **Kidney**: 11 of 25 verified (batch 1 plus EVEREST); 14 left.
 - Every entry has results text. STOP MDS, which could not be identified, was removed.
 - 69 spelling corrections applied and approved. Five name-level fixes among them:
   ABCSG-16, ToGA, Joudi, fedratinib, "Periop chemo".
@@ -58,6 +59,22 @@ Last updated: 13 September 2026
 | EV-301 | Accurate; ORR checked in full text; 24-mo update (PMIDs 33577729, 37678672) |
 | TROPiCS-04 | Accurate; primary endpoint not met and grade 5 AEs stated (PMID 39934055) |
 
+## Verified so far (kidney)
+
+| Entry | Outcome |
+|---|---|
+| EVEREST | Verified in the flag pass (PMID 37524096) |
+| S-TRAC | Accurate; updated OS HR 0.92, NS (PMIDs 27718781, 28967554) |
+| ASSURE | Accurate; "OS similar" was not in the abstract, replaced with DFS HRs (PMID 26969090) |
+| KEYNOTE-564 | Updated to 5-y results (PMIDs 34407342, 38631003, 42648402) |
+| LITESPARK-022 | Figures corrected to the NEJM paper (PMID 42384869) |
+| Motzer (sunitinib vs IFN-α) | Accurate; OS p=0.051 and crossover added (PMIDs 17215529, 19487381) |
+| COMPARZ | Accurate (PMID 23964934) |
+| METEOR | Grade 3-4 AEs corrected; final OS (PMIDs 26406150, 27279544) |
+| CABOSUN | Accurate; phase 2 added (PMIDs 28199818, 29550566) |
+| CheckMate 214 | Updated to the 9.3-y final analysis (PMIDs 29562145, 41786248) |
+| COSMIC-313 | Final analysis added: OS not improved (PMIDs 37163623, 41720427) |
+
 ## Flag pass — completed 13 September 2026
 
 64 flagged entries worked through against PubMed; 58 resolved, 6 remain open.
@@ -87,6 +104,8 @@ dotatate → edotreotide correction had already been applied).
   The earlier list of 8 left out the advanced-disease entries.
 - **Bladder placement question for David**: POUT and Coleman (upper tract UC) sit under
   subsite MIBC.
+- **Kidney, for David**: two rows are both named "Motzer" (sunitinib vs IFN-α, and
+  lenvatinib ± everolimus). Consider naming them by drug so search can tell them apart.
 - **Every other site** — only flagged entries checked so far; no site-wide verification.
 
 ## Corrections applied
@@ -183,6 +202,20 @@ Bladder verification, batch 3:
   unsupported "trend to better PFS" was dropped (PMID 31100038)
 - THOR: ORR 45.6 vs 11.5% is not in the abstract; confirmed from a plain-language summary
   of the NEJM paper (PMC12218492) rather than the paper itself
+
+Kidney verification, batch 1:
+
+- LITESPARK-022: "2.5 year DFS 76 vs 69%; 2.5 year OS 96 vs 94%; G3 AEs 43 vs 18%" →
+  24-mo DFS 80.7 vs 73.7%, HR 0.72; 24-mo OS 96.2 vs 95.7%, HR 0.78, NS; grade 3+ AEs 52.1 vs
+  30.2%; comparator is pembro + placebo (PMID 42384869)
+- METEOR: "68% ≥grade 3 toxicity with cabo" → grade 3-4 AEs 74 vs 65%; OS 21 vs 17 mo → final
+  21.4 vs 16.5 mo, HR 0.70 → 0.66 (PMIDs 26406150, 27279544); bone-metastasis OS HR 0.54
+  sourced to PMID 29309249
+- CheckMate 214: the garbled comment "4 year OS 48 vs 26.6 mos" was replaced with the 9.3-y
+  final analysis, OS HR 0.71 (PMID 41786248)
+- COSMIC-313: the final analysis (OS HR 1.02, NS) was missing (PMID 41720427)
+- ASSURE: "similar OS" is not in the publication abstract; removed (PMID 26969090)
+- Motzer (sunitinib vs IFN-α): OS HR 0.82 was borderline (p=0.051), which is now stated (PMID 19487381)
 - van der Maase: OS "15 months" → 14.0 vs 15.2 mo (long-term update); "RR 46/49%" →
   ORR 49 (GC) vs 46% (MVAC); trial name "van der Masse" → "van der Maase" (PMIDs 11001674,
   16034041)
@@ -194,6 +227,6 @@ Bladder verification, batch 3:
 3. ~~Build the entry-generation and batch-verification skills~~ — done: `add-trial`,
    `verify-site`, and `scripts/rows.py` for scripted edits (13 September 2026)
 4. Reference capture site by site with `verify-site`, starting with GU and heme
-   (bladder done 13 September 2026; next GU site, then heme). `rows.py style` currently reports 259 house-style
+   (bladder done 13 September 2026; kidney batch 1 done, 14 left; then heme). `rows.py style` currently reports 259 house-style
    warnings (mostly months/years/versus spelled out, 27 cells with line breaks, 4
    `results` over 180). Fix these per site during verification, not in bulk
