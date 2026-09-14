@@ -6,10 +6,11 @@ Last updated: 13 September 2026
 
 - **900 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **105 entries carry a PMID** (was 28). The rest have no reference yet.
-- **No entries flagged** (was 64 before the flag pass).
+- **115 entries carry a PMID** (was 28). The rest have no reference yet.
+- **2 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney; see
+  Open items. There were 64 before the flag pass.
 - **Bladder verified**: all 44 entries.
-- **Kidney**: 11 of 25 verified (batch 1 plus EVEREST); 14 left.
+- **Kidney**: 19 of 25 verified, 2 flagged, 4 left (TIVO-3, AXIS, LITESPARK-005, LITESPARK-011).
 - Every entry has results text. STOP MDS, which could not be identified, was removed.
 - 69 spelling corrections applied and approved. Five name-level fixes among them:
   ABCSG-16, ToGA, Joudi, fedratinib, "Periop chemo".
@@ -74,6 +75,16 @@ Last updated: 13 September 2026
 | CABOSUN | Accurate; phase 2 added (PMIDs 28199818, 29550566) |
 | CheckMate 214 | Updated to the 9.3-y final analysis (PMIDs 29562145, 41786248) |
 | COSMIC-313 | Final analysis added: OS not improved (PMIDs 37163623, 41720427) |
+| KEYNOTE-426 | Updated to 43-mo final analysis (PMIDs 30779529, 37500340) |
+| CheckMate 9ER | Updated to 5.6-y final analysis (PMIDs 33657295, 40998092) |
+| JAVELIN Renal 101 | "OS immature" replaced by the final analysis, OS not significant (PMIDs 30779531, 39706335) |
+| CLEAR | Lenvatinib-everolimus HR corrected; final OS added (PMIDs 33616314, 38227898) |
+| KEYNOTE-B61 | PMID and updated ORR added; **flagged**, 6-mo PFS/OS figures not in the abstracts (PMIDs 37451291, 40707309) |
+| IMmotion151 | Coprimary PFS HR corrected; final OS not significant (PMIDs 31079938, 34940781) |
+| ASPEN | Accurate; ORR and OS checked in the full text (PMID 26794930) |
+| CheckMate 025 | Accurate; 5-y PFS checked in the update's full text (PMIDs 26406148, 32673417) |
+| CARMENA | Accurate; updated OS (PMIDs 29860937, 34187771) |
+| Motzer (lenvatinib +/- everolimus) | PMID and PFS HRs added; **flagged**, OS not confirmed (PMID 26482279) |
 
 ## Flag pass — completed 13 September 2026
 
@@ -104,8 +115,12 @@ dotatate → edotreotide correction had already been applied).
   The earlier list of 8 left out the advanced-disease entries.
 - **Bladder placement question for David**: POUT and Coleman (upper tract UC) sit under
   subsite MIBC.
-- **Kidney, for David**: two rows are both named "Motzer" (sunitinib vs IFN-α, and
-  lenvatinib ± everolimus). Consider naming them by drug so search can tell them apart.
+- **KEYNOTE-B61 (kidney)**, flagged: 6-mo PFS 72%, 6-mo OS 88%, median PFS 18 mo and
+  "lower activity in chromophobe" are not in the Lancet Oncol 2023 or Eur Urol 2025 abstracts;
+  check the full text.
+- **Motzer, lenvatinib +/- everolimus (kidney)**, flagged: the recorded OS of 25.5 vs 15.4 mo
+  (HR 0.55) is not in the Lancet Oncol 2015 abstract, and a web summary gives 17.5 mo for
+  everolimus; check the updated OS analysis.
 - **Every other site** — only flagged entries checked so far; no site-wide verification.
 
 ## Corrections applied
@@ -216,6 +231,19 @@ Kidney verification, batch 1:
 - COSMIC-313: the final analysis (OS HR 1.02, NS) was missing (PMID 41720427)
 - ASSURE: "similar OS" is not in the publication abstract; removed (PMID 26969090)
 - Motzer (sunitinib vs IFN-α): OS HR 0.82 was borderline (p=0.051), which is now stated (PMID 19487381)
+
+Kidney verification, batch 2:
+
+- Both rows named "Motzer" were renamed by regimen — David's decision
+- CLEAR: lenvatinib-everolimus PFS "HR 0.53" → 0.65; "CR 16% with L-P" removed, as no source
+  was found; final OS HR 0.79 added (PMIDs 33616314, 38227898)
+- IMmotion151: PFS "11 vs 8.4 mos, HR 0.83" → coprimary PD-L1+ 11.2 vs 7.7 mo, HR 0.74; the
+  final OS was not significant (PMIDs 31079938, 34940781)
+- JAVELIN Renal 101: "OS immature" → final OS 45 vs 39 mo, HR 0.88, not significant (PMID 39706335)
+- KEYNOTE-426: the risk-group HRs (int-poor 0.52, good 0.64) could not be sourced from the
+  abstracts and were replaced by the 43-mo final analysis (PMID 37500340)
+- KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus): the figures that could not be confirmed
+  were moved to comment and flagged, not deleted
 - van der Maase: OS "15 months" → 14.0 vs 15.2 mo (long-term update); "RR 46/49%" →
   ORR 49 (GC) vs 46% (MVAC); trial name "van der Masse" → "van der Maase" (PMIDs 11001674,
   16034041)
@@ -227,6 +255,6 @@ Kidney verification, batch 1:
 3. ~~Build the entry-generation and batch-verification skills~~ — done: `add-trial`,
    `verify-site`, and `scripts/rows.py` for scripted edits (13 September 2026)
 4. Reference capture site by site with `verify-site`, starting with GU and heme
-   (bladder done 13 September 2026; kidney batch 1 done, 14 left; then heme). `rows.py style` currently reports 259 house-style
+   (bladder done 13 September 2026; kidney batches 1-2 done, 4 left; then heme). `rows.py style` currently reports 259 house-style
    warnings (mostly months/years/versus spelled out, 27 cells with line breaks, 4
    `results` over 180). Fix these per site during verification, not in bulk
