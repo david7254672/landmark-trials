@@ -6,11 +6,12 @@ Last updated: 13 September 2026
 
 - **900 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **115 entries carry a PMID** (was 28). The rest have no reference yet.
+- **119 entries carry a PMID** (was 28). The rest have no reference yet.
 - **2 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney; see
   Open items. There were 64 before the flag pass.
 - **Bladder verified**: all 44 entries.
-- **Kidney**: 19 of 25 verified, 2 flagged, 4 left (TIVO-3, AXIS, LITESPARK-005, LITESPARK-011).
+- **Kidney**: all 25 entries have a PMID; 23 verified and 2 flagged (KEYNOTE-B61, Motzer
+  lenvatinib +/- everolimus).
 - Every entry has results text. STOP MDS, which could not be identified, was removed.
 - 69 spelling corrections applied and approved. Five name-level fixes among them:
   ABCSG-16, ToGA, Joudi, fedratinib, "Periop chemo".
@@ -85,6 +86,10 @@ Last updated: 13 September 2026
 | CheckMate 025 | Accurate; 5-y PFS checked in the update's full text (PMIDs 26406148, 32673417) |
 | CARMENA | Accurate; updated OS (PMIDs 29860937, 34187771) |
 | Motzer (lenvatinib +/- everolimus) | PMID and PFS HRs added; **flagged**, OS not confirmed (PMID 26482279) |
+| TIVO-3 | Accurate; final OS HR 0.89, NS, taken from the full text (PMIDs 31810797, 39912344) |
+| AXIS | PFS corrected; OS not significant (PMIDs 22056247, 23598172) |
+| LITESPARK-005 | Accurate; the PFS HR that had no source was replaced by the 18-mo PFS rate (PMID 39167807) |
+| LITESPARK-011 | Grade 3+ AEs corrected; OS not significant (PMID 42586114) |
 
 ## Flag pass — completed 13 September 2026
 
@@ -244,6 +249,15 @@ Kidney verification, batch 2:
   abstracts and were replaced by the 43-mo final analysis (PMID 37500340)
 - KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus): the figures that could not be confirmed
   were moved to comment and flagged, not deleted
+
+Kidney verification, batch 3:
+
+- AXIS: "PFS 5 vs 3 mos" → 6.7 vs 4.7 mo, HR 0.67; OS 20.1 vs 19.2 mo, HR 0.97, NS
+  (PMIDs 22056247, 23598172)
+- LITESPARK-011: "G3 AEs 72 vs 66%" → grade 3+ AEs 84 vs 83%; OS NS, p=0.061 (PMID 42586114)
+- LITESPARK-005: "PFS HR 0.74 (median similar at 5.5 mos)" → median PFS 5.6 mo in both arms,
+  18-mo PFS 24.0 vs 8.3%. The HR is not in the abstract and was removed (PMID 39167807)
+- TIVO-3: "OS similar" confirmed as final OS HR 0.89, NS (PMID 39912344)
 - van der Maase: OS "15 months" → 14.0 vs 15.2 mo (long-term update); "RR 46/49%" →
   ORR 49 (GC) vs 46% (MVAC); trial name "van der Masse" → "van der Maase" (PMIDs 11001674,
   16034041)
@@ -255,6 +269,6 @@ Kidney verification, batch 2:
 3. ~~Build the entry-generation and batch-verification skills~~ — done: `add-trial`,
    `verify-site`, and `scripts/rows.py` for scripted edits (13 September 2026)
 4. Reference capture site by site with `verify-site`, starting with GU and heme
-   (bladder done 13 September 2026; kidney batches 1-2 done, 4 left; then heme). `rows.py style` currently reports 259 house-style
+   (bladder and kidney done 13 September 2026, with 2 kidney flags open; next prostate, then heme). `rows.py style` currently reports 259 house-style
    warnings (mostly months/years/versus spelled out, 27 cells with line breaks, 4
    `results` over 180). Fix these per site during verification, not in bulk
