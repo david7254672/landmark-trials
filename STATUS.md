@@ -4,11 +4,11 @@ Last updated: 13 September 2026
 
 ## Where things stand
 
-- **903 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **902 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
 - **66 entries carry a PMID** (was 28). The rest have no reference yet.
-- **6 entries flagged** for review (was 64).
-- **1 entry has no results text** — STOP MDS, which could not be identified.
+- **4 entries flagged** for review (was 64).
+- Every entry has results text. STOP MDS, which could not be identified, was removed.
 - 69 spelling corrections applied and approved. Five name-level fixes among them:
   ABCSG-16, ToGA, Joudi, fedratinib, "Periop chemo".
 - Phone app redesigned: collapsed cards that expand on tap, chip filters within a site,
@@ -53,13 +53,6 @@ dotatate → edotreotide correction had already been applied).
 
 ## Open items
 
-- **STOP MDS** — no trial by this name in registries or literature. The text in the
-  population field was a study-design description and has been moved to intervention.
-  Name or source needs confirming; may be a transcription of something else.
-- **REAL-2 setting mismatch** — the row sits under Neoadjuvant/adjuvant with intervention
-  "Periop Chemo (ECX/EOX)", but REAL-2 studied first-line advanced esophagogastric disease.
-  Left unchanged and flagged — may be deliberate shorthand for justifying X/O substitution.
-  Needs David's decision: move to Advanced/1st line, or keep and say why in comment.
 - **Colorectal "Pooled analysis" (chemo ± bev)** — HR 0.81, OS 19.8 vs 17.6 mo don't match
   the Hurwitz 2013 seven-trial pooled analysis (PMID 23881988, HR 0.80) or the older-patient
   pooled analyses. Source not identified.
@@ -115,6 +108,9 @@ Flag pass:
 - AML14: comparator is hydroxyurea ± ATRA, not "SOC" (PMID 17315155)
 - ABACUS, PURE-01: phase 1/2 → 2
 - Unnamed ipilimumab + dacarbazine row named CA184-024 (PMIDs 21639810, 25713437)
+- REAL-2 moved from Neoadjuvant/adjuvant to Advanced / 1st line and its intervention
+  rewritten as the four 2x2 arms (PMID 18172173) — David's decision
+- STOP MDS removed: unidentifiable, no results — David's decision
 
 ## Planned order
 
