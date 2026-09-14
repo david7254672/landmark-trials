@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Landmark Trials</title>
+<meta name="description" content="Point-of-care quick reference of landmark haematology and oncology trials">
+<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111418" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Trials">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<style>
+:root {
+  --bg: #f6f7f9; --card: #fff; --text: #16191d; --muted: #5c6570; --line: #e2e5ea;
+  --accent: #1f5fbf; --accent-bg: #e8f0fc;
+  --flag: #7a4a00; --flag-bg: #fff4dc; --flag-line: #f0d49a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111418; --card: #1a1e24; --text: #e8eaed; --muted: #9aa3ad; --line: #2c323a;
+    --accent: #7fb0ff; --accent-bg: #1d2a3d;
+    --flag: #ffcf7a; --flag-bg: #33280f; --flag-line: #5c4717;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.wrap { max-width: 760px; margin: 0 auto; }
+
+header {
+  position: sticky; top: 0; z-index: 2; background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  padding: calc(8px + env(safe-area-inset-top)) 12px 6px;
+}
+.search { position: relative; margin: 0; }
+#q {
+  width: 100%; font: inherit; font-size: 16px; /* 16px stops iOS zooming on focus */
+  padding: 10px 40px 10px 12px; border: 1px solid var(--line); border-radius: 10px;
+  background: var(--card); color: var(--text); -webkit-appearance: none; appearance: none;
+}
+#q::-webkit-search-cancel-button { display: none; }
+#q:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+#clear {
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  width: 36px; height: 36px; border: 0; background: none; color: var(--muted);
+  font-size: 22px; cursor: pointer;
+}
+.filters { display: flex; gap: 6px; margin-top: 8px; overflow-x: auto; scrollbar-width: none; }
+.filters::-webkit-scrollbar { display: none; }
+select, .toggle {
+  flex: none; font: inherit; font-size: 14px; color: var(--text); background: var(--card);
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px;
+}
+select { max-width: 62vw; }
+.toggle { cursor: pointer; white-space: nowrap; }
+.toggle[aria-pressed="true"] { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+#count { font-size: 13px; color: var(--muted); margin: 6px 2px 0; }
+
+main { padding: 4px 12px calc(24px + env(safe-area-inset-bottom)); }
+h2 {
+  font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--muted); margin: 18px 4px 6px;
+}
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin: 8px 0; }
+.top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.name { font-size: 17px; font-weight: 650; margin: 0; }
+.badge { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; }
+.pmid { margin-left: auto; font-size: 13px; color: var(--accent); text-decoration: none; white-space: nowrap; }
+.nopmid { margin-left: auto; font-size: 12px; color: var(--muted); }
+.meta { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+dl { margin: 8px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 5px 12px; }
+dt { font-size: 12px; color: var(--muted); padding-top: 2px; }
+dd { margin: 0; white-space: pre-line; overflow-wrap: anywhere; }
+dd.res { font-weight: 600; }
+dd a { color: var(--accent); }
+.flags {
+  margin-top: 10px; font-size: 13px; color: var(--flag); background: var(--flag-bg);
+  border: 1px solid var(--flag-line); border-radius: 8px; padding: 6px 10px; white-space: pre-line;
+}
+.empty { text-align: center; color: var(--muted); padding: 40px 0; }
+footer { text-align: center; font-size: 12px; color: var(--muted); padding: 8px 0 24px; }
+footer a { color: inherit; }
+@media (max-width: 480px) {
+  dl { grid-template-columns: 1fr; gap: 0; }
+  dt { padding-top: 6px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <form class="search" role="search">
+      <input id="q" type="search" placeholder="Search trial, drug, setting…" aria-label="Search trials"
+             autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search">
+      <button id="clear" type="button" aria-label="Clear search" hidden>×</button>
+    </form>
+    <div class="filters">
+      <select id="tumour" aria-label="Tumour site"></select>
+      <select id="subsite" aria-label="Subsite" hidden></select>
+      <button class="toggle" type="button" data-key="pmid" aria-pressed="false">Has PMID</button>
+      <button class="toggle" type="button" data-key="flagged" aria-pressed="false">Flagged</button>
+    </div>
+    <p id="count"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="list"><p class="empty">Loading…</p></div>
+  <div id="more"></div>
+</main>
+<footer><a href="https://github.com/david7254672/landmark-trials">Source on GitHub</a></footer>
+
+<script>
+const $ = s => document.querySelector(s);
+const SEARCH_FIELDS = ['trial', 'tumour', 'subsite', 'setting', 'line', 'subgroup', 'population',
+  'intervention', 'results', 'pe', 'comment', 'extra', 'flags'];
+const CHUNK = 40;
+
+const state = { q: '', tumour: '', subsite: '', flagged: false, pmid: false };
+let trials = [], matches = [], shown = 0, lastGroup = null, searching = false;
+
+// Lower-case, strip accents, treat punctuation as spaces so "keynote 057" finds "KEYNOTE-057".
+const norm = s => s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')
+  .replace(/[\-‐-―_/,;:()\[\]]/g, ' ');
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+function context(t) {
+  return [t.tumour, t.subsite, t.setting, t.line, t.subgroup].filter(Boolean).join(' · ');
+}
+
+function counts(list, field) {
+  const m = new Map();
+  for (const t of list) if (t[field]) m.set(t[field], (m.get(t[field]) || 0) + 1);
+  return [...m].sort((a, b) => a[0].localeCompare(b[0]));
+}
+
+function fillSelect(sel, allLabel, entries) {
+  sel.replaceChildren(new Option(allLabel, ''));
+  for (const [value, n] of entries) sel.add(new Option(`${value} (${n})`, value));
+}
+
+function buildTumours() {
+  const entries = counts(trials, 'tumour');
+  if (!entries.some(([v]) => v === state.tumour)) state.tumour = '';
+  fillSelect($('#tumour'), `All sites (${trials.length})`, entries);
+}
+
+function buildSubsites() {
+  const entries = state.tumour ? counts(trials.filter(t => t.tumour === state.tumour), 'subsite') : [];
+  if (!entries.some(([v]) => v === state.subsite)) state.subsite = '';
+  fillSelect($('#subsite'), 'All subsites', entries);
+  $('#subsite').hidden = entries.length === 0;
+}
+
+function syncControls() {
+  $('#q').value = state.q;
+  $('#tumour').value = state.tumour;
+  $('#subsite').value = state.subsite;
+  document.querySelectorAll('.toggle').forEach(b => b.setAttribute('aria-pressed', state[b.dataset.key]));
+}
+
+function card(t) {
+  const c = el('article', 'card');
+
+  const top = el('div', 'top');
+  top.append(el('h3', 'name', t.trial || '(unnamed trial)'));
+  if (t.phase) top.append(el('span', 'badge', t.phase));
+  if (t.pm) {
+    const a = el('a', 'pmid', `PMID ${t.pm}`);
+    a.href = `https://pubmed.ncbi.nlm.nih.gov/${t.pm}/`;
+    a.target = '_blank'; a.rel = 'noopener';
+    top.append(a);
+  } else {
+    top.append(el('span', 'nopmid', 'no PMID'));
+  }
+  c.append(top);
+
+  // Group headings carry the context when browsing; search results mix groups, so show it per card.
+  if (searching) c.append(el('div', 'meta', context(t)));
+
+  const dl = el('dl');
+  const row = (label, value, cls) => {
+    if (value) dl.append(el('dt', null, label), el('dd', cls, value));
+  };
+  row('Population', t.population);
+  row('Intervention', t.intervention);
+  row('Results', t.results, 'res');
+  row('Primary endpoint', t.pe);
+  row('Comment', t.comment);
+  row('Also', t.extra);
+  row('Reference', t.rf);
+  if (/^https?:\/\//.test(t.link)) {
+    const a = el('a', null, new URL(t.link).hostname);
+    a.href = t.link; a.target = '_blank'; a.rel = 'noopener';
+    const dd = el('dd');
+    dd.append(a);
+    dl.append(el('dt', null, 'Link'), dd);
+  }
+  c.append(dl);
+
+  if (t.flags) c.append(el('div', 'flags', '⚑ ' + t.flags.split(/;\s*/).join('\n⚑ ')));
+  return c;
+}
+
+function renderMore() {
+  const frag = document.createDocumentFragment();
+  const end = Math.min(shown + CHUNK, matches.length);
+  for (; shown < end; shown++) {
+    const t = matches[shown];
+    if (!searching) {
+      const group = context(t);
+      if (group !== lastGroup) frag.append(el('h2', null, group));
+      lastGroup = group;
+    }
+    frag.append(card(t));
+  }
+  $('#list').append(frag);
+}
+
+function update() {
+  const tokens = norm(state.q).split(/\s+/).filter(Boolean);
+  searching = tokens.length > 0;
+
+  matches = trials.filter(t =>
+    (!state.tumour || t.tumour === state.tumour) &&
+    (!state.subsite || t.subsite === state.subsite) &&
+    (!state.flagged || t.flags) &&
+    (!state.pmid || t.pm) &&
+    tokens.every(k => t._hay.includes(k) || t._compact.includes(k)));
+
+  if (searching) {
+    // Trial-name hits first, then everything else in reference order.
+    const q = tokens.join('');
+    const rank = t => t._name === q ? 0 : t._name.startsWith(q) ? 1
+      : tokens.every(k => t._name.includes(k)) ? 2 : 3;
+    matches.sort((a, b) => rank(a) - rank(b) || a._i - b._i);
+  }
+
+  $('#count').textContent = `${matches.length} ${matches.length === 1 ? 'trial' : 'trials'}`;
+  $('#clear').hidden = !state.q;
+  shown = 0; lastGroup = null;
+  $('#list').replaceChildren();
+  if (!matches.length) $('#list').append(el('p', 'empty', 'No trials match.'));
+  renderMore();
+  writeHash();
+}
+
+function readHash() {
+  const p = new URLSearchParams(location.hash.slice(1));
+  state.q = p.get('q') || '';
+  state.tumour = p.get('site') || '';
+  state.subsite = p.get('sub') || '';
+  state.flagged = p.has('flagged');
+  state.pmid = p.has('pmid');
+}
+
+function writeHash() {
+  const p = new URLSearchParams();
+  if (state.q) p.set('q', state.q);
+  if (state.tumour) p.set('site', state.tumour);
+  if (state.subsite) p.set('sub', state.subsite);
+  if (state.flagged) p.set('flagged', '');
+  if (state.pmid) p.set('pmid', '');
+  const h = p.toString();
+  history.replaceState(null, '', h ? '#' + h : location.pathname + location.search);
+}
+
+function applyHash() {
+  readHash();
+  buildTumours();
+  buildSubsites();
+  syncControls();
+  update();
+}
+
+function refresh() { update(); window.scrollTo(0, 0); }
+
+let typing;
+$('#q').addEventListener('input', e => {
+  state.q = e.target.value;
+  clearTimeout(typing);
+  typing = setTimeout(refresh, 120);
+});
+$('.search').addEventListener('submit', e => { e.preventDefault(); $('#q').blur(); });
+$('#clear').addEventListener('click', () => { state.q = ''; $('#q').value = ''; refresh(); $('#q').focus(); });
+$('#tumour').addEventListener('change', e => { state.tumour = e.target.value; buildSubsites(); refresh(); });
+$('#subsite').addEventListener('change', e => { state.subsite = e.target.value; refresh(); });
+document.querySelectorAll('.toggle').forEach(b => b.addEventListener('click', () => {
+  state[b.dataset.key] = !state[b.dataset.key];
+  b.setAttribute('aria-pressed', state[b.dataset.key]);
+  refresh();
+}));
+
+// Render in chunks as the user scrolls. Re-observing forces a fresh check in case the
+// sentinel is still on screen after a chunk is added.
+const more = $('#more');
+const observer = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting && shown < matches.length) {
+    renderMore();
+    observer.unobserve(more);
+    observer.observe(more);
+  }
+}, { rootMargin: '800px' });
+
+fetch('data/trials.json', { cache: 'no-cache' })
+  .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+  .then(data => {
+    trials = data.map((t, i) => {
+      const hay = norm(SEARCH_FIELDS.map(f => t[f]).join(' | '));
+      return { ...t, _i: i, _hay: hay, _compact: hay.replace(/\s+/g, ''), _name: norm(t.trial).replace(/\s+/g, '') };
+    });
+    $('[data-key="pmid"]').textContent = `Has PMID (${trials.filter(t => t.pm).length})`;
+    $('[data-key="flagged"]').textContent = `Flagged (${trials.filter(t => t.flags).length})`;
+    applyHash();
+    observer.observe(more);
+    // replaceState in writeHash doesn't fire this, so it only runs for bookmarks and edited URLs.
+    window.addEventListener('hashchange', () => { applyHash(); window.scrollTo(0, 0); });
+  })
+  .catch(err => $('#list').replaceChildren(el('p', 'empty', `Could not load trials (${err.message}).`)));
+
+// Offline support: the service worker serves the last copy when there's no signal.
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+</body>
+</html>

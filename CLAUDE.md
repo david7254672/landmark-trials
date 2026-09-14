@@ -11,8 +11,10 @@ a working session.
 ## Layout
 
 ```
+index.html           the phone web app (single page, no build step)
+sw.js                service worker: network first, cached copy when offline
 data/trials.csv      source of truth - edit this, nothing else
-data/trials.json     generated from the CSV for the phone web app; never edit by hand
+data/trials.json     generated from the CSV, loaded by the app; never edit by hand
 scripts/validate.py  checks the CSV (exit 1 on errors)
 scripts/build_json.py  CSV -> JSON (refuses to build if validation fails; --check for staleness)
 scripts/trials_schema.py  column list, required fields, allowed tumour/phase values
@@ -21,6 +23,22 @@ STATUS.md            working log
 ```
 
 Scripts are Python 3 standard library only (no Node on this machine).
+
+## Web app
+
+Live at https://david7254672.github.io/landmark-trials/ (GitHub Pages, served from
+the root of `main`). A push to `main` redeploys within a minute or two, so a committed
+data change reaches the phone once `data/trials.json` is rebuilt and pushed.
+
+The app renders every column except `src`, including `flags` (personal use - review
+flags are meant to be visible). Search matches all tokens across the text fields and
+ignores punctuation ("keynote057" finds KEYNOTE-057). Filters and search are kept in the
+URL hash, so a search can be bookmarked. All data is inserted with `textContent`,
+never as HTML.
+
+The sandbox can't read the Desktop folder, so preview locally by copying `index.html`,
+`sw.js` and `data/trials.json` to a scratch folder and serving it with
+`python3 -m http.server` (`.claude/launch.json` is local-only and gitignored).
 
 ## Columns
 
