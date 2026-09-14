@@ -137,9 +137,13 @@ Bladder verification, batch 1:
 - Coleman: pCR 11% → 19% (11 was the patient count) (PMID 36603175)
 - CheckMate 274: PD-L1 ≥1% "NR vs 10.5 mo, HR 0.5" (unsourced) → 5-y 55.5 vs 8.4 mo, HR
   0.58; OS 75.0 vs 50.1 mo, HR 0.83, NS (PMID 41110694)
-- KEYNOTE-905/EV-303: EFS HR "0.4" → 0.40, pCR 57 vs 9% → 57.1 vs 8.6%; unconfirmed
-  medians ("16 mo", "42 mo") replaced by published 2-y rates; population includes
-  cisplatin decliners (PMID 41707170)
+- KEYNOTE-905/EV-303: EFS HR "0.4" → 0.40, pCR 57 vs 9% → 57.1 vs 8.6%; published 2-y
+  rates added; population includes cisplatin decliners (PMID 41707170). Medians EFS NR vs
+  16 mo and OS NR vs 42 mo kept although only in secondary reports, not the abstract —
+  David's decision
+- House style: months rounded to the nearest month in `results` and `comment` (`pe` keeps
+  published figures) — David's decision. Applied to verified bladder entries; other sites
+  are rounded as they are verified
 - van der Maase: OS "15 months" → 14.0 vs 15.2 mo (long-term update); "RR 46/49%" →
   ORR 49 (GC) vs 46% (MVAC); trial name "van der Masse" → "van der Maase" (PMIDs 11001674,
   16034041)

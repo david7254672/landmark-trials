@@ -82,8 +82,10 @@ The recently verified entries (see `STATUS.md`) are the standard. Older rows tha
 don't match are brought into line when their site is verified, not in bulk.
 
 - Abbreviations: `mo`, `y`, `vs`, `NS`, `HR`, `OR`, `ORR`, `CR`, `PFS`, `OS`, `DFS`, `EFS`
-- Figures in `results`: `PFS 39.1 vs 5.6 mo, HR 0.16 (0.10-0.24), p<0.001` - CI in
+- Figures in `results`: `PFS 39 vs 6 mo, HR 0.16 (0.10-0.24), p<0.001` - CI in
   brackets without "95% CI"
+- Round months to the nearest month in `results` and `comment` (21.9 → 22, 55.5 → 56).
+  `pe` keeps the published figures. Percentages, HRs and CIs are not rounded
 - `pe` may spell out `(95% CI ...)`
 - Separate findings with `; `. No line breaks inside a cell
 - `results` 180 characters or fewer; move interpretation to `comment`

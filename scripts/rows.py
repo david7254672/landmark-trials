@@ -25,6 +25,8 @@ import sys
 from trials_schema import COLUMNS, CSV_PATH, read_rows
 
 RESULTS_MAX = 180
+# A decimal followed (possibly via "vs"/"/" chains) by a month unit, e.g. "21.9 vs 11 mo".
+DECIMAL_MONTHS = re.compile(r"\d+\.\d+(?=(?:\s*(?:vs|/)\s*\d+(?:\.\d+)?)*\s*(?:mo|mos|months?)\b)")
 
 
 def load():
@@ -65,6 +67,9 @@ def style_warnings(r):
         w.append('results says "95% CI"; use brackets only, e.g. HR 0.68 (0.49-0.94)')
     if re.search(r"\bmonths?\b|\byears?\b|\bversus\b", r["results"], re.I):
         w.append("results spells out months/years/versus; use mo, y, vs")
+    for col in ("results", "comment"):
+        if DECIMAL_MONTHS.search(r[col]):
+            w.append(f"{col} has decimal months; round to the nearest month")
     if r["pm"] and (r["rf"] or r["link"]):
         w.append("rf/link filled although a PMID is present (fallbacks only)")
     return w

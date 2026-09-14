@@ -38,7 +38,7 @@ the batch before starting.
 
 | Outcome | Action |
 |---|---|
-| **Confirmed** | Add `pm` and `pe`; tidy to house style (abbreviations, CI in brackets, timepoint labels, ≤180-character `results`) without changing any figure |
+| **Confirmed** | Add `pm` and `pe`; tidy to house style (abbreviations, CI in brackets, timepoint labels, months rounded to the nearest month outside `pe`, ≤180-character `results`) without changing any figure otherwise |
 | **Corrected** | Change only what the paper contradicts or omits in a way that misleads (wrong figure, wrong arm, missing negative result, missing deaths). Add `pm` and `pe`. Record the before → after in `STATUS.md` |
 | **Updated** | Later follow-up changes the figures: update them and state the follow-up (`at median 5 y`). `pm` stays the primary paper; put the update PMID in `comment` |
 | **Flagged** | Can't confirm something (no full text, abstract only, conflicting reports): fill what is confirmed and write the specific open issue in `flags`, e.g. `12-mo DFS 19% not in abstract; check full text` |

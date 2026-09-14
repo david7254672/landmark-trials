@@ -49,7 +49,7 @@ Write a JSON object to the scratchpad, filling every column that applies:
 | `phase` | From the paper, e.g. `Phase 3` |
 | `population` | Who was randomised, key eligibility, `n=` |
 | `intervention` | Arms, experimental first: `Sasanlimab + BCG vs BCG` |
-| `results` | ≤180 characters. Primary endpoint first, then key secondaries, then notable toxicity. `PFS 39.1 vs 5.6 mo, HR 0.16 (0.10-0.24), p<0.001`. Label timepoints and follow-up. Negative trials start `Primary endpoint not met: ` |
+| `results` | ≤180 characters. Primary endpoint first, then key secondaries, then notable toxicity. `PFS 39 vs 6 mo, HR 0.16 (0.10-0.24), p<0.001`. Round months to the nearest month (not in `pe`). Label timepoints and follow-up. Negative trials start `Primary endpoint not met: ` |
 | `comment` | Take-home, caveats (single arm, crossover, control arm), later-update PMIDs |
 | `pe` | Primary endpoint as reported; may spell out `(95% CI ...)` |
 | `pm` | Primary publication PMID, bare number |
