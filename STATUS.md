@@ -6,7 +6,7 @@ Last updated: 13 September 2026
 
 - **900 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **77 entries carry a PMID** (was 28). The rest have no reference yet.
+- **87 entries carry a PMID** (was 28). The rest have no reference yet.
 - **No entries flagged** (was 64).
 - Every entry has results text. STOP MDS, which could not be identified, was removed.
 - 69 spelling corrections applied and approved. Five name-level fixes among them:
@@ -38,6 +38,16 @@ Last updated: 13 September 2026
 | KEYNOTE-905/EV-303 | Typos fixed, published figures used (PMID 41707170) |
 | KEYNOTE-B15/EV-304 | Accurate; now published in NEJM (PMID 42485627) |
 | van der Maase et al | Updated to long-term figures; name spelling fixed (PMIDs 11001674, 16034041) |
+| KEYNOTE-052 | Accurate (figures are the 2-y update); 5-y update in comment (PMIDs 28967485, 32552471, 36494006) |
+| IMvigor210 | Accurate (PMID 27939400) |
+| IMvigor130 | Updated to final OS, HR 0.85, NS (PMIDs 32416780, 38101433, 38101431) |
+| KEYNOTE-361 | Accurate; figures and missed p-value boundaries added (PMID 34051178) |
+| JAVELIN Bladder 100 | PD-L1+ medians with no source replaced by the published HR; 2-y update (PMIDs 32945632, 37071838) |
+| CheckMate 901 | Accurate; typo fixed (PMID 37870949) |
+| DANUBE | Accurate; exploratory PD-L1-high result labelled (PMID 32971005) |
+| NORSE | ORR corrected from final results (PMID 41538748) |
+| EV-103 cohort A | Cohort and phase identified; 5-y update in comment (PMIDs 36041086, 42155320) |
+| RC48-C016 | Accurate; now published in NEJM (PMID 41124210) |
 
 ## Flag pass — completed 13 September 2026
 
@@ -65,9 +75,8 @@ dotatate → edotreotide correction had already been applied).
 
 - **FLOT65+** — "OS not different" kept from the original row but isn't stated in the
   abstract (PMID 23063354); check against the full text when gastric is verified.
-- **Bladder, still unverified (18)**: KEYNOTE-052, IMvigor210, IMvigor130, KEYNOTE-361,
-  JAVELIN Bladder 100, CheckMate 901, DANUBE, NORSE, EV-103/KN-869, RC48-C016, KEYNOTE-045,
-  IMvigor211, CheckMate 032, BLC2001, THOR, EV-201, EV-301, TROPiCS-04 (batch 2 = first 10).
+- **Bladder, still unverified (8)**: KEYNOTE-045, IMvigor211, CheckMate 032, BLC2001, THOR,
+  EV-201, EV-301, TROPiCS-04 (batch 3).
   The earlier list of 8 left out the advanced-disease entries.
 - **Bladder placement question for David**: POUT and Coleman (upper tract UC) sit under
   subsite MIBC.
@@ -144,6 +153,19 @@ Bladder verification, batch 1:
 - House style: months rounded to the nearest month in `results` and `comment` (`pe` keeps
   published figures) — David's decision. Applied to verified bladder entries; other sites
   are rounded as they are verified
+
+Bladder verification, batch 2:
+
+- IMvigor130: "OS NS (16 vs 13 mo) at interim; further results awaited" → final OS 16 vs
+  13 mo, HR 0.85 (0.73-1.00), NS (PMID 38101433)
+- JAVELIN Bladder 100: PD-L1+ "OS NR vs 17 mos" (no source) → HR 0.56 (0.40-0.79) (PMID 32945632)
+- NORSE: ORR 68 vs 33% → 54.5 vs 44.2% (final results, PMID 41538748)
+- EV-103: population "Pase1b/2" → dose escalation/cohort A, phase 1b/2, n=45; the primary
+  endpoint was safety (PMID 36041086)
+- DANUBE: PD-L1-high durva-treme OS 17.9 vs 12.1 mo (HR 0.74) is not in the abstract; kept
+  in comment, labelled exploratory and from secondary reports (as for KEYNOTE-905)
+- Wording only, no figures changed: KEYNOTE-057 "12 month" → "12-mo"; ABC meta-analysis
+  "5-year" → "5-y"
 - van der Maase: OS "15 months" → 14.0 vs 15.2 mo (long-term update); "RR 46/49%" →
   ORR 49 (GC) vs 46% (MVAC); trial name "van der Masse" → "van der Maase" (PMIDs 11001674,
   16034041)
@@ -155,6 +177,6 @@ Bladder verification, batch 1:
 3. ~~Build the entry-generation and batch-verification skills~~ — done: `add-trial`,
    `verify-site`, and `scripts/rows.py` for scripted edits (13 September 2026)
 4. Reference capture site by site with `verify-site`, starting with GU and heme
-   (bladder in progress: batch 1 done 13 September 2026, 18 left). `rows.py style` currently reports 259 house-style
+   (bladder in progress: batches 1-2 done 13 September 2026, 8 left). `rows.py style` currently reports 259 house-style
    warnings (mostly months/years/versus spelled out, 27 cells with line breaks, 4
    `results` over 180). Fix these per site during verification, not in bulk
