@@ -31,7 +31,9 @@ the root of `main`). A push to `main` redeploys within a minute or two, so a com
 data change reaches the phone once `data/trials.json` is rebuilt and pushed.
 
 The app renders every column except `src`, including `flags` (personal use - review
-flags are meant to be visible). Search matches all tokens across the text fields and
+flags are meant to be visible). Choosing a tumour site reveals dropdowns for `subsite`,
+`setting`, `line` and `subgroup` - only those the site uses, each listing only values
+that still match the other selections. Search matches all tokens across the text fields and
 ignores punctuation ("keynote057" finds KEYNOTE-057). Filters and search are kept in the
 URL hash, so a search can be bookmarked. All data is inserted with `textContent`,
 never as HTML.

@@ -58,7 +58,9 @@ select, .toggle {
 }
 select { max-width: 62vw; }
 .toggle { cursor: pointer; white-space: nowrap; }
-.toggle[aria-pressed="true"] { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+.toggle[aria-pressed="true"], select.active { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+.facets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.facets select { flex: 1 1 auto; min-width: 0; max-width: 100%; }
 #count { font-size: 13px; color: var(--muted); margin: 6px 2px 0; }
 
 main { padding: 4px 12px calc(24px + env(safe-area-inset-bottom)); }
@@ -101,9 +103,14 @@ footer a { color: inherit; }
     </form>
     <div class="filters">
       <select id="tumour" aria-label="Tumour site"></select>
-      <select id="subsite" aria-label="Subsite" hidden></select>
       <button class="toggle" type="button" data-key="pmid" aria-pressed="false">Has PMID</button>
       <button class="toggle" type="button" data-key="flagged" aria-pressed="false">Flagged</button>
+    </div>
+    <div class="facets" hidden>
+      <select data-facet="subsite" aria-label="Subsite" hidden></select>
+      <select data-facet="setting" aria-label="Setting" hidden></select>
+      <select data-facet="line" aria-label="Line of therapy" hidden></select>
+      <select data-facet="subgroup" aria-label="Subgroup" hidden></select>
     </div>
     <p id="count"></p>
   </div>
@@ -121,7 +128,11 @@ const SEARCH_FIELDS = ['trial', 'tumour', 'subsite', 'setting', 'line', 'subgrou
   'intervention', 'results', 'pe', 'comment', 'extra', 'flags'];
 const CHUNK = 40;
 
-const state = { q: '', tumour: '', subsite: '', flagged: false, pmid: false };
+// Within-site filters, shown once a tumour site is chosen, with the label for "no filter".
+const FACETS = { subsite: 'All subsites', setting: 'All settings', line: 'All lines', subgroup: 'All subgroups' };
+const FACET_KEYS = Object.keys(FACETS);
+
+const state = { q: '', tumour: '', subsite: '', setting: '', line: '', subgroup: '', flagged: false, pmid: false };
 let trials = [], matches = [], shown = 0, lastGroup = null, searching = false;
 
 // Lower-case, strip accents, treat punctuation as spaces so "keynote 057" finds "KEYNOTE-057".
@@ -156,17 +167,38 @@ function buildTumours() {
   fillSelect($('#tumour'), `All sites (${trials.length})`, entries);
 }
 
-function buildSubsites() {
-  const entries = state.tumour ? counts(trials.filter(t => t.tumour === state.tumour), 'subsite') : [];
-  if (!entries.some(([v]) => v === state.subsite)) state.subsite = '';
-  fillSelect($('#subsite'), 'All subsites', entries);
-  $('#subsite').hidden = entries.length === 0;
+// Each facet's options come from trials matching the site and the *other* facets, so every
+// option leads to at least one trial and its count is accurate. Facets the site doesn't use stay hidden.
+function buildFacets() {
+  const inSite = trials.filter(t => t.tumour === state.tumour);
+
+  // Drop selections that can't apply (e.g. from an old bookmark) before building options,
+  // or one bad value would empty every other dropdown: first values the site doesn't have,
+  // then, if the combination still matches nothing, the most specific facets first.
+  for (const f of FACET_KEYS) if (state[f] && !inSite.some(t => t[f] === state[f])) state[f] = '';
+  const matchesAll = t => FACET_KEYS.every(g => !state[g] || t[g] === state[g]);
+  for (const f of [...FACET_KEYS].reverse()) {
+    if (inSite.some(matchesAll)) break;
+    state[f] = '';
+  }
+
+  let anyShown = false;
+  for (const f of FACET_KEYS) {
+    const pool = inSite.filter(t => FACET_KEYS.every(g => g === f || !state[g] || t[g] === state[g]));
+    const entries = counts(pool, f);
+    const sel = $(`[data-facet="${f}"]`);
+    fillSelect(sel, FACETS[f], entries);
+    sel.value = state[f];
+    sel.classList.toggle('active', Boolean(state[f]));
+    sel.hidden = entries.length === 0;
+    anyShown = anyShown || entries.length > 0;
+  }
+  $('.facets').hidden = !anyShown;
 }
 
 function syncControls() {
   $('#q').value = state.q;
   $('#tumour').value = state.tumour;
-  $('#subsite').value = state.subsite;
   document.querySelectorAll('.toggle').forEach(b => b.setAttribute('aria-pressed', state[b.dataset.key]));
 }
 
@@ -234,7 +266,7 @@ function update() {
 
   matches = trials.filter(t =>
     (!state.tumour || t.tumour === state.tumour) &&
-    (!state.subsite || t.subsite === state.subsite) &&
+    FACET_KEYS.every(f => !state[f] || t[f] === state[f]) &&
     (!state.flagged || t.flags) &&
     (!state.pmid || t.pm) &&
     tokens.every(k => t._hay.includes(k) || t._compact.includes(k)));
@@ -260,7 +292,7 @@ function readHash() {
   const p = new URLSearchParams(location.hash.slice(1));
   state.q = p.get('q') || '';
   state.tumour = p.get('site') || '';
-  state.subsite = p.get('sub') || '';
+  for (const f of FACET_KEYS) state[f] = p.get(f) || '';
   state.flagged = p.has('flagged');
   state.pmid = p.has('pmid');
 }
@@ -269,7 +301,7 @@ function writeHash() {
   const p = new URLSearchParams();
   if (state.q) p.set('q', state.q);
   if (state.tumour) p.set('site', state.tumour);
-  if (state.subsite) p.set('sub', state.subsite);
+  for (const f of FACET_KEYS) if (state[f]) p.set(f, state[f]);
   if (state.flagged) p.set('flagged', '');
   if (state.pmid) p.set('pmid', '');
   const h = p.toString();
@@ -279,7 +311,7 @@ function writeHash() {
 function applyHash() {
   readHash();
   buildTumours();
-  buildSubsites();
+  buildFacets();
   syncControls();
   update();
 }
@@ -294,8 +326,17 @@ $('#q').addEventListener('input', e => {
 });
 $('.search').addEventListener('submit', e => { e.preventDefault(); $('#q').blur(); });
 $('#clear').addEventListener('click', () => { state.q = ''; $('#q').value = ''; refresh(); $('#q').focus(); });
-$('#tumour').addEventListener('change', e => { state.tumour = e.target.value; buildSubsites(); refresh(); });
-$('#subsite').addEventListener('change', e => { state.subsite = e.target.value; refresh(); });
+$('#tumour').addEventListener('change', e => {
+  state.tumour = e.target.value;
+  for (const f of FACET_KEYS) state[f] = '';
+  buildFacets();
+  refresh();
+});
+document.querySelectorAll('[data-facet]').forEach(sel => sel.addEventListener('change', () => {
+  state[sel.dataset.facet] = sel.value;
+  buildFacets();
+  refresh();
+}));
 document.querySelectorAll('.toggle').forEach(b => b.addEventListener('click', () => {
   state[b.dataset.key] = !state[b.dataset.key];
   b.setAttribute('aria-pressed', state[b.dataset.key]);
