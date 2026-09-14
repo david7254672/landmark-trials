@@ -18,7 +18,9 @@ data/trials.json     generated from the CSV, loaded by the app; never edit by ha
 scripts/validate.py  checks the CSV (exit 1 on errors)
 scripts/build_json.py  CSV -> JSON (refuses to build if validation fails; --check for staleness)
 scripts/trials_schema.py  column list, required fields, allowed tumour/phase values
-.claude/skills/      project skills (none yet)
+scripts/rows.py      list/show/set/add rows by src, house-style warnings (use instead of hand-editing)
+.claude/skills/add-trial     draft and add a new entry from its primary publication
+.claude/skills/verify-site   batch-verify a site's entries: PMIDs, primary endpoints, corrections
 STATUS.md            working log
 ```
 
@@ -66,7 +68,7 @@ The sandbox can't read the Desktop folder, so preview locally by copying `index.
 | `rf` | Free-text citation - fallback only when there is no PMID |
 | `extra` | Additional teaching points that don't fit `comment` |
 | `link` | URL - fallback only when there is no PMID |
-| `src` | Provenance: workbook `Sheet!row` from the migration, `(split)` if a row was divided, or `new entry, <Mon YYYY>` for additions. Required, unique |
+| `src` | Provenance: workbook `Sheet!row` from the migration, `(split)` if a row was divided, or `new entry, <Mon YYYY>` for additions (add the trial name in brackets if that value is taken). Required, unique |
 | `flags` | Open review issues, `;`-separated. Blank = nothing outstanding |
 
 `setting`, `line` and `subgroup` came from section headings in the original 25-sheet
@@ -105,7 +107,8 @@ don't match are brought into line when their site is verified, not in bulk.
 
 ## Workflow for every data change
 
-1. Edit `data/trials.csv` (keep it UTF-8, 18 columns, standard CSV quoting)
+1. Edit `data/trials.csv` with `scripts/rows.py set` / `add` (keeps UTF-8, 18 columns,
+   standard CSV quoting, one-line diffs)
 2. `python3 scripts/validate.py` - must report 0 errors
 3. `python3 scripts/build_json.py` - regenerates `data/trials.json`
 4. Commit the CSV and JSON together with a **descriptive message** naming the entries
