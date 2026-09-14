@@ -30,10 +30,12 @@ Live at https://david7254672.github.io/landmark-trials/ (GitHub Pages, served fr
 the root of `main`). A push to `main` redeploys within a minute or two, so a committed
 data change reaches the phone once `data/trials.json` is rebuilt and pushed.
 
-The app renders every column except `src`, including `flags` (personal use - review
-flags are meant to be visible). Choosing a tumour site reveals dropdowns for `subsite`,
-`setting`, `line` and `subgroup` - only those the site uses, each listing only values
-that still match the other selections. Search matches all tokens across the text fields and
+The app opens on an Index grid of tumour sites. Each trial is a collapsed card (name,
+context, arms and the first `; `-separated segment of `results`); a tap reveals the other
+result segments, population, `pe`, `comment`, `extra`, `flags` and the PMID or `src`
+(personal use - review flags are meant to be visible). Within a site, one scrolling row of
+chips filters by `subsite`, `setting`, `line` and `subgroup` - only values that still match
+the other selections - plus Flagged and Has PMID. Search matches all tokens across the text fields and
 ignores punctuation ("keynote057" finds KEYNOTE-057). Filters and search are kept in the
 URL hash, so a search can be bookmarked. All data is inserted with `textContent`,
 never as HTML.

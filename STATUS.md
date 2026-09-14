@@ -6,11 +6,13 @@ Last updated: 13 September 2026
 
 - **903 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **28 entries carry a PMID** (was 9). The rest have no reference yet.
-- **64 entries flagged** for review (was 84).
-- **1 entry has no results text** (was 26) — STOP MDS, which could not be identified.
+- **66 entries carry a PMID** (was 28). The rest have no reference yet.
+- **6 entries flagged** for review (was 64).
+- **1 entry has no results text** — STOP MDS, which could not be identified.
 - 69 spelling corrections applied and approved. Five name-level fixes among them:
   ABCSG-16, ToGA, Joudi, fedratinib, "Periop chemo".
+- Phone app redesigned: collapsed cards that expand on tap, chip filters within a site,
+  and an Index grid of tumour sites.
 
 ## Verified so far (bladder)
 
@@ -27,22 +29,27 @@ Last updated: 13 September 2026
 | CREST | Identified and filled — sasanlimab + BCG I+M, EFS HR 0.68, 36-mo EFS 82.1 vs 74.8% (PMID 40450141) |
 | LAURA (lung) | PFS HR 0.16 confirmed; primary NEJM PMID pinned (38828946) |
 
-## Results pass — completed 13 September 2026
+## Flag pass — completed 13 September 2026
 
-All 26 blank-results entries worked through. 21 filled with a PMID, 4 filled with a
-status (not yet reported / terminated), 1 unresolved.
+64 flagged entries worked through against PubMed; 58 resolved, 6 remain open.
 
-**Filled with primary publication:** CREST, TEXT (via SOFT-TEXT combined), ATOMIC, COMMIT,
-REAL-2, FIRST-MIND, LAURA, FREEDOM-2, MOMENTUM, MASTER, LYNX, BELLINI, CANOVA, SEQTOR,
-OCLURANDOM, COMPETE, GARNET, Schram/zenocutuzumab, ROAR. Plus two column-shift repairs
-(STIM-1, SELECT-D) where the results text was sitting in the population field.
+**Formatting only (14):** SOFT, APHINITY, STOP 2G-TKI, DYNAMIC, KEYNOTE-177, CROSS,
+KEYNOTE-062, KEYNOTE-048, ELEVATE-TN, CLL13, FLAIR, ELEVATE-RR, PROUD-PV, FORTE — results
+cut to ≤180 characters, interpretation moved to comment, no figures changed.
 
-**Filled with status, no efficacy data:**
-- SWOG S1207 — negative (5-y IDFS 74.8 vs 73.9%, HR 0.93), SABCS 2022 abstract only, no
-  indexed publication
-- RENAISSANCE — not yet reported; design paper PMID 29282088
-- SURGIGAST — terminated for inadequate accrual; no efficacy data will come
-- PACIFICA — ongoing, completion listed Dec 2026
+**Filled from the primary publication, PMID and primary endpoint added:** POTOMAC, VESPER,
+ABACUS, PURE-01, IMvigor011, EV-302, SWOG S1207, YOUNG-PEARL, TRYPHAENA, NeoSphere, IDEA,
+STEAM, FOLFOXIRI-bev IPD meta-analysis, MyPathway, KRYSTAL-1 (CRC), FLAGS, CALGB 80403,
+TAX-325, ToGA, JACOB, COSMIC-312, PANOPTIMOX, EVEREST, RELEVANCE, Owen (acalabrutinib WM),
+TRANSCEND CLL 004, CA184-024, MAJIC-ET, CANDOR, MM-003, Baz, AML14, ICON8, GOG 218,
+PCTCG, PEACE-1, A031201, TheraP.
+
+**Status only:** CRITICS-II (protocol PMID 30200910, not yet reported); RENAISSANCE and
+PACIFICA rechecked — still no results in PubMed. Stage II adjuvant meta-analyses row given
+an intervention (adjuvant chemotherapy vs surgery alone).
+
+**Stale flags cleared:** ABC meta-analysis (population was already filled), COMPETE (the
+dotatate → edotreotide correction had already been applied).
 
 ## Open items
 
@@ -52,14 +59,22 @@ OCLURANDOM, COMPETE, GARNET, Schram/zenocutuzumab, ROAR. Plus two column-shift r
 - **REAL-2 setting mismatch** — the row sits under Neoadjuvant/adjuvant with intervention
   "Periop Chemo (ECX/EOX)", but REAL-2 studied first-line advanced esophagogastric disease.
   Left unchanged and flagged — may be deliberate shorthand for justifying X/O substitution.
-- **POTOMAC** — HR 0.68 unconfirmed. Primary publication is Lancet 2025;406:2221-34.
-- **IMvigor011** — numbers don't match the published description. Possibly IMvigor010
-  ctDNA-positive subgroup figures. Flagged, not corrected.
-- **Bladder, still unverified**: VESPER, ABACUS, PURE-01, POUT, Coleman, CheckMate 274,
-  NIAGARA, EV-303/KEYNOTE-905, EV-304/KEYNOTE-B15, Herr, Harland.
-- **Every other site** — no verification started.
+  Needs David's decision: move to Advanced/1st line, or keep and say why in comment.
+- **Colorectal "Pooled analysis" (chemo ± bev)** — HR 0.81, OS 19.8 vs 17.6 mo don't match
+  the Hurwitz 2013 seven-trial pooled analysis (PMID 23881988, HR 0.80) or the older-patient
+  pooled analyses. Source not identified.
+- **GASTRIC (epirubicin)** — the GASTRIC IPD meta-analysis in advanced disease (PMID
+  23352439) doesn't address epirubicin in its abstract. Source of the row unconfirmed.
+- **FLOT65+** — no publication found in PubMed; population can't be filled.
+- **TRANSCEND CLL 004** — primary result corrected to CR/CRi 18%; the previously recorded
+  ORR 45% and DOR 35 mo aren't in the abstract and need the full text.
+- **Bladder, still unverified**: POUT, Coleman, CheckMate 274, NIAGARA, EV-303/KEYNOTE-905,
+  EV-304/KEYNOTE-B15, Herr, Harland.
+- **Every other site** — only flagged entries checked so far; no site-wide verification.
 
-## Corrections applied during this pass
+## Corrections applied
+
+Results pass:
 
 - COMMIT intervention rewritten: the FOLFOX/bev-alone arm closed after 20 patients, so the
   reported comparison is atezolizumab alone vs FFX/bev/atezo, not "FOLFOX-bev +/- atezo"
@@ -71,8 +86,39 @@ OCLURANDOM, COMPETE, GARNET, Schram/zenocutuzumab, ROAR. Plus two column-shift r
 - ATOMIC: published NEJM figures (86.3/76.2) used in preference to the widely quoted
   ASCO 2025 presentation figures (86.4/76.6)
 
+Flag pass:
+
+- SWOG S1605: 3-mo CR 42% → 43%, and labelled as clinical CR, post hoc (PMID 37596191)
+- VESPER: "3-y PFS 64 vs 56%, HR 0.77" was attributed to the neoadjuvant arm but is the
+  overall result, which missed the primary endpoint; neoadjuvant subgroup is 66 vs 56%,
+  HR 0.70. 5-y OS added (PMIDs 35254888, 38142702)
+- IMvigor011: now published (NEJM 2025, PMID 41124204); the recorded figures were correct,
+  not IMvigor010 subgroup data
+- POTOMAC: HR 0.68 (0.50-0.93) confirmed (PMID 41115436)
+- SWOG S1207: now published (JCO 2024, PMID 38833643); IDFS HR 0.94, replacing the SABCS
+  abstract HR 0.93
+- YOUNG-PEARL: PFS 19 vs 14 mo, HR 0.74 → 20.1 vs 14.4 mo, HR 0.66 (PMID 31668850)
+- TRYPHAENA: "pCR 64 vs 55%" → 62/57/66% across the three arms; primary endpoint was
+  cardiac safety (PMID 23704196)
+- PANOPTIMOX: 6-mo PFS 47/43/34% and OS 10.1/11.2/7.3 mo; severe neurotoxicity was higher
+  with maintenance (20 vs 10%), noted against the "stop oxaliplatin" comment (PMID 34288696)
+- CANDOR: fatal AEs 10 → 9% (updated analysis, PMID 34871550)
+- PCTCG: "5-y mortality 70 vs 72%" → 5-y OS 25.4 vs 23.6%; the unsupported HR 0.92 removed
+  (PMID 10801170)
+- CALGB 80403: third arm (irinotecan-cisplatin + cetuximab) added (PMID 27382098)
+- CRITICS-II: arms are docetaxel/oxaliplatin/capecitabine-based, not FLOT (PMID 30200910)
+- STEAM: "improved RR" → ORR primary endpoint not met (PMID 30552157)
+- FOLFOXIRI-bev meta-analysis: "ORR 65 vs 54 mos" → % (PMID 32816630)
+- EV-302: OS 16 → 16.1 mo, PFS 6 → 6.3 mo (PMID 38446675)
+- KRYSTAL-1 CRC: combination PFS 7 → 6.9 mo (PMID 36546659)
+- TheraP: phase 3 → 2; OS NS stated as RMST 19.1 vs 19.6 mo (PMIDs 33581798, 38043558)
+- AML14: comparator is hydroxyurea ± ATRA, not "SOC" (PMID 17315155)
+- ABACUS, PURE-01: phase 1/2 → 2
+- Unnamed ipilimumab + dacarbazine row named CA184-024 (PMIDs 21639810, 25713437)
+
 ## Planned order
 
 1. ~~Finish the 26 entries with no results~~ — done
-2. Build the entry-generation and batch-verification skills
-3. Reference capture site by site, starting with GU and heme
+2. ~~Work through the flagged entries~~ — done, 6 open
+3. Build the entry-generation and batch-verification skills
+4. Reference capture site by site, starting with GU and heme
