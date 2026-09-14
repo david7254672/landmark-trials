@@ -6,8 +6,9 @@ Last updated: 13 September 2026
 
 - **900 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **87 entries carry a PMID** (was 28). The rest have no reference yet.
-- **No entries flagged** (was 64).
+- **95 entries carry a PMID** (was 28). The rest have no reference yet.
+- **1 entry flagged**: CheckMate 032 (bladder), see Open items. Was 64 before the flag pass.
+- **Bladder verified**: all 44 entries have a PMID and primary endpoint; 43 verified.
 - Every entry has results text. STOP MDS, which could not be identified, was removed.
 - 69 spelling corrections applied and approved. Five name-level fixes among them:
   ABCSG-16, ToGA, Joudi, fedratinib, "Periop chemo".
@@ -48,6 +49,14 @@ Last updated: 13 September 2026
 | NORSE | ORR corrected from final results (PMID 41538748) |
 | EV-103 cohort A | Cohort and phase identified; 5-y update in comment (PMIDs 36041086, 42155320) |
 | RC48-C016 | Accurate; now published in NEJM (PMID 41124210) |
+| KEYNOTE-045 | Accurate; 12-mo OS, ORR and DOR checked in full text; 5-y update (PMIDs 28212060, 36494006) |
+| IMvigor211 | Accurate; primary endpoint not met stated (PMID 29268948) |
+| CheckMate 032 | ORR confirmed; PFS/OS medians **flagged**, not in abstract, no full text (PMID 31100038) |
+| BLC2001 | Accurate; name corrected from "BCL2001"; long-term follow-up (PMIDs 31340094, 35030333) |
+| THOR | Accurate; ORR from plain-language summary of the NEJM paper (PMID 37870920) |
+| EV-201 | Accurate; PFS/OS checked in full text; cohort 2 added (PMIDs 31356140, 33991512) |
+| EV-301 | Accurate; ORR checked in full text; 24-mo update (PMIDs 33577729, 37678672) |
+| TROPiCS-04 | Accurate; primary endpoint not met and grade 5 AEs stated (PMID 39934055) |
 
 ## Flag pass — completed 13 September 2026
 
@@ -75,8 +84,9 @@ dotatate → edotreotide correction had already been applied).
 
 - **FLOT65+** — "OS not different" kept from the original row but isn't stated in the
   abstract (PMID 23063354); check against the full text when gastric is verified.
-- **Bladder, still unverified (8)**: KEYNOTE-045, IMvigor211, CheckMate 032, BLC2001, THOR,
-  EV-201, EV-301, TROPiCS-04 (batch 3).
+- **CheckMate 032 (bladder)** — flagged: the recorded median PFS/OS (OS 15 vs 9.9/7.4 mo)
+  is not in the JCO 2019 abstract (PMID 31100038) and the PMC full text is empty; check the
+  full text, including which arm each figure belongs to.
   The earlier list of 8 left out the advanced-disease entries.
 - **Bladder placement question for David**: POUT and Coleman (upper tract UC) sit under
   subsite MIBC.
@@ -166,6 +176,15 @@ Bladder verification, batch 2:
   in comment, labelled exploratory and from secondary reports (as for KEYNOTE-905)
 - Wording only, no figures changed: KEYNOTE-057 "12 month" → "12-mo"; ABC meta-analysis
   "5-year" → "5-y"
+
+Bladder verification, batch 3:
+
+- BLC2001: trial name "BCL2001" → "BLC2001" (PMID 31340094); the comment "erdafitinib vs
+  IO being evaluated in phase 3" is outdated and was replaced with the THOR result
+- CheckMate 032: ORR 38 vs 26/27% confirmed (38.0 vs 26.9 vs 25.6%); PFS/OS medians flagged,
+  not removed (PMID 31100038)
+- THOR: ORR 45.6 vs 11.5% is not in the abstract; confirmed from a plain-language summary
+  of the NEJM paper (PMC12218492) rather than the paper itself
 - van der Maase: OS "15 months" → 14.0 vs 15.2 mo (long-term update); "RR 46/49%" →
   ORR 49 (GC) vs 46% (MVAC); trial name "van der Masse" → "van der Maase" (PMIDs 11001674,
   16034041)
@@ -177,6 +196,6 @@ Bladder verification, batch 2:
 3. ~~Build the entry-generation and batch-verification skills~~ — done: `add-trial`,
    `verify-site`, and `scripts/rows.py` for scripted edits (13 September 2026)
 4. Reference capture site by site with `verify-site`, starting with GU and heme
-   (bladder in progress: batches 1-2 done 13 September 2026, 8 left). `rows.py style` currently reports 259 house-style
+   (bladder done 13 September 2026 apart from the CheckMate 032 flag; next GU site, then heme). `rows.py style` currently reports 259 house-style
    warnings (mostly months/years/versus spelled out, 27 cells with line breaks, 4
    `results` over 180). Fix these per site during verification, not in bulk
