@@ -769,15 +769,15 @@
     "phase": "Phase 1/2",
     "population": "Platinum-pretreated metastatic UC; n=274 across 3 cohorts",
     "intervention": "Nivo 3 mg/kg vs nivo 3 + ipi 1 vs nivo 1 + ipi 3 (cohorts)",
-    "results": "ORR 38.0% nivo1/ipi3 vs 26.9% nivo3/ipi1 vs 25.6% nivo3; median DOR >22 mo in all arms; grade 3-4 TRAEs 39.1 vs 30.8 vs 26.9%",
-    "comment": "Previously recorded: trend to better PFS/OS with nivo1/ipi3 (OS 15 vs 10/7 mo)",
+    "results": "ORR 38.0% nivo1/ipi3 vs 26.9% nivo3/ipi1 vs 25.6% nivo3; median OS 15 vs 7 vs 10 mo; grade 3-4 TRAEs 39.1 vs 30.8 vs 26.9%",
+    "comment": "Cohorts not formally compared; nivo1/ipi3 cohort had shorter follow-up (minimum 8 mo vs 38-39 mo). Median DOR >22 mo in all arms. OS from Fig 4 of the full text",
     "pe": "ORR 38.0% (nivo1/ipi3), 26.9% (nivo3/ipi1), 25.6% (nivo3)",
     "pm": "31100038",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "Bladder Cancer!51",
-    "flags": "Median PFS/OS (OS 15 vs 10/7 mo) not in abstract and PMC full text empty; check JCO 2019 full text, including which arm each figure belongs to"
+    "flags": ""
   },
   {
     "tumour": "Bladder Cancer",
