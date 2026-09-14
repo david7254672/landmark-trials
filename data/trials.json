@@ -1189,15 +1189,15 @@
     "phase": "",
     "population": "Premen",
     "intervention": "Tam vs Tam+OFS vs Exe+OFS",
-    "results": "In those with prev chemo, 12 year DFS tam vs tam/OFS 72 vs 76%, HR 0.82 for OFS arms; DFS exe+OFS 79%; tam+OFS improved 12 year OS 87 vs 89% (HR 0.78); exe+OFS showed survival benefit with longer follow up; <35 had most benefit from OFS; higher benefit in those with previous chemo",
-    "comment": "",
+    "results": "Prior chemo: 12-y DFS tam vs tam+OFS 72 vs 76%, HR 0.82 for OFS arms; exe+OFS 79%; 12-y OS tam vs tam+OFS 87 vs 89%, HR 0.78",
+    "comment": "Exe+OFS showed survival benefit with longer follow-up; women <35 had most benefit from OFS; higher benefit in those with previous chemo",
     "pe": "",
     "pm": "",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "Breast Cancer!20",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "Breast Cancer",
@@ -2229,7 +2229,7 @@
     "phase": "",
     "population": "Node+ or high risk node neg",
     "intervention": "Chemo-tras +/-pert",
-    "results": "3 year iDFS 94.1 vs 93.2%, HR 0.81; node pos 92 vs 90%, HR 0.77; no difference in node neg; 6 year follow up shows clear iDFS benefit in node + (HR 0.76, iDFS 88 vs 83%) but not node -.",
+    "results": "3-y iDFS 94.1 vs 93.2%, HR 0.81; node+ 92 vs 90%, HR 0.77; no difference in node-neg; 6-y node+ iDFS 88 vs 83%, HR 0.76, still no benefit node-neg",
     "comment": "",
     "pe": "",
     "pm": "",
@@ -2237,7 +2237,7 @@
     "extra": "",
     "link": "",
     "src": "Breast Cancer!82",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "Breast Cancer",
@@ -3309,15 +3309,15 @@
     "phase": "",
     "population": "DAS or NIL, ≥3 years TKI with MR4.5 for 2 years (undetectable)",
     "intervention": "Stopping study",
-    "results": "Molecular relapse (loss of MMR) in 43% with min 12 month follow up (median 47 mos); loss MR4.5 3 months after stopping TKI predicted later loss of MMR; median time to relapse 4 mos (1-38); no progression",
-    "comment": "",
+    "results": "Molecular relapse (loss of MMR) 43% at median 47 mo follow-up (min 12 mo); median time to relapse 4 mo (1-38); no progression",
+    "comment": "Loss of MR4.5 3 months after stopping TKI predicted later loss of MMR",
     "pe": "",
     "pm": "",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "CML!18",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "CML",
@@ -3669,7 +3669,7 @@
     "phase": "Phase 3",
     "population": "adjuvant stage II CRC",
     "intervention": "ctDNA or standard guidance adjuvant therapy",
-    "results": "2 year RFS non-inferior with ctDNA guidance (94 vs 92%); less chemo used 15 vs 28%, RR 1.82); \n\n3 year RFS in ctDNA pos treated with chemo was 86% vs 93% in ctDNA neg patients without chemo",
+    "results": "2-y RFS non-inferior with ctDNA guidance 94 vs 92%; less chemo 15 vs 28% (RR 1.82); 3-y RFS ctDNA+ treated with chemo 86% vs ctDNA-neg untreated 93%",
     "comment": "",
     "pe": "",
     "pm": "",
@@ -3677,7 +3677,7 @@
     "extra": "",
     "link": "",
     "src": "Colorectal Cancer!20",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "Colorectal Cancer",
@@ -4029,15 +4029,15 @@
     "phase": "Phase 3",
     "population": "1st line dMMR",
     "intervention": "Pembro vs chemo",
-    "results": "PFS 16.5 vs 8.2 months; higher response rate with pembro ( 44 vs 33%) but also more PD as best response (30 vs 12%); 36 month OS 61 vs 50%, HR 0.74 (technically not significant); in responding patients, 24 month DOR OS immature",
-    "comment": "OS curves separate well but did not meet criteria for statistical significance; the study did have crossover at 60%",
+    "results": "PFS 16.5 vs 8.2 mo; ORR 44 vs 33% but more PD as best response 30 vs 12%; 36-mo OS 61 vs 50%, HR 0.74 (not statistically significant)",
+    "comment": "OS curves separate well but did not meet criteria for statistical significance; the study did have crossover at 60%; in responding patients, 24-mo DOR - OS immature",
     "pe": "",
     "pm": "",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "Colorectal Cancer!42",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "Colorectal Cancer",
@@ -5329,15 +5329,15 @@
     "phase": "",
     "population": "Esophageal/GEJ potentially resectable",
     "intervention": "Surgery +/- preoperative chemo-RT (carbo/weekly taxol)",
-    "results": "5 year OS 47 vs 33%, HR 0.67; 10 year OS 38vs 25%, HR 0.70; rates of distant relapse not different between arms; R0 rate 92 v 65%; path CR 29% in chemo-RT arm (23% adeno, 39% squamous)",
-    "comment": "",
+    "results": "5-y OS 47 vs 33%, HR 0.67; 10-y OS 38 vs 25%, HR 0.70; R0 92 vs 65%; path CR 29% with chemo-RT (23% adeno, 39% squamous)",
+    "comment": "Rates of distant relapse not different between arms",
     "pe": "",
     "pm": "",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "Gastric Cancer!12",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "Gastric Cancer",
@@ -5749,15 +5749,15 @@
     "phase": "",
     "population": "Gastric/GEJ CPS ≥1",
     "intervention": "Pembro vs cis-FU vs pembro+cis-5FU",
-    "results": "Pembro non-inferior to chemo for OS and less toxicity; improved OS in CPS≥10 subgroup with pembro (17.4 vs 10.8 mos HR 0.69); lower RR and PFS so not routinely recommended; pembro+chemo not better than chemo alone including in CPS≥10",
-    "comment": "",
+    "results": "Pembro non-inferior to chemo for OS, less toxicity; CPS≥10 OS 17.4 vs 10.8 mo, HR 0.69; pembro+chemo not better than chemo alone, including CPS≥10",
+    "comment": "Lower RR and PFS with pembro monotherapy, so not routinely recommended",
     "pe": "",
     "pm": "",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "Gastric Cancer!37",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "Gastric Cancer",
@@ -6389,7 +6389,7 @@
     "phase": "Phase 3",
     "population": "1st line; (14 primary hypotheses); chemo=platinum-5FU",
     "intervention": "Pembro vs pembro-chemo vs cetux-chemo",
-    "results": "CPS ≥20: OS pembro vs cetux-chemo 15 vs 11 mos (HR 0.6)\n\nCPS ≥1: OS pembro vs cetux-chemo 12 vs 10 mos, HR 0.78\n\nOS pembro-chemo vs cetux-chemo 13vs 11mos, HR 0.77 in overall and PDL1 positive populations",
+    "results": "CPS≥20 OS pembro vs cetux-chemo 15 vs 11 mo, HR 0.6; CPS≥1 12 vs 10 mo, HR 0.78; pembro-chemo vs cetux-chemo 13 vs 11 mo, HR 0.77 (overall and PD-L1+)",
     "comment": "A bit less clear if pembro monotherapy benefit in CPS≥1 driven by the ≥20 group",
     "pe": "",
     "pm": "",
@@ -6397,7 +6397,7 @@
     "extra": "",
     "link": "",
     "src": "Head and Neck!4",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "Head and Neck",
@@ -10309,15 +10309,15 @@
     "phase": "",
     "population": "1st line CLL, older/frail",
     "intervention": "Acala-obi vs acala vs chlor-obi",
-    "results": "2 year PFS 93 vs 87 vs 47%; 2 year OS 95/95 vs 92% NS - immature; 4 year PFS for A+O and A NR vs 28 mos for chl-obi; 48 mo PFS 87% A+O vs 78% A vs 25% )Chl-obi; OS NR in any arm (but trend in A+O vs Chl-Obi); more adverse events with obi so despite better PFS usually not used in combination",
-    "comment": "",
+    "results": "48-mo PFS 87% A+O vs 78% A vs 25% chl-obi; 2-y OS 95/95 vs 92% (NS, immature); OS NR in any arm",
+    "comment": "2-y PFS 93 vs 87 vs 47%; 4-y median PFS NR for A+O and A vs 28 mo for chl-obi; trend to OS benefit A+O vs chl-obi; more adverse events with obi so despite better PFS usually not used in combination",
     "pe": "",
     "pm": "",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "CLL!11",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "CLL",
@@ -10369,15 +10369,15 @@
     "phase": "",
     "population": "1st line CLL, 17p/TP53 negative; fit patients with CIRS<6",
     "intervention": "FCR/BR vs VR vs VO vs VO-Ibr",
-    "results": "15 mo MRD neg: 87% VOm 92% VIO, 52% chemo;\nVO HR 0.42 and VIO HR 0.32; VR NS\n3 year PFS 91% VIO and 88% VO and 76% chemo (HR 0.32); more infection with chemo and VIO than VO;\nOS similar at 3 years in all arms",
-    "comment": "VO with or without ibrutinib was superior to chemo in first line fit patients",
+    "results": "15-mo MRD neg 87% VO, 92% VIO, 52% chemo; VO HR 0.42, VIO HR 0.32, VR NS; 3-y PFS 91% VIO, 88% VO, 76% chemo; OS similar at 3 y",
+    "comment": "More infection with chemo and VIO than VO; VO with or without ibrutinib was superior to chemo in first line fit patients",
     "pe": "",
     "pm": "",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "CLL!14",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "CLL",
@@ -10469,15 +10469,15 @@
     "phase": "Phase 3",
     "population": "1st line CLL; duration of IBR-ven driven by MRD",
     "intervention": "IBR vs IBR-ven vs FCR",
-    "results": "IBR-ven vs FCR: PFS HR 0.13 at 44 mos (12 vs 75 events); 58% of IBR-ven had stopped at 3 years due to MRD neg; deaths at 3 years in 9 vs 25 pts (HR 0.31); similar infections, more cardiac AEs with Ibr-ven (11 vs 0.4%)",
-    "comment": "",
+    "results": "IBR-ven vs FCR: PFS HR 0.13 at 44 mo (12 vs 75 events); deaths at 3 y 9 vs 25 (HR 0.31); similar infections; cardiac AEs 11 vs 0.4%",
+    "comment": "58% of IBR-ven had stopped at 3 years due to MRD negativity",
     "pe": "",
     "pm": "",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "CLL!19",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "CLL",
@@ -10609,15 +10609,15 @@
     "phase": "Phase 3",
     "population": "High risk CLL (del 17p or 11q)",
     "intervention": "Acala vs Ibr",
-    "results": "PFS 38.4 mos both arms (noninferior); OS, infection, Richters similar; Less HTN (9 vs 23%), arthralgia and diarrhea but more H/A and cough; less discontinuation of acala (15 vs 23%); less cardiotoxiciy",
-    "comment": "",
+    "results": "PFS 38.4 mo both arms (non-inferior); OS, infection, Richter similar; less HTN 9 vs 23%; less discontinuation 15 vs 23%",
+    "comment": "Acalabrutinib: less arthralgia, diarrhea and cardiotoxicity but more headache and cough",
     "pe": "",
     "pm": "",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "CLL!29",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "CLL",
@@ -13529,15 +13529,15 @@
     "phase": "",
     "population": "< 3 years prev HU or no prev cytoreduction; CHR and normalization of spleen size was primary endpoint",
     "intervention": "Ropeginterferon vs HU",
-    "results": "RR 21 vs 28% in PROUD-PV (not noninferior) but improved rates in the continuation study; progression seems to be lower with ropeg (0.2% vs 1%/patient year - ASH2020); higher long term molecular response",
-    "comment": "",
+    "results": "RR 21 vs 28% in PROUD-PV (not non-inferior) but improved rates in the continuation study; higher long-term molecular response",
+    "comment": "Progression seems to be lower with ropeg (0.2% vs 1%/patient-year - ASH 2020)",
     "pe": "",
     "pm": "",
     "rf": "",
     "extra": "",
     "link": "",
     "src": "MPN!26",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "MPN",
@@ -13928,8 +13928,8 @@
     "trial": "FORTE",
     "phase": "Phase 3",
     "population": "1st line pre-ASCT phase 3",
-    "intervention": "KRD4->ASCT->KRD4 vs KRD12 vs KCD4->ASCT->KRD4\n\nSecond randomization maintenance KR vs R",
-    "results": "VGPR 70 vs 53% for KRD vs KCD, OR 2.14; 4 year PFS 69 vs 56 vs 51% (sig benefit for KRD over others, HR 0.61 and 0.54); 4 year OS NS (76-86%);\n\nMaintenance: 3 year PFS 75 vs 65%, HR 0.64",
+    "intervention": "KRD4->ASCT->KRD4 vs KRD12 vs KCD4->ASCT->KRD4; second randomisation maintenance KR vs R",
+    "results": "VGPR 70 vs 53% KRD vs KCD, OR 2.14; 4-y PFS 69 vs 56 vs 51% (KRD-ASCT better, HR 0.61 and 0.54); 4-y OS NS (76-86%); maintenance 3-y PFS 75 vs 65%, HR 0.64",
     "comment": "",
     "pe": "",
     "pm": "",
@@ -13937,7 +13937,7 @@
     "extra": "",
     "link": "",
     "src": "Myeloma!19",
-    "flags": "Results cell overlong (>180 ch) - split interpretation into Comment"
+    "flags": ""
   },
   {
     "tumour": "Myeloma",
