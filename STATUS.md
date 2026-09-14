@@ -6,7 +6,7 @@ Last updated: 13 September 2026
 
 - **900 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **67 entries carry a PMID** (was 28). The rest have no reference yet.
+- **77 entries carry a PMID** (was 28). The rest have no reference yet.
 - **No entries flagged** (was 64).
 - Every entry has results text. STOP MDS, which could not be identified, was removed.
 - 69 spelling corrections applied and approved. Five name-level fixes among them:
@@ -28,6 +28,16 @@ Last updated: 13 September 2026
 | AMBASSADOR | Accurate; coprimary endpoint design noted (PMID 39282902) |
 | CREST | Identified and filled — sasanlimab + BCG I+M, EFS HR 0.68, 36-mo EFS 82.1 vs 74.8% (PMID 40450141) |
 | LAURA (lung) | PFS HR 0.16 confirmed; primary NEJM PMID pinned (38828946) |
+| Herr et al | Accurate; n=86, crossover noted (PMID 7751885) |
+| Harland et al | Comparator corrected; HRs added (PMID 17631326) |
+| BC2001 | Primary endpoint met was missing; 10-y update in comment (PMIDs 22512481, 35577644) |
+| POUT | Accurate; final 5-y OS added (PMIDs 32145825, 38350047) |
+| Coleman et al | pCR corrected 11% → 19% (PMID 36603175) |
+| CheckMate 274 | Updated to 5-y results, OS NS (PMIDs 34077643, 41110694) |
+| NIAGARA | Accurate; exact figures and HRs (PMID 39282910) |
+| KEYNOTE-905/EV-303 | Typos fixed, published figures used (PMID 41707170) |
+| KEYNOTE-B15/EV-304 | Accurate; now published in NEJM (PMID 42485627) |
+| van der Maase et al | Updated to long-term figures; name spelling fixed (PMIDs 11001674, 16034041) |
 
 ## Flag pass — completed 13 September 2026
 
@@ -55,8 +65,12 @@ dotatate → edotreotide correction had already been applied).
 
 - **FLOT65+** — "OS not different" kept from the original row but isn't stated in the
   abstract (PMID 23063354); check against the full text when gastric is verified.
-- **Bladder, still unverified**: POUT, Coleman, CheckMate 274, NIAGARA, EV-303/KEYNOTE-905,
-  EV-304/KEYNOTE-B15, Herr, Harland.
+- **Bladder, still unverified (18)**: KEYNOTE-052, IMvigor210, IMvigor130, KEYNOTE-361,
+  JAVELIN Bladder 100, CheckMate 901, DANUBE, NORSE, EV-103/KN-869, RC48-C016, KEYNOTE-045,
+  IMvigor211, CheckMate 032, BLC2001, THOR, EV-201, EV-301, TROPiCS-04 (batch 2 = first 10).
+  The earlier list of 8 left out the advanced-disease entries.
+- **Bladder placement question for David**: POUT and Coleman (upper tract UC) sit under
+  subsite MIBC.
 - **Every other site** — only flagged entries checked so far; no site-wide verification.
 
 ## Corrections applied
@@ -113,6 +127,23 @@ Flag pass:
 - FLOT65+: arms corrected FOLFOX vs FLOT → FLO vs FLOT; filled from the primary paper
   (PMID 23063354), found by web search after PubMed keyword searches missed it
 
+Bladder verification, batch 1:
+
+- Harland: "XRT vs observation" → RT vs observation (unifocal, no CIS) or vs intravesical
+  therapy (multifocal and/or CIS) (PMID 17631326)
+- BC2001: "numerical nonsignificant benefits" → primary endpoint met, 2-y locoregional DFS
+  67 vs 54%, HR 0.68; OS NS (PMID 22512481)
+- POUT: "3 year EFS" → DFS (the HR 0.45 is DFS); 5-y OS 66 vs 57% added (PMID 38350047)
+- Coleman: pCR 11% → 19% (11 was the patient count) (PMID 36603175)
+- CheckMate 274: PD-L1 ≥1% "NR vs 10.5 mo, HR 0.5" (unsourced) → 5-y 55.5 vs 8.4 mo, HR
+  0.58; OS 75.0 vs 50.1 mo, HR 0.83, NS (PMID 41110694)
+- KEYNOTE-905/EV-303: EFS HR "0.4" → 0.40, pCR 57 vs 9% → 57.1 vs 8.6%; unconfirmed
+  medians ("16 mo", "42 mo") replaced by published 2-y rates; population includes
+  cisplatin decliners (PMID 41707170)
+- van der Maase: OS "15 months" → 14.0 vs 15.2 mo (long-term update); "RR 46/49%" →
+  ORR 49 (GC) vs 46% (MVAC); trial name "van der Masse" → "van der Maase" (PMIDs 11001674,
+  16034041)
+
 ## Planned order
 
 1. ~~Finish the 26 entries with no results~~ — done
@@ -120,6 +151,6 @@ Flag pass:
 3. ~~Build the entry-generation and batch-verification skills~~ — done: `add-trial`,
    `verify-site`, and `scripts/rows.py` for scripted edits (13 September 2026)
 4. Reference capture site by site with `verify-site`, starting with GU and heme
-   (bladder first: 8 left). `rows.py style` currently reports 259 house-style
+   (bladder in progress: batch 1 done 13 September 2026, 18 left). `rows.py style` currently reports 259 house-style
    warnings (mostly months/years/versus spelled out, 27 cells with line breaks, 4
    `results` over 180). Fix these per site during verification, not in bulk
