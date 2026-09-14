@@ -4,10 +4,10 @@ Last updated: 13 September 2026
 
 ## Where things stand
 
-- **902 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **900 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **66 entries carry a PMID** (was 28). The rest have no reference yet.
-- **4 entries flagged** for review (was 64).
+- **67 entries carry a PMID** (was 28). The rest have no reference yet.
+- **No entries flagged** (was 64).
 - Every entry has results text. STOP MDS, which could not be identified, was removed.
 - 69 spelling corrections applied and approved. Five name-level fixes among them:
   ABCSG-16, ToGA, Joudi, fedratinib, "Periop chemo".
@@ -53,14 +53,8 @@ dotatate → edotreotide correction had already been applied).
 
 ## Open items
 
-- **Colorectal "Pooled analysis" (chemo ± bev)** — HR 0.81, OS 19.8 vs 17.6 mo don't match
-  the Hurwitz 2013 seven-trial pooled analysis (PMID 23881988, HR 0.80) or the older-patient
-  pooled analyses. Source not identified.
-- **GASTRIC (epirubicin)** — the GASTRIC IPD meta-analysis in advanced disease (PMID
-  23352439) doesn't address epirubicin in its abstract. Source of the row unconfirmed.
-- **FLOT65+** — no publication found in PubMed; population can't be filled.
-- **TRANSCEND CLL 004** — primary result corrected to CR/CRi 18%; the previously recorded
-  ORR 45% and DOR 35 mo aren't in the abstract and need the full text.
+- **FLOT65+** — "OS not different" kept from the original row but isn't stated in the
+  abstract (PMID 23063354); check against the full text when gastric is verified.
 - **Bladder, still unverified**: POUT, Coleman, CheckMate 274, NIAGARA, EV-303/KEYNOTE-905,
   EV-304/KEYNOTE-B15, Herr, Harland.
 - **Every other site** — only flagged entries checked so far; no site-wide verification.
@@ -111,6 +105,13 @@ Flag pass:
 - REAL-2 moved from Neoadjuvant/adjuvant to Advanced / 1st line and its intervention
   rewritten as the four 2x2 arms (PMID 18172173) — David's decision
 - STOP MDS removed: unidentifiable, no results — David's decision
+- Colorectal "Pooled analysis" (chemo ± bev) removed: figures matched no identifiable
+  source — David's decision
+- GASTRIC (epirubicin) removed: not supported by the GASTRIC IPD meta-analysis (PMID
+  23352439) — David's decision
+- TRANSCEND CLL 004: flag cleared, results kept as written — David's decision
+- FLOT65+: arms corrected FOLFOX vs FLOT → FLO vs FLOT; filled from the primary paper
+  (PMID 23063354), found by web search after PubMed keyword searches missed it
 
 ## Planned order
 
