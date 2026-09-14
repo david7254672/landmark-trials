@@ -117,5 +117,9 @@ Flag pass:
 
 1. ~~Finish the 26 entries with no results~~ — done
 2. ~~Work through the flagged entries~~ — done, 6 open
-3. Build the entry-generation and batch-verification skills
-4. Reference capture site by site, starting with GU and heme
+3. ~~Build the entry-generation and batch-verification skills~~ — done: `add-trial`,
+   `verify-site`, and `scripts/rows.py` for scripted edits (13 September 2026)
+4. Reference capture site by site with `verify-site`, starting with GU and heme
+   (bladder first: 8 left). `rows.py style` currently reports 259 house-style
+   warnings (mostly months/years/versus spelled out, 27 cells with line breaks, 4
+   `results` over 180). Fix these per site during verification, not in bulk
