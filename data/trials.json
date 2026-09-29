@@ -10780,6 +10780,26 @@
     "flags": ""
   },
   {
+    "tumour": "CLL",
+    "subsite": "",
+    "setting": "Relapsed",
+    "line": "",
+    "subgroup": "",
+    "trial": "BRUIN CLL-321",
+    "phase": "Phase 3",
+    "population": "R/R CLL/SLL after ≥1 prior covalent BTKi; n=238",
+    "intervention": "Pirtobrutinib vs investigator's choice (idelalisib+rituximab or bendamustine+rituximab)",
+    "results": "PFS 14 vs 9 mo, HR 0.54 (0.39-0.75), p<0.001; TTNT 24 vs 11 mo, HR 0.37 (0.25-0.52); grade ≥3 AEs 58 vs 73%",
+    "comment": "OS not improved (HR 1.09, NS) with substantial crossover to pirtobrutinib",
+    "pe": "PFS (IRC) HR 0.54 (95% CI, 0.39-0.75), p=0.0002; median PFS 14.0 vs 8.7 mo",
+    "pm": "40479620",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (BRUIN CLL-321)",
+    "flags": ""
+  },
+  {
     "tumour": "Lung Cancer",
     "subsite": "",
     "setting": "Adjuvant",
