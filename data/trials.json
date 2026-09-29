@@ -9140,6 +9140,26 @@
     "flags": ""
   },
   {
+    "tumour": "Lymphoma - DLBCL",
+    "subsite": "",
+    "setting": "Relapsed/refractory",
+    "line": "",
+    "subgroup": "",
+    "trial": "Schuster et al",
+    "phase": "Phase 2",
+    "population": "R/R DLBCL (n=24) or follicular lymphoma (n=14) after chemoimmunotherapy; n=38 treated",
+    "intervention": "CTL019 (tisagenlecleucel)",
+    "results": "10-y lymphoma-free survival 32% (DLBCL) vs 47% (FL); 10-y OS 17% vs 50%; no relapse beyond 5.4 y; 2nd cancer 21%; non-relapse mortality 18%",
+    "comment": "10-y update: decade-long remissions in ~1/3 DLBCL and ~1/2 FL responders; CAR-transgene persistence associated with durable response (PMID 42341302)",
+    "pe": "ORR 64% (95% CI, 44-81); CR 43% (DLBCL) and 71% (FL)",
+    "pm": "29226764",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (Schuster CAR-T)",
+    "flags": ""
+  },
+  {
     "tumour": "Indolent Lymphoma",
     "subsite": "Follicular lymphoma",
     "setting": "",
