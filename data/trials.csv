@@ -478,6 +478,7 @@ Lymphoma - DLBCL,,Relapsed/refractory,,,L-MIND,Phase 2,"R/R DLBCL, phase 2 singl
 Lymphoma - DLBCL,,Relapsed/refractory,,,LOTIS-2,,R/R DLBCL,Loncastuximab tesirine,"ORR 48%, CR 24%, PFS 5 mos, IS 10 mos",,,,,,,Lymphoma - DLBCL!33,
 Lymphoma - DLBCL,,Relapsed/refractory,,,SADAL,,Heavily pretreated DLBCL,Selinexor,"OR 28%, CR 12%, DOR 9 mos but 23 mos in CR patients;",FDA approved for R/R DLBCL after ≥2 lines of therapy,,,,,,Lymphoma - DLBCL!34,
 Lymphoma - DLBCL,,Relapsed/refractory,,,Advani,,Phase 1b R/R NHL including DLBCL,Hu5F9-G4 (blocks CD47 macrophage immune checkpoint),"OR 50%, CR 36% (lower in DLBCL than FL)",,,,,,,Lymphoma - DLBCL!35,
+Lymphoma - DLBCL,,Relapsed/refractory,Transplant-ineligible,,POLARGO,Phase 3,"R/R DLBCL (NOS or transformed indolent), transplant-ineligible; n=255",Pola-R-GemOx vs R-GemOx,"OS 20 vs 13 mo, HR 0.60 (0.43-0.83), p=0.0017; peripheral neuropathy 57 vs 29%, mostly grade 1; fatal AEs 12 vs 4%",Fatal AEs mostly infection-related (including COVID-19),"OS HR 0.60 (95% CI, 0.43-0.83), p=0.0017; median OS 19.5 vs 12.5 mo",42407012,,,,"new entry, Sep 2026 (POLARGO)",
 Indolent Lymphoma,Follicular lymphoma,,1st line,,W&W,Phase 3,asymptomatic low burden FL,"Rituximab induction, Rituximab maintenance, Watchful waiting","TTNT: 2.7 years (WW), 9.9 years RI, NR for RM
 OS NS (76/80/82%); transformation NS",,,,,,,Indolent Lymphoma!5,
 Indolent Lymphoma,Follicular lymphoma,,1st line,,StiL,,"II-IV FL, iNHL, MCL",BR vs RCHOP,"PFS 69.5 vs 31.2 mos, HR 0.58; less toxic; OS NS at 10 years;",,,,,,,Indolent Lymphoma!6,

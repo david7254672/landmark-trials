@@ -9120,6 +9120,26 @@
     "flags": ""
   },
   {
+    "tumour": "Lymphoma - DLBCL",
+    "subsite": "",
+    "setting": "Relapsed/refractory",
+    "line": "Transplant-ineligible",
+    "subgroup": "",
+    "trial": "POLARGO",
+    "phase": "Phase 3",
+    "population": "R/R DLBCL (NOS or transformed indolent), transplant-ineligible; n=255",
+    "intervention": "Pola-R-GemOx vs R-GemOx",
+    "results": "OS 20 vs 13 mo, HR 0.60 (0.43-0.83), p=0.0017; peripheral neuropathy 57 vs 29%, mostly grade 1; fatal AEs 12 vs 4%",
+    "comment": "Fatal AEs mostly infection-related (including COVID-19)",
+    "pe": "OS HR 0.60 (95% CI, 0.43-0.83), p=0.0017; median OS 19.5 vs 12.5 mo",
+    "pm": "42407012",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (POLARGO)",
+    "flags": ""
+  },
+  {
     "tumour": "Indolent Lymphoma",
     "subsite": "Follicular lymphoma",
     "setting": "",
