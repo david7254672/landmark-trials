@@ -1,12 +1,12 @@
 # Landmark Trials — status
 
-Last updated: 13 September 2026
+Last updated: 28 September 2026
 
 ## Where things stand
 
-- **900 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **906 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **119 entries carry a PMID** (was 28). The rest have no reference yet.
+- **125 entries carry a PMID** (was 28). The rest have no reference yet.
 - **2 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney; see
   Open items. There were 64 before the flag pass.
 - **Bladder verified**: all 44 entries.
@@ -90,6 +90,25 @@ Last updated: 13 September 2026
 | AXIS | PFS corrected; OS not significant (PMIDs 22056247, 23598172) |
 | LITESPARK-005 | Accurate; the PFS HR that had no source was replaced by the 18-mo PFS rate (PMID 39167807) |
 | LITESPARK-011 | Grade 3+ AEs corrected; OS not significant (PMID 42586114) |
+
+## New entries added — 28 September 2026
+
+Six trials added from primary publications, one commit each, none flagged:
+
+| Entry | Site | Outcome |
+|---|---|---|
+| BRUIN CLL-321 | CLL | Pirtobrutinib vs IdelaR/BR post-cBTKi; PFS HR 0.54, OS NS (PMID 40479620) |
+| POLARGO | Lymphoma - DLBCL | Pola-R-GemOx vs R-GemOx, transplant-ineligible R/R DLBCL; OS HR 0.60 (PMID 42407012) |
+| BGB-11417-201 | Indolent Lymphoma (Mantle cell) | Sonrotoclax monotherapy, R/R MCL post-BTKi; ORR 52% vs 30% historical control, basis for accelerated approval (PMID 42385124) |
+| Schuster et al | Lymphoma - DLBCL | CTL019, 10-y follow-up of the original 2017 pilot (n=38 DLBCL+FL); pm kept as the 2017 paper, 10-y update PMID 42341302 in comment |
+| MonumenTAL-3 | Myeloma | Talquetamab-daratumumab +/- pomalidomide vs DPd, 1 prior line; PFS HR 0.28/0.33 (PMID 42294841) |
+| MajesTEC-3 | Myeloma | Teclistamab-daratumumab vs IC, 1-3 prior lines; PFS HR 0.17 (PMID 41363801) |
+
+Two corrections to what David asked for, both confirmed with him before writing: "Bruin
+CLL-322" doesn't exist — added as BRUIN CLL-321, the only phase 3 BRUIN trial in CLL/SLL.
+The citation given for the Schuster update (*N Engl J Med* 2026;395(3):221) was a different,
+unrelated paper (Kumar et al, ENDURANCE myeloma maintenance trial); the correct 10-year
+CAR-T follow-up is PMID 42341302.
 
 ## Flag pass — completed 13 September 2026
 
