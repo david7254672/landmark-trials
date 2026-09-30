@@ -11020,6 +11020,26 @@
     "flags": ""
   },
   {
+    "tumour": "CLL",
+    "subsite": "",
+    "setting": "",
+    "line": "1st line",
+    "subgroup": "",
+    "trial": "CRISTALLO",
+    "phase": "Phase 3",
+    "population": "Untreated fit CLL (CIRS ≤6, CrCl ≥70 mL/min), del(17p)/TP53-negative; n=166",
+    "intervention": "Venetoclax-obinutuzumab (VenO) vs FCR/BR",
+    "results": "15-mo uMRD (PB, <10-4) 81 vs 55%, p=0.0004; EOT uMRD higher with VenO; fewer progressions/deaths (7 vs 13); no clinical TLS with VenO",
+    "comment": "Primary endpoint was uMRD, not PFS; short follow-up precluded PFS analysis at this interim look. Confirms and extends CLL13/GAIA findings.",
+    "pe": "uMRD (PB, <10-4) at month 15: 81.3% (VenO) vs 54.7% (FCR/BR), p=0.0004",
+    "pm": "41770817",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (CRISTALLO)",
+    "flags": ""
+  },
+  {
     "tumour": "Lung Cancer",
     "subsite": "",
     "setting": "Adjuvant",
