@@ -10980,6 +10980,26 @@
     "flags": ""
   },
   {
+    "tumour": "CLL",
+    "subsite": "",
+    "setting": "",
+    "line": "1st line",
+    "subgroup": "",
+    "trial": "BRUIN CLL-313",
+    "phase": "Phase 3",
+    "population": "Untreated CLL/SLL, del(17p)-negative; n=282",
+    "intervention": "Pirtobrutinib vs bendamustine + rituximab (BendaR)",
+    "results": "24-mo PFS 93 vs 71%, HR 0.20 (0.11-0.37), p<0.0001; OS favored pirtobrutinib (HR 0.26) despite 53% crossover; grade ≥3 AEs 40 vs 67%",
+    "comment": "Interim OS analysis at median 32-mo follow-up; BendaR arm allowed crossover to pirtobrutinib at progression",
+    "pe": "PFS (IRC) HR 0.199 (95% CI, 0.107-0.367), p<0.0001; 24-mo PFS 93.4 vs 70.7%",
+    "pm": "41363773",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (BRUIN CLL-313)",
+    "flags": ""
+  },
+  {
     "tumour": "Lung Cancer",
     "subsite": "",
     "setting": "Adjuvant",
