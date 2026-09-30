@@ -11040,6 +11040,26 @@
     "flags": ""
   },
   {
+    "tumour": "CLL",
+    "subsite": "",
+    "setting": "",
+    "line": "1st line",
+    "subgroup": "",
+    "trial": "MAJIC",
+    "phase": "Phase 3",
+    "population": "Untreated CLL/SLL",
+    "intervention": "Acalabrutinib + venetoclax vs venetoclax + obinutuzumab",
+    "results": "Not yet reported; response/MRD-guided duration in both arms, max 2 y treatment",
+    "comment": "Design only - primary results not yet published as of Sep 2026. Feb 2026 FDA approval of acalabrutinib+venetoclax was based on AMPLIFY, not MAJIC.",
+    "pe": "",
+    "pm": "",
+    "rf": "Protocol: Ryan et al, Future Oncol 2022 (PMID 36102212)",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (MAJIC)",
+    "flags": "Abstract/results not yet published; design-only entry (Sep 2026)"
+  },
+  {
     "tumour": "Lung Cancer",
     "subsite": "",
     "setting": "Adjuvant",
