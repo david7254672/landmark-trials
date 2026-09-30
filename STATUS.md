@@ -4,7 +4,7 @@ Last updated: 30 September 2026
 
 ## Where things stand
 
-- **916 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **913 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
 - **142 entries carry a PMID** (was 28). The rest have no reference yet.
 - **3 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney, plus
@@ -91,6 +91,23 @@ Last updated: 30 September 2026
 | AXIS | PFS corrected; OS not significant (PMIDs 22056247, 23598172) |
 | LITESPARK-005 | Accurate; the PFS HR that had no source was replaced by the 18-mo PFS rate (PMID 39167807) |
 | LITESPARK-011 | Grade 3+ AEs corrected; OS not significant (PMID 42586114) |
+
+## Duplicate cleanup — 30 September 2026
+
+A full structural review found three trials entered twice with identical results text,
+split across two disease subsites when the trial reported one combined figure. Merged
+each into a single row (subsite blank, population broadened where needed) and removed
+the duplicate. Added a `rows.py remove` command for this. 916 -> 913 entries.
+
+| Trial | Site | Was duplicated across |
+|---|---|---|
+| StiL | Indolent Lymphoma | Follicular lymphoma / Mantle cell |
+| AZA-001 | Myeloid | AML / MDS |
+| CLARINET | Neuroendocrine | GI NET / Pancreatic NET |
+
+No other structural duplicates found. A broader pass for trials that are outdated or
+superseded on clinical grounds (rather than literal duplication) was proposed to David
+but not yet started - see Open items.
 
 ## New entries added / updated — 30 September 2026 (CLL batch)
 
@@ -193,6 +210,11 @@ dotatate → edotreotide correction had already been applied).
 
 ## Open items
 
+- **Clinical-relevance cleanup pass** — David asked whether any entries are outdated
+  enough to be worth removing. Structural duplicates are done (see above); a deeper pass
+  judging which historical/superseded trials still earn their place needs David's
+  criteria or a site-by-site walkthrough before going further - an AI guess at "no longer
+  relevant" risks cutting content that's deliberately historical in a landmark-trials app.
 - **FLOT65+** — "OS not different" kept from the original row but isn't stated in the
   abstract (PMID 23063354); check against the full text when gastric is verified.
   The earlier list of 8 left out the advanced-disease entries.
