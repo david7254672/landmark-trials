@@ -485,7 +485,7 @@ Lymphoma - DLBCL,,Relapsed/refractory,Transplant-ineligible,,SUNMO,Phase 3,Trans
 Lymphoma - DLBCL,,,1st line,,LNH09-1B,Phase 3,"Untreated DLBCL, aaIPI 0 (low-risk); n=650","PET2-adapted R-CHOP (4 cycles if PET2-neg, 6 if PET2-pos) vs 6 cycles R-CHOP","Noninferior: 3-y PFS 92 vs 89%, HR 0.72 (0.47-1.12); 78% got only 4 cycles; grade ≥3 AEs 55 vs 63%, p=0.046; serious AEs 10 vs 14%, p=0.039",No radiotherapy planned in either arm; PFS difference NS (p=0.070) supporting noninferiority,"3-y PFS (ITT) 92.0% (95% CI, 88.3-94.5) vs 89.2% (95% CI, 85.3-92.2), p=0.070; noninferiority HR 0.72 (95% CI, 0.47-1.12), p<0.0001",41260259,,,,"new entry, Sep 2026 (LNH09-1B)",
 Indolent Lymphoma,Follicular lymphoma,,1st line,,W&W,Phase 3,asymptomatic low burden FL,"Rituximab induction, Rituximab maintenance, Watchful waiting","TTNT: 2.7 years (WW), 9.9 years RI, NR for RM
 OS NS (76/80/82%); transformation NS",,,,,,,Indolent Lymphoma!5,
-Indolent Lymphoma,Follicular lymphoma,,1st line,,StiL,,"II-IV FL, iNHL, MCL",BR vs RCHOP,"PFS 69.5 vs 31.2 mos, HR 0.58; less toxic; OS NS at 10 years;",,,,,,,Indolent Lymphoma!6,
+Indolent Lymphoma,,,1st line,,StiL,,"II-IV FL, MCL, and other iNHL",BR vs RCHOP,"PFS 70 vs 31 mo, HR 0.58; less toxic; OS NS at 10 y",,,,,,,Indolent Lymphoma!6,
 Indolent Lymphoma,Follicular lymphoma,,1st line,,BRIGHT,,"II-IV FL, iNHL, MCL",BR vs RCHOP,"5 year PFS 66 vs 56%, HR 0.61; OS NS",,,,,,,Indolent Lymphoma!7,
 Indolent Lymphoma,Follicular lymphoma,,1st line,,GALLIUM,,II-IV FL,Chemo with R vs O,"ORR/CR NS; 3 year PFS 83 vs 79%, HR 0.68; 3 year OS NS (94%); more grade 3-5 toxicity with Obi 75 vs 68%;",Higher rate fatal events with benda backbone (4% vs 2% with CHOP or CVP). Most benda deaths occurred during maintenance,,,,,,Indolent Lymphoma!8,
 Indolent Lymphoma,Follicular lymphoma,,1st line,,FOLL-05,,II-IV FL,RCHOP vs RCVP vs RFM,R-CHOP and R-FM superior to R-CVP for PFS; more toxicity with R-FM,,,,,,,Indolent Lymphoma!9,
@@ -519,7 +519,6 @@ Indolent Lymphoma,Waldenstrom,,,,Owen,Phase 2,"Waldenstrom, treatment-naive (n=1
 Indolent Lymphoma,Marginal zone lymphoma,,,,Noy,Phase 2,R/R MZL; prev anti-CD20 therapy,Ibrutinib,ORR 48%; DOR NR after 19.4 mos; PFS 14 mos,,,,,,,Indolent Lymphoma!43,
 Indolent Lymphoma,Marginal zone lymphoma,,,,MAGNOLIA,Phase 2,R/R MZL,Zanubrutinib,ORR 68%; CR 24%; DOR NR; 85% responders still responding at 12 mos,,,,,,,Indolent Lymphoma!44,
 Indolent Lymphoma,Marginal zone lymphoma,,,,CITADEL-204,Phase 2,R/R MZL,Paraclisib,"ORR 58%; ≥3 grade AE in 63%, diarrhea most common",,,,,,,Indolent Lymphoma!45,
-Indolent Lymphoma,Mantle cell,,,,StiL,,"1st line (also with FL, MCL, iNHL)",BR vs RCHOP,"PFS 69.5 vs 31.2 mos, HR 0.58; less toxic; OS NS at 10 years;",,,,,,,Indolent Lymphoma!48,
 Indolent Lymphoma,Mantle cell,,,,Hermine,,"II-IV MCL, ≤65 yo, untreated, pre-ASCT",RCHOP vs RCHOP+DHAP followed by ASCT,"TTF 9.1 vs 3.9 years, HR 0.56; increased toxicity with RDHAP",Authors felt alternating RCHO/RDHAP should be new standard in youmger patients,,,,,,Indolent Lymphoma!49,
 Indolent Lymphoma,Mantle cell,,,,SHINE,Phase 3,≥65; first line,BR+/- ibrutinib,"PFS 81 vs 53 mos, HR 0.75); OS NS (7 year OS ~55%)",,,,,,,Indolent Lymphoma!50,
 Indolent Lymphoma,Mantle cell,,,,ACE-LY-308,Phase 3,first line,BR+/-acala,"PFS 66 vs 50 mos, HR 0.73; OS NS",,,,,,,Indolent Lymphoma!51,

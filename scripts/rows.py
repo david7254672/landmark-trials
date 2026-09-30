@@ -10,6 +10,7 @@ Usage:
   python3 scripts/rows.py set SRC col=value [col=value ...]
   python3 scripts/rows.py set SRC --json patch.json      (object of col: value)
   python3 scripts/rows.py add --json row.json            (object of col: value)
+  python3 scripts/rows.py remove SRC
   python3 scripts/rows.py style [--site "Bladder Cancer"] [SRC]
 
 An entry is verified when it has `pe` and `pm` and no `flags`. `set` and `add` print
@@ -157,6 +158,14 @@ def cmd_add(args):
         print(f"warning: {w}")
 
 
+def cmd_remove(args):
+    rows = load()
+    i = find(rows, args[0])
+    removed = rows.pop(i)
+    save(rows)
+    print(f"removed {removed['trial']!r} (src={removed['src']!r})")
+
+
 def cmd_style(args):
     rows = load()
     site = opt(args, "--site")
@@ -171,7 +180,14 @@ def cmd_style(args):
     print(f"{n} style warning(s)")
 
 
-COMMANDS = {"list": cmd_list, "show": cmd_show, "set": cmd_set, "add": cmd_add, "style": cmd_style}
+COMMANDS = {
+    "list": cmd_list,
+    "show": cmd_show,
+    "set": cmd_set,
+    "add": cmd_add,
+    "remove": cmd_remove,
+    "style": cmd_style,
+}
 
 
 def main():
