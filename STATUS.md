@@ -1,12 +1,12 @@
 # Landmark Trials — status
 
-Last updated: 29 September 2026
+Last updated: 30 September 2026
 
 ## Where things stand
 
-- **908 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **911 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **127 entries carry a PMID** (was 28). The rest have no reference yet.
+- **133 entries carry a PMID** (was 28). The rest have no reference yet.
 - **2 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney; see
   Open items. There were 64 before the flag pass.
 - **Bladder verified**: all 44 entries.
@@ -90,6 +90,29 @@ Last updated: 29 September 2026
 | AXIS | PFS corrected; OS not significant (PMIDs 22056247, 23598172) |
 | LITESPARK-005 | Accurate; the PFS HR that had no source was replaced by the 18-mo PFS rate (PMID 39167807) |
 | LITESPARK-011 | Grade 3+ AEs corrected; OS not significant (PMID 42586114) |
+
+## New entries added / updated — 30 September 2026
+
+Three new DLBCL trials plus four updates, all Lymphoma - DLBCL and Indolent Lymphoma
+(follicular). ECHELON-2 (PET4 sub-study) was considered but dropped — not yet in the
+CSV, and peripheral T-cell lymphoma doesn't fit any existing tumour site.
+
+**Added:**
+
+| Entry | Site | Outcome |
+|---|---|---|
+| frontMIND | Lymphoma - DLBCL | Tafasitamab+lenalidomide+R-CHOP vs R-CHOP, untreated high-risk DLBCL; PFS HR 0.75, confirms FIRST-MIND (PMID 42217458) |
+| SUNMO | Lymphoma - DLBCL | Mosunetuzumab+polatuzumab vedotin vs R-GemOx, transplant-ineligible R/R LBCL; PFS HR 0.41, ORR 70 vs 40% (PMID 41037766) |
+| LNH09-1B | Lymphoma - DLBCL | PET2-adapted R-CHOP (4 vs 6 cycles) noninferior in untreated low-risk DLBCL, 3-y PFS 92 vs 89% (PMID 41260259, verified against figures David supplied) |
+
+**Updated with newer follow-up:**
+
+| Entry | Update | PMIDs |
+|---|---|---|
+| POLARIX | Added primary PMID; 5-y PFS 65 vs 59%, HR 0.77 | 34904799 (primary), 40991874 (5-y) |
+| STARGLO | Added primary PMID; 3-y OS 26 vs 13 mo, HR 0.60 | 39550172 (primary), 42269085 (3-y) |
+| RELEVANCE | 10-y final analysis: PFS/OS/TTNLT all comparable between arms | 41915772 (10-y update) |
+| AUGMENT | Renamed from "AUGMENT (ASH '22 update)" now peer-reviewed; primary PFS + 5-y OS/PFS HRs | 30897038 (primary), 41990300 (5-y) |
 
 ## New entries added — 29 September 2026
 
