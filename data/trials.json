@@ -11000,6 +11000,26 @@
     "flags": ""
   },
   {
+    "tumour": "CLL",
+    "subsite": "",
+    "setting": "",
+    "line": "1st line",
+    "subgroup": "",
+    "trial": "BRUIN CLL-314",
+    "phase": "Phase 3",
+    "population": "BTKi-naive CLL/SLL, treatment-naive (n=225) or R/R (n=437); n=662 total",
+    "intervention": "Pirtobrutinib vs ibrutinib",
+    "results": "Noninferior ORR (ITT) 87 vs 79%; PFS favored pirtobrutinib, HR 0.57 (0.39-0.83); TN subgroup HR 0.24; lower AFib/flutter and hypertension",
+    "comment": "Coprimary ORR endpoints met in ITT and R/R populations; PFS is a secondary, investigator-assessed endpoint (early trend)",
+    "pe": "ORR (IRC, ITT) 87.0% vs 78.5%, ratio 1.11 (95% CI, 1.03-1.19), p<0.0001; R/R population 84.0% vs 74.8%, ratio 1.12 (95% CI, 1.02-1.24), p<0.0001",
+    "pm": "41353787",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (BRUIN CLL-314)",
+    "flags": ""
+  },
+  {
     "tumour": "Lung Cancer",
     "subsite": "",
     "setting": "Adjuvant",
