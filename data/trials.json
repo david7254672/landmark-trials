@@ -9160,6 +9160,26 @@
     "flags": ""
   },
   {
+    "tumour": "Lymphoma - DLBCL",
+    "subsite": "",
+    "setting": "",
+    "line": "1st line",
+    "subgroup": "",
+    "trial": "frontMIND",
+    "phase": "Phase 3",
+    "population": "Untreated high-intermediate/high-risk DLBCL or high-grade BCL; n=899",
+    "intervention": "Tafasitamab + lenalidomide + R-CHOP vs R-CHOP",
+    "results": "PFS HR 0.75 (0.59-0.96), p=0.019; 2-y PFS 71 vs 63%; OS immature, HR 0.85; grade ≥3 AEs 87 vs 76%; fatal AEs 6 vs 4%",
+    "comment": "OS data immature; overall deaths numerically lower with tafa-len-R-CHOP (19 vs 22%) despite more fatal AEs. Confirms FIRST-MIND phase 1b signal.",
+    "pe": "PFS (investigator) HR 0.75 (95% CI, 0.59-0.96), p=0.0194; 2-y PFS 71.1 vs 62.9%",
+    "pm": "42217458",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (frontMIND)",
+    "flags": ""
+  },
+  {
     "tumour": "Indolent Lymphoma",
     "subsite": "Follicular lymphoma",
     "setting": "",
