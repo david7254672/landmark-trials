@@ -4,12 +4,13 @@ Last updated: 30 September 2026
 
 ## Where things stand
 
-- **914 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **916 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **145 entries carry a PMID** (was 28). The rest have no reference yet.
-- **4 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
-  MAJIC (CLL, design-only - no results published yet); and VERIFY (MPN, rusfertide - see
-  below); see Open items. There were 64 before the kidney/bladder flag pass.
+- **152 entries carry a PMID** (was 28). The rest have no reference yet.
+- **5 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
+  MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide - see below);
+  and UNION (colorectal, EFS/OS immature at publication - see below); see Open items. There
+  were 64 before the kidney/bladder flag pass.
 - **Bladder verified**: all 44 entries.
 - **Kidney**: all 25 entries have a PMID; 23 verified and 2 flagged (KEYNOTE-B61, Motzer
   lenvatinib +/- everolimus).
@@ -388,6 +389,35 @@ Searched PubMed for MDS and MPN phase 3 trials published in the last 2 years.
   PMID 39695117) is a Chinese trial with a non-FDA-approved agent — relevance to this
   reference undecided. Ropeginterferon alfa-2b in early/lower-risk PMF (PMID 39145781) is a
   trial protocol only, no results yet. POIESIS and SENTRY (MF) are design papers, no results.
+
+## Colorectal phase 3 sweep (30 September 2026)
+
+Searched PubMed for colorectal cancer phase 3 trials published in the last 2 years (via a
+subagent, given the volume — 164 raw hits before filtering).
+
+- **BREAKWATER** (PMID 40444708, NEJM 2025): PFS/OS confirmed as previously recorded; comment
+  now distinguishes the earlier ORR-based accelerated approval (PMID 39863775) from this
+  co-primary PFS/interim OS readout.
+- **CHALLENGE** (PMID 40450658, NEJM 2025): DFS/OS HRs added to the existing figures.
+- **PRODIGE 23** (primary PMID 33862000): the existing "DFS* 66 vs 60 mos" figure could not be
+  traced to either publication and was replaced — `pe` now holds the actual 3-y primary-pub
+  figures, `results` holds the 7-y update (DFS/MFS/OS with RMST differences, PMID 38986769
+  in comment).
+- **KEYNOTE-177** (primary PMID 33264544): `results` updated from the immature 36-mo OS
+  readout to the 5-y follow-up (OS 78 vs 37 mo, PMID 39631622 in comment).
+- **TRIPLETE** (primary PMID 35666229): corrected a wrong ORR figure ("57%" — untraceable to
+  either arm; actual is 73 vs 76%, NS) and added the final 5-y analysis's borderline OS
+  benefit (HR 0.79, p=0.049, PMID 41505697) despite the missed primary endpoint (ORR) and PFS.
+- **TNTCRT** added (PMID 42492015, JCO 2026) — TNT with long-course RT + doublet CAPOX beats
+  conventional chemoRT on 3-y DFS in high-risk LARC (75 vs 66%).
+- **UNION** added (PMID 38964714, Ann Oncol 2024) — short-course RT + camrelizumab (anti-PD-1,
+  not FDA-approved) + CAPOX roughly triples pCR over long-course chemoRT in LARC; flagged
+  since EFS/OS were not yet mature at publication.
+- Declined (negative trials): ALTAIR/CIRCULATE-Japan, NeoCol, CAIRO4, OPTICAL,
+  STRATEGIC-1/PRODIGE-39, JCOG1018, SOLARIS/Alliance A021703, ANCHOR — all missed their
+  primary endpoint. Not added.
+- Skipped as low-relevance: a Chinese cetuximab biosimilar (CMAB009) + FOLFIRI trial
+  (PMID 40328753) — biosimilar not marketed in the US.
 
 ## Planned order
 
