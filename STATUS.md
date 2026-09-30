@@ -1,12 +1,12 @@
 # Landmark Trials — status
 
-Last updated: 28 September 2026
+Last updated: 29 September 2026
 
 ## Where things stand
 
-- **906 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **908 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **125 entries carry a PMID** (was 28). The rest have no reference yet.
+- **127 entries carry a PMID** (was 28). The rest have no reference yet.
 - **2 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney; see
   Open items. There were 64 before the flag pass.
 - **Bladder verified**: all 44 entries.
@@ -90,6 +90,16 @@ Last updated: 28 September 2026
 | AXIS | PFS corrected; OS not significant (PMIDs 22056247, 23598172) |
 | LITESPARK-005 | Accurate; the PFS HR that had no source was replaced by the 18-mo PFS rate (PMID 39167807) |
 | LITESPARK-011 | Grade 3+ AEs corrected; OS not significant (PMID 42586114) |
+
+## New entries added — 29 September 2026
+
+Two more, both R/R follicular lymphoma built on the R2 (lenalidomide-rituximab) backbone,
+same population as the existing AUGMENT row:
+
+| Entry | Site | Outcome |
+|---|---|---|
+| EPCORE FL-1 | Indolent Lymphoma (Follicular lymphoma) | Epcoritamab+R2 vs R2; ORR 95 vs 79%, PFS HR 0.21 (PMID 41371238) |
+| inMIND | Indolent Lymphoma (Follicular lymphoma) | Tafasitamab+R2 vs placebo+R2; PFS 22 vs 14 mo, HR 0.43 (PMID 41360064) |
 
 ## New entries added — 28 September 2026
 
