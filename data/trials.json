@@ -9200,6 +9200,26 @@
     "flags": ""
   },
   {
+    "tumour": "Lymphoma - DLBCL",
+    "subsite": "",
+    "setting": "",
+    "line": "1st line",
+    "subgroup": "",
+    "trial": "LNH09-1B",
+    "phase": "Phase 3",
+    "population": "Untreated DLBCL, aaIPI 0 (low-risk); n=650",
+    "intervention": "PET2-adapted R-CHOP (4 cycles if PET2-neg, 6 if PET2-pos) vs 6 cycles R-CHOP",
+    "results": "Noninferior: 3-y PFS 92 vs 89%, HR 0.72 (0.47-1.12); 78% got only 4 cycles; grade ≥3 AEs 55 vs 63%, p=0.046; serious AEs 10 vs 14%, p=0.039",
+    "comment": "No radiotherapy planned in either arm; PFS difference NS (p=0.070) supporting noninferiority",
+    "pe": "3-y PFS (ITT) 92.0% (95% CI, 88.3-94.5) vs 89.2% (95% CI, 85.3-92.2), p=0.070; noninferiority HR 0.72 (95% CI, 0.47-1.12), p<0.0001",
+    "pm": "41260259",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (LNH09-1B)",
+    "flags": ""
+  },
+  {
     "tumour": "Indolent Lymphoma",
     "subsite": "Follicular lymphoma",
     "setting": "",
