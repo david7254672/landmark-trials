@@ -4,13 +4,14 @@ Last updated: 30 September 2026
 
 ## Where things stand
 
-- **918 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **937 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **156 entries carry a PMID** (was 28). The rest have no reference yet.
-- **5 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
-  MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide - see below);
-  and UNION (colorectal, EFS/OS immature at publication - see below); see Open items. There
-  were 64 before the kidney/bladder flag pass.
+- **180 entries carry a PMID** (was 28). The rest have no reference yet.
+- **7 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
+  MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
+  (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
+  reported); and TESAR (colorectal, underpowered/inconclusive) - see below and Open items.
+  There were 64 before the kidney/bladder flag pass.
 - **Bladder verified**: all 44 entries.
 - **Kidney**: all 25 entries have a PMID; 23 verified and 2 flagged (KEYNOTE-B61, Motzer
   lenvatinib +/- everolimus).
@@ -447,6 +448,40 @@ Biliary / HCC - no schema change needed. Plan was reviewed with David before app
 - Not addressed: TOPAZ-1, KEYNOTE-966, HIMALAYA, LEAP-002, IMbrave150, REFLECT are already in
   the CSV without PMIDs, but their primary publications predate the 2-year window - a proper
   lookup is a `verify-site`-style task, not part of this sweep.
+
+## Colorectal named-trial batch (30 September 2026)
+
+David supplied a specific list of ~30 named trials to add/update (not a PubMed sweep this
+time). Researched via two parallel subagents plus direct lookups; drafted the full plan and
+had David confirm before writing to the CSV.
+
+Existing-row updates:
+- **CheckMate 8HW**: both co-primary comparisons now captured (1L nivo-ipi vs chemo, PMID
+  39602630; nivo-ipi vs nivo across all lines, PMID 39874977 in comment)
+- **JCOG0603**: replaced a garbled, unsourced results string ("38 vs 88 months(") with the
+  actual long-term figures (PMID 41564372) - delays recurrence, no OS benefit
+- **CAIRO5**: added both randomized cohorts with real PFS figures (PMID 37329889, OS update
+  PMID 39570583 in comment)
+- **CodeBreaK 300**: added primary (PMID 37870968) and final OS (PMID 40215429, not
+  significant) analysis
+- **DYNAMIC** (stage II, PMID 35657320): bonus fix while distinguishing it from the new
+  DYNAMIC-III (stage III) entry below - same short name, different trials
+
+New entries, positive/practice-relevant: BREAKWATER Cohort 3 (PMID 42219860, EC+FOLFIRI),
+ALASCCA (PMID 40961426, biomarker-selected adjuvant aspirin), STELLAR-303 (PMID 41130252,
+first IO OS benefit in MSS mCRC), OPERA (PMID 36801007, brachytherapy boost for organ
+preservation), SCOT (primary PMID 29611518, final OS PMID 41512219 - distinct from the
+pooled IDEA meta-analysis already in the CSV), FIND (PMID 42525894, ctDNA-methylation
+surveillance).
+
+New entries, negative/inconclusive: DYNAMIC-III (PMID 41115959), STAR-TREC (PMID 42633754,
+flagged - interim only), ORCHESTRA (PMID 41837962), CAIRO6 (PMID 42372745), CONVERT
+(PMID 41712876), TESAR (PMID 42202843, flagged - underpowered), NordICC (PMID 36214590),
+FOWARC (primary PMID 31557064, 10-y update PMID 39671537), ASCOLT (PMID 39824200), PRODIGE-13
+(PMID 40972947), ALTAIR (PMID 42260101), SOLARIS (PMID 42545685), JCOG1018 (PMID 39186709).
+
+Not added - no PubMed-indexed primary publication found despite extensive searching: **ASAC**
+and **ARISTOTLE** (both appear to be unpublished/ongoing aspirin trials as of Sept 2026).
 
 ## Planned order
 
