@@ -4,12 +4,12 @@ Last updated: 30 September 2026
 
 ## Where things stand
 
-- **913 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **914 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **142 entries carry a PMID** (was 28). The rest have no reference yet.
-- **3 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney, plus
-  MAJIC (CLL, design-only - no results published yet); see Open items. There were 64 before
-  the kidney/bladder flag pass.
+- **145 entries carry a PMID** (was 28). The rest have no reference yet.
+- **4 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
+  MAJIC (CLL, design-only - no results published yet); and VERIFY (MPN, rusfertide - see
+  below); see Open items. There were 64 before the kidney/bladder flag pass.
 - **Bladder verified**: all 44 entries.
 - **Kidney**: all 25 entries have a PMID; 23 verified and 2 flagged (KEYNOTE-B61, Motzer
   lenvatinib +/- everolimus).
@@ -365,6 +365,29 @@ Kidney verification, batch 3:
 - van der Maase: OS "15 months" → 14.0 vs 15.2 mo (long-term update); "RR 46/49%" →
   ORR 49 (GC) vs 46% (MVAC); trial name "van der Masse" → "van der Maase" (PMIDs 11001674,
   16034041)
+
+## MDS/MPN phase 3 sweep (30 September 2026)
+
+Searched PubMed for MDS and MPN phase 3 trials published in the last 2 years.
+
+- **MANIFEST2** (MPN!16) and **TRANSFORM1** (MPN!17): primary publications now exist
+  (PMIDs 40065169, 42378247). Both corrected: MANIFEST2's "TSS improved" was wrong — the
+  key secondary TSS endpoint was NOT significant (p=0.0545); TRANSFORM1's "g3 AEs similar"
+  was wrong — navitoclax had substantially more grade 3/4 thrombocytopenia and neutropenia.
+- **VERIFY** (MPN!28, rusfertide vs placebo in phlebotomy-dependent PV) had only a
+  placeholder row. No primary peer-reviewed publication exists yet; filled in with topline
+  figures (n=293; clinical response 77 vs 33%) from the Aug 2026 FDA approval of rusfertide
+  (Mimrylo) and flagged for reverification once a primary publication appears.
+- **MAJIC-PV** added (PMID 37126762, JCO 2023) — ruxolitinib vs BAT in
+  hydroxycarbamide-resistant/intolerant PV. Note: this is phase 2, not phase 3 (like its
+  companion MAJIC-ET, already in the CSV).
+- Declined (negative trials, per David): SELECT-MDS-1 (tamibarotene + azacitidine, HR-MDS,
+  missed CR endpoint) and LIMBER-304 (add-on parsaclisib in MF, stopped early for lack of
+  efficacy). Not added.
+- Noted but not resolved: ZGJAK016 (gecacitinib/jaktinib vs hydroxyurea in MF, positive,
+  PMID 39695117) is a Chinese trial with a non-FDA-approved agent — relevance to this
+  reference undecided. Ropeginterferon alfa-2b in early/lower-risk PMF (PMID 39145781) is a
+  trial protocol only, no results yet. POIESIS and SENTRY (MF) are design papers, no results.
 
 ## Planned order
 
