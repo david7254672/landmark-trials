@@ -9180,6 +9180,26 @@
     "flags": ""
   },
   {
+    "tumour": "Lymphoma - DLBCL",
+    "subsite": "",
+    "setting": "Relapsed/refractory",
+    "line": "Transplant-ineligible",
+    "subgroup": "",
+    "trial": "SUNMO",
+    "phase": "Phase 3",
+    "population": "Transplant-ineligible R/R LBCL; n=208 (2:1 randomisation)",
+    "intervention": "Mosunetuzumab + polatuzumab vedotin vs R-GemOx",
+    "results": "PFS 12 vs 4 mo, HR 0.41 (0.3-0.6), p<0.0001; ORR 70 vs 40%, p<0.0001; CR 51 vs 24%; grade ≥2 CRS <5%",
+    "comment": "Fixed-duration outpatient regimen; patient-reported outcomes improved vs R-GemOx",
+    "pe": "ORR (central) 70% vs 40%, p<0.0001; PFS (central) HR 0.41 (95% CI, 0.3-0.6), p<0.0001",
+    "pm": "41037766",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (SUNMO)",
+    "flags": ""
+  },
+  {
     "tumour": "Indolent Lymphoma",
     "subsite": "Follicular lymphoma",
     "setting": "",
