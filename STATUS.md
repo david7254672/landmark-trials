@@ -4,9 +4,9 @@ Last updated: 30 September 2026
 
 ## Where things stand
 
-- **916 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **918 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **152 entries carry a PMID** (was 28). The rest have no reference yet.
+- **156 entries carry a PMID** (was 28). The rest have no reference yet.
 - **5 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide - see below);
   and UNION (colorectal, EFS/OS immature at publication - see below); see Open items. There
@@ -418,6 +418,35 @@ subagent, given the volume — 164 raw hits before filtering).
   primary endpoint. Not added.
 - Skipped as low-relevance: a Chinese cetuximab biosimilar (CMAB009) + FOLFIRI trial
   (PMID 40328753) — biosimilar not marketed in the US.
+
+## Pancreatic/biliary/HCC phase 3 sweep (30 September 2026)
+
+Searched PubMed (via subagent, ~200 raw hits across the three areas) for pancreatic, biliary/
+gallbladder, and HCC phase 3 trials published in the last 2 years. Pancreatic, biliary, and
+HCC all live under the single "Hepatobiliary" tumour category with subsites Pancreatic /
+Biliary / HCC - no schema change needed. Plan was reviewed with David before applying.
+
+- **PANOVA-3** (PMID 40448572) and **PRODIGE29/NEOPAN** (PMID 40378359, phase corrected to
+  Phase 3): both already-tracked pancreatic entries, just needed PMIDs - figures already
+  matched the publications.
+- **RASolute 302** added (PMID 42223072, NEJM 2026) - daraxonrasib (pan-RAS(ON) inhibitor)
+  more than doubles OS vs chemo in previously treated RAS-mutant metastatic PDAC (13 vs 7 mo,
+  HR 0.40); not yet FDA-approved.
+- **FIGHT-302** added (PMID 42223137, JCO 2026) - 1st-line pemigatinib vs gem-cis in
+  FGFR2-rearranged cholangiocarcinoma; PFS/ORR improved, OS not; companion to the existing
+  FIGHT-202 (2nd-line, already FDA-approved).
+- **Declined as borderline** (David's call): NRG/RTOG 1112 (SBRT+sorafenib vs sorafenib,
+  HCC) - primary endpoint (unadjusted OS) technically not met (1-sided p=0.06), though an
+  adjusted analysis and PFS were significant. Not added.
+- Declined (missed primary endpoint): NRG/RTOG 0848, CONKO-007, TRYBECA-1, AVENGER 500
+  (pancreatic); NuTide:121, SWOG S1815, bintrafusp alfa (biliary); adjuvant TACE, SELECT (HCC).
+- Skipped as low US relevance: PAN-HEROIC-1 (liposomal irinotecan, China, distinct from
+  Onivyde), a single-center China neoadjuvant PDAC trial, ASCOT (adjuvant S-1, Japan - not
+  US-available), finotonlimab+bevacizumab-biosimilar and TACE+apatinib trials (China, neither
+  agent FDA-approved).
+- Not addressed: TOPAZ-1, KEYNOTE-966, HIMALAYA, LEAP-002, IMbrave150, REFLECT are already in
+  the CSV without PMIDs, but their primary publications predate the 2-year window - a proper
+  lookup is a `verify-site`-style task, not part of this sweep.
 
 ## Planned order
 
