@@ -4,11 +4,12 @@ Last updated: 30 September 2026
 
 ## Where things stand
 
-- **911 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **916 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **133 entries carry a PMID** (was 28). The rest have no reference yet.
-- **2 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney; see
-  Open items. There were 64 before the flag pass.
+- **142 entries carry a PMID** (was 28). The rest have no reference yet.
+- **3 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney, plus
+  MAJIC (CLL, design-only - no results published yet); see Open items. There were 64 before
+  the kidney/bladder flag pass.
 - **Bladder verified**: all 44 entries.
 - **Kidney**: all 25 entries have a PMID; 23 verified and 2 flagged (KEYNOTE-B61, Motzer
   lenvatinib +/- everolimus).
@@ -90,6 +91,31 @@ Last updated: 30 September 2026
 | AXIS | PFS corrected; OS not significant (PMIDs 22056247, 23598172) |
 | LITESPARK-005 | Accurate; the PFS HR that had no source was replaced by the 18-mo PFS rate (PMID 39167807) |
 | LITESPARK-011 | Grade 3+ AEs corrected; OS not significant (PMID 42586114) |
+
+## New entries added / updated — 30 September 2026 (CLL batch)
+
+Four new BRUIN trials plus CRISTALLO, a design-only MAJIC entry (no results published
+yet), and five existing CLL rows brought up to their latest peer-reviewed follow-up.
+
+**Added:**
+
+| Entry | Outcome |
+|---|---|
+| BRUIN CLL-322 | Fixed-duration pirtobrutinib+VR vs VR, previously treated CLL; PFS HR 0.55 (PMID 42425121) |
+| BRUIN CLL-313 | Pirtobrutinib vs BendaR, untreated CLL; PFS HR 0.20, OS trend favors pirtobrutinib (PMID 41363773) |
+| BRUIN CLL-314 | Pirtobrutinib vs ibrutinib, BTKi-naive; noninferior ORR, PFS trend favors pirtobrutinib (PMID 41353787) |
+| CRISTALLO | VenO vs FCR/BR, untreated fit CLL; 15-mo uMRD 81 vs 55% (PMID 41770817) |
+| MAJIC | Design only - acala+ven vs ven+obin, untreated CLL; no peer-reviewed or conference results found despite searching (protocol PMID 36102212) |
+
+**Updated with primary PMID and/or newer follow-up:**
+
+| Entry | Update | PMIDs |
+|---|---|---|
+| CLL17 | Added primary PMID/endpoint; results already matched published figures | 41358601 |
+| CLL13/GAIA | Added primary PMID; updated to 5-y follow-up (PFS 81/70/57/51% by arm) | 37163621 (primary), 41911073 (5-y) |
+| RESONATE-2 | Added primary PMID; updated to final 10-y analysis (median PFS 8.9 vs 1.3 y) | 26639149 (primary), 40737596 (final) |
+| CLL12 | Added primary PMID; updated to final analysis (EFS HR 0.276, still no OS benefit) | 34758069 (primary), 39602678 (final) |
+| AMPLIFY | Added primary PMID/endpoint; results already matched published figures | 39976417 |
 
 ## New entries added / updated — 30 September 2026
 
@@ -178,6 +204,10 @@ dotatate → edotreotide correction had already been applied).
 - **Motzer, lenvatinib +/- everolimus (kidney)**, flagged: the recorded OS of 25.5 vs 15.4 mo
   (HR 0.55) is not in the Lancet Oncol 2015 abstract, and a web summary gives 17.5 mo for
   everolimus; check the updated OS analysis.
+- **MAJIC (CLL)**, flagged: design-only entry, added at David's request. Acalabrutinib+
+  venetoclax vs venetoclax+obinutuzumab in untreated CLL/SLL; only the 2022 protocol paper
+  (PMID 36102212) is on PubMed, and no conference presentation of results was found either.
+  Fill in real figures once a primary publication or conference abstract appears.
 - **Every other site** — only flagged entries checked so far; no site-wide verification.
 
 ## Corrections applied
