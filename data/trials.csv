@@ -557,10 +557,7 @@ MRD+ -> ibr vs ibr+ven","In MRD cohort: uMRD achieved in 58% of patients by 12 c
 In FD cohort, CR 55%; 2 year PFS 95% and OS 98%",,,,,,,CLL!18,
 CLL,,,1st line,,FLAIR,Phase 3,1st line CLL; duration of IBR-ven driven by MRD,IBR vs IBR-ven vs FCR,IBR-ven vs FCR: PFS HR 0.13 at 44 mo (12 vs 75 events); deaths at 3 y 9 vs 25 (HR 0.31); similar infections; cardiac AEs 11 vs 0.4%,58% of IBR-ven had stopped at 3 years due to MRD negativity,,,,,,CLL!19,
 CLL,,,1st line,,GLOW,,"1st line CLL, ≥65 yo or younger with CIRS >6",Ibr+ven vs Chl-O,"42 mo PFS 75 vs 25%, HR 0.21; OS improved HR 0.49",,,,,,,CLL!20,
-CLL,,,1st line,,CLL17,,1st line CLL,Obinutuzumab-venetoclax-ibrutinib vs venetoclax-ibrutinib vs ibrutinib,"3 year PFS/OS:
-VO - 81%/92%
-I - 81%/96%
-VI - 79%/96%",uIGHV 3 year PFS - 76 vs 80 vs 79%; similar infections; more cardiac in VI and I,,,,,,CLL!21,
+CLL,,,1st line,,CLL17,,1st line CLL,Obinutuzumab-venetoclax-ibrutinib vs venetoclax-ibrutinib vs ibrutinib,"3-y PFS/OS: VO 81/92%, I 81/96%, VI 79/96%",uIGHV 3 year PFS - 76 vs 80 vs 79%; similar infections; more cardiac in VI and I,"PFS (investigator) noninferiority vs ibrutinib: VO HR 0.87 (98.3% CI, 0.54-1.41); VI HR 0.84 (98.0% CI, 0.53-1.32); 3-y PFS 81.1% (VO), 79.4% (VI), 81.0% (I)",41358601,,,,CLL!21,
 CLL,,,1st line,,AMPLIFY,,1st line CLL,Acala+ven+/-obin vs FCR/BR,36 mo PFS 77% vs 83% vs 67%; 36 mo OS 94% vs 88% vs 86%,Adding obinutuzumab deepened response without improving other outcomes due to greater infection / immunosuppression,,,,,,CLL!22,
 CLL,,Relapsed,,,RESONATE,,R/R CLL,Ibr vs ofatumumab,"3year PFS 59 vs 3%; OS 68 vs 65 mos, HR 0.81",,,,,,,CLL!26,
 CLL,,Relapsed,,,RESONATE-17,,R/R CLL with del17p,Ibr,2 year PFS and OS 63% and 75%,,,,,,,CLL!27,
