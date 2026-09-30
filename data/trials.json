@@ -10960,6 +10960,26 @@
     "flags": ""
   },
   {
+    "tumour": "CLL",
+    "subsite": "",
+    "setting": "Relapsed",
+    "line": "",
+    "subgroup": "",
+    "trial": "BRUIN CLL-322",
+    "phase": "Phase 3",
+    "population": "Previously treated CLL/SLL, venetoclax-naive; n=639 (median 2 prior lines; 80% prior cBTKi)",
+    "intervention": "Pirtobrutinib + venetoclax-rituximab (PVR) vs venetoclax-rituximab (VR)",
+    "results": "PFS 87 vs 72% at 24 mo, HR 0.55 (0.40-0.75), p=0.0001; grade ≥3 TLS 1 vs 4%; similar grade ≥3 AEs (79 vs 73%)",
+    "comment": "Interim analysis at median 27-mo follow-up; benefit consistent regardless of prior cBTKi exposure. First randomised phase 3 evidence for a novel fixed-duration regimen vs VR in R/R CLL.",
+    "pe": "PFS (IRC) HR 0.547 (95% CI, 0.400-0.748), p=0.0001; median PFS not reached (PVR) vs 39.7 mo (VR)",
+    "pm": "42425121",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (BRUIN CLL-322)",
+    "flags": ""
+  },
+  {
     "tumour": "Lung Cancer",
     "subsite": "",
     "setting": "Adjuvant",
