@@ -900,6 +900,26 @@
     "flags": ""
   },
   {
+    "tumour": "Bladder Cancer",
+    "subsite": "MIBC",
+    "setting": "Adjuvant",
+    "line": "",
+    "subgroup": "",
+    "trial": "BART",
+    "phase": "Phase 3",
+    "population": "High-risk MIBC after radical cystectomy and chemo (pT3-4, pN1-3, margin+, or <10 nodes dissected); n=153",
+    "intervention": "Adjuvant pelvic IG-IMRT vs observation",
+    "results": "2-y LRFS 87 vs 76%, HR 0.43 (0.20-0.96), p=0.04 at median 47 mo; DFS, BCSS and OS numerically better but NS",
+    "comment": "No excess severe toxicity with RT; separate toxicity report (PMID 39353477) found similar grade 3-4 rates in both arms",
+    "pe": "2-y LRFS 87.1% vs 76.0%, HR 0.43 (95% CI 0.20-0.96), p=0.04",
+    "pm": "42166701",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (BART)",
+    "flags": ""
+  },
+  {
     "tumour": "Breast Cancer",
     "subsite": "",
     "setting": "Chemoprevention",
