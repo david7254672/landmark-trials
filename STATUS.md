@@ -4,9 +4,9 @@ Last updated: 30 September 2026
 
 ## Where things stand
 
-- **946 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **952 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **195 entries carry a PMID** (was 28). The rest have no reference yet.
+- **206 entries carry a PMID** (was 28). The rest have no reference yet.
 - **7 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -534,6 +534,37 @@ than trusting the search ranking.
   bioequivalence, not practice-changing), ETER100 (benmelstobart/anlotinib not
   US-available), RAMPART and LITESPARK-012 (press-release/abstract only, no peer-reviewed
   publication yet - revisit once published).
+
+## Prostate named-trial batch (30 September 2026)
+
+David pasted a pre-researched PICO breakdown of RCC-style prostate phase 3 trials (Oct
+2024-Sep 2026) from another source, with PMIDs/DOIs, and said to go with the suggested
+shortlist. As with the kidney batch, every citation was independently re-verified against
+PubMed before writing anything - this caught two wrong figures already sitting in the CSV
+from before this session (not from the pasted report).
+
+Existing-row corrections/updates:
+- **EMBARK** (primary PMID 37851874, OS update PMID 41124201): the existing OS HR was wrong
+  (0.44 instead of the actual 0.60) - corrected.
+- **PSMAfore** (primary PMID 39293462, final OS PMID 40680993): the existing rPFS HR was
+  wrong (0.43 instead of 0.49 at the most current analysis) - corrected; added the final OS
+  analysis (not significant, confounded by 60% crossover).
+- **PEACE-1** (comment): added the RT-factorial result (PMID 39580202) - RT only helped rPFS
+  when paired with abiraterone, in low-volume disease.
+- **PEACE-3** (primary PMID 40450503, final OS PMID 41763609): updated to final OS, which
+  reached significance (HR 0.76).
+- **PSMAddition** (PMID 42561994) and **TALAPRO-2** (PMID 37285865, both final-OS cohort
+  updates PMID 40683290/40683287): primary PMIDs added, figures confirmed.
+
+New entries: PROTEUS (PMID 42223077), PACE-B (PMID 39413377), NRG-GU005 (PMID 42593775,
+not superior to MH-IMRT on DFS despite better QoL - a useful contrast with PACE-B), PATCH/
+STAMPEDE tE2 (PMID 41880608), AMPLITUDE (PMID 41057655), ARANOTE (PMID 39279580).
+
+**Not added - could not independently verify**: **TALAPRO-3**. The pasted report cited
+10.1056/NEJMoa2604126, but after around a dozen different PubMed search strategies (title,
+author, trial-name, topic combinations) only the trial's protocol and plain-language-summary
+papers could be found - no primary results publication. Flagged for David to confirm the
+citation or revisit once better indexed.
 
 ## Planned order
 
