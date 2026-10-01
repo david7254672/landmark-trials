@@ -1,12 +1,12 @@
 # Landmark Trials — status
 
-Last updated: 30 September 2026 (endometrial named-trial batch)
+Last updated: 30 September 2026 (AML unfit/no-transplant named-trial batch)
 
 ## Where things stand
 
-- **969 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **972 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **235 entries carry a PMID** (was 28). The rest have no reference yet.
+- **239 entries carry a PMID** (was 28). The rest have no reference yet.
 - **8 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -736,6 +736,34 @@ New entries:
 Not pursued this round (optional/update-tier items from the same pasted research, or
 presented-not-published): NRG-GY018 OS update, RUBY Part 1 4-y dMMR update, GOG-0286B
 (negative), TroFuse-005 and ASCENT-GYN-01 (not yet published with efficacy results).
+
+## AML unfit/no-transplant named-trial batch (30 September 2026)
+
+David pasted a pre-researched PICO breakdown of phase 3 AML trials in the lower-intensity,
+no-transplant setting (Oct 2024-Sep 2026, plus COMMODORE's Sep 2024 primary publication,
+flagged as borderline). Few trials reported in this window, and most were negative.
+
+Existing-row update:
+- **AGILE** (original primary PMID 35443108, long-term update PMID 40706052): figures were
+  already accurate. Updated to the long-term follow-up: OS matured from 24.0 to 29.3 mo with
+  ivosidenib (HR 0.42) vs 7.9 mo with placebo - the longest reported survival benefit in
+  IDH1-mutated AML unfit for intensive chemo.
+
+New entries, all confirming the ven/aza backbone rather than displacing it:
+- **LACEWING** (PMID 42687805): gilteritinib+aza did not improve OS over aza alone in
+  FLT3-mutated AML (9.8 vs 9.2 mo, NS) despite a much higher response rate - supports
+  ven/aza, not gilt/aza, as the FLT3+ unfit backbone.
+- **ENHANCE-3** (PMID 40233321): adding magrolimab to ven/aza was a negative triplet -
+  stopped for futility, with more fatal AEs (19.0 vs 11.4%, mainly infections).
+- **ENHANCE-2** (PMID 40009500): magrolimab+aza was not better than ven/aza in TP53-mutated
+  AML (OS 4.4 vs 6.6 mo, NS, futility) - illustrates how poor outcomes remain in this
+  subgroup regardless of regimen.
+
+Not pursued this round (optional/subgroup items, or no abstract data available): VIALE-A
+age/frailty post hoc, EORTC AML21 long-term, and COMMODORE (R/R FLT3+, redundant with the
+existing ADMIRAL entry per David's own instruction). Noted in passing: the existing ADMIRAL
+entry (Myeloid!16) still has no PMID and a stray "Test" left in its comment field - not
+touched this round since it wasn't part of this batch, but worth a verification pass.
 
 ## Planned order
 
