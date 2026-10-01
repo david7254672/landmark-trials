@@ -4,9 +4,9 @@ Last updated: 30 September 2026 (bladder named-trial batch)
 
 ## Where things stand
 
-- **954 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **955 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **208 entries carry a PMID** (was 28). The rest have no reference yet.
+- **209 entries carry a PMID** (was 28). The rest have no reference yet.
 - **7 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -596,11 +596,12 @@ Found during verification but not added (not on David's shortlist, or not yet re
 - **LEA long-term update** (PMID 40967930): would need the original LEA trial added first
   (not currently in the CSV) - extended vs standard lymph node dissection at cystectomy,
   n=401; primary endpoint (RFS) negative, a secondary (CSS) positive.
-- **BART**: the only PMID findable by search (37208232) was a 2023 trial protocol, not
-  results - flagged to David, who supplied the actual citation (JCO 2025;44(19):1812-1821,
-  DOI 10.1200/JCO-25-02093 -> PMID 42166701). Primary endpoint met: 2-y LRFS 87.1 vs 76.0%,
-  HR 0.43 (0.20-0.96), p=0.04. Not added yet - David said "just EV-302 and ALBAN" for this
-  round; PMID is resolved and ready whenever he wants it added.
+New entry: **BART** (PMID 42166701) - the only PMID findable by search (37208232) was a
+2023 trial protocol, not results; David supplied the actual citation (JCO 2026;44(19):
+1812-1821, DOI 10.1200/JCO-25-02093). Adjuvant pelvic IG-IMRT vs observation after radical
+cystectomy and chemo in high-risk MIBC, n=153. Primary endpoint met: 2-y LRFS 87.1 vs
+76.0%, HR 0.43 (0.20-0.96), p=0.04 at median 47 mo; DFS/BCSS/OS numerically better but NS.
+Separate toxicity report (PMID 39353477) cited in comment.
 
 Not added, per existing project standard (peer-reviewed primary publication only): VOLGA
 (press release only) and SunRISe-4/TAR-200 (discontinuation announcement, not a results
