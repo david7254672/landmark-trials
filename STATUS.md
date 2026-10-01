@@ -4,9 +4,9 @@ Last updated: 30 September 2026
 
 ## Where things stand
 
-- **952 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **953 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **206 entries carry a PMID** (was 28). The rest have no reference yet.
+- **207 entries carry a PMID** (was 28). The rest have no reference yet.
 - **7 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -560,11 +560,10 @@ New entries: PROTEUS (PMID 42223077), PACE-B (PMID 39413377), NRG-GU005 (PMID 42
 not superior to MH-IMRT on DFS despite better QoL - a useful contrast with PACE-B), PATCH/
 STAMPEDE tE2 (PMID 41880608), AMPLITUDE (PMID 41057655), ARANOTE (PMID 39279580).
 
-**Not added - could not independently verify**: **TALAPRO-3**. The pasted report cited
-10.1056/NEJMoa2604126, but after around a dozen different PubMed search strategies (title,
-author, trial-name, topic combinations) only the trial's protocol and plain-language-summary
-papers could be found - no primary results publication. Flagged for David to confirm the
-citation or revisit once better indexed.
+**TALAPRO-3 added** (PMID 42223064) after David supplied the exact citation (N Engl J Med
+2026;395:427-439) - PubMed search alone hadn't surfaced it. Talazoparib+enzalutamide vs
+placebo+enzalutamide in mCSPC with HRR gene alterations: 3-y rPFS 77 vs 56%, HR 0.48,
+p<0.001; OS still immature (HR 0.77). Companion to TALAPRO-2 (CRPC setting).
 
 ## Planned order
 
