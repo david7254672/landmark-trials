@@ -1,12 +1,12 @@
 # Landmark Trials — status
 
-Last updated: 30 September 2026 (ovarian named-trial batch)
+Last updated: 30 September 2026 (endometrial named-trial batch)
 
 ## Where things stand
 
-- **964 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **969 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **228 entries carry a PMID** (was 28). The rest have no reference yet.
+- **235 entries carry a PMID** (was 28). The rest have no reference yet.
 - **8 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -697,6 +697,45 @@ added nothing on its own in any of them; benefit came entirely from the PARP inh
 Not pursued this round (optional/low-priority items from the same pasted research, or
 non-randomised): ATHENA-MONO, AGO-OVAR 2.29, EPIK-O, NRG-GY005, ANITA (borderline date,
 numbers unconfirmed), and OPINION (single-arm, not randomised, so out of scope by design).
+
+## Endometrial named-trial batch (30 September 2026)
+
+David pasted a pre-researched PICO breakdown of phase 3 endometrial trials (Oct 2024-Sep
+2026, plus KEYNOTE-B21's Sep 2024 primary publication, flagged as borderline), covering
+adjuvant/locally advanced and first-line advanced/recurrent disease. This site (filed under
+"Endometrial and Cervical Cancer") had not been through a verification pass either.
+
+Verified and corrected (now with PMID and `pe`):
+- **LEAP-001** (PMID 39591551): the entry was just a placeholder ("Enrolling") with no
+  results at all - filled in with the final published data. Negative: pMMR OS HR 1.02 (not
+  noninferior to chemo), ruling out a chemo-free lenvatinib+pembro regimen in 1st-line
+  disease.
+- **RUBY** (PMID 36972026): figures were already accurate; renamed "RUBY Part 1" to
+  disambiguate from the new RUBY Part 2 entry below (a different trial) and cleaned up a
+  stray line break in `results`.
+
+New entries:
+- **KEYNOTE-B21** (PMID 39284383, dMMR subgroup PMID 39411812): adjuvant pembrolizumab
+  added to chemo did not improve DFS in the all-comer population (HR 1.02) - benefit was
+  confined to dMMR tumours (HR 0.31), with no benefit and a possible signal of harm in pMMR
+  (HR 1.20).
+- **PORTEC-3** (original primary PMID 29449189, 10-y update PMID 40921169): adjuvant
+  chemoradiotherapy vs radiotherapy alone in high-risk disease. 10-y OS benefit (HR 0.73) now
+  established, concentrated almost entirely in p53-abnormal tumours (HR 0.52); no benefit in
+  MMRd/POLEmut.
+- **GOG-258** (original primary PMID 31189035, final OS PMID 39700442): chemoradiotherapy
+  reduced locoregional recurrence but not distant recurrence or survival (final OS HR 1.05,
+  NS) in locally advanced disease - chemotherapy alone remains preferred.
+- **PORTEC-4a** (PMID 41449145): the first randomised trial of molecular profile-directed
+  adjuvant de-escalation in endometrial cancer - noninferior for vaginal recurrence (HR 2.71,
+  within the predefined margin) while sparing 46% of patients any adjuvant therapy.
+- **RUBY Part 2** (PMID 42391799): adding niraparib to dostarlimab maintenance improved PFS
+  (HR 0.60) but not OS (HR 1.2), at substantially more toxicity - dostarlimab+chemo alone
+  (Part 1) remains the only regimen with a demonstrated OS benefit in this setting.
+
+Not pursued this round (optional/update-tier items from the same pasted research, or
+presented-not-published): NRG-GY018 OS update, RUBY Part 1 4-y dMMR update, GOG-0286B
+(negative), TroFuse-005 and ASCENT-GYN-01 (not yet published with efficacy results).
 
 ## Planned order
 
