@@ -18520,6 +18520,26 @@
     "flags": ""
   },
   {
+    "tumour": "Prostate Cancer",
+    "subsite": "",
+    "setting": "CSPC",
+    "line": "",
+    "subgroup": "HRR-altered",
+    "trial": "TALAPRO-3",
+    "phase": "Phase 3",
+    "population": "mCSPC with HRR gene alterations; n=599",
+    "intervention": "Talazoparib+enzalutamide vs placebo+enzalutamide",
+    "results": "3-y rPFS 77 vs 56%, HR 0.48, p<0.001; 3-y OS (interim) 78 vs 72%, HR 0.77, immature; more serious AEs (42 vs 32%)",
+    "comment": "Companion to TALAPRO-2 (CRPC setting); OS still immature at interim analysis (HR 0.77, 95% CI 0.56-1.04)",
+    "pe": "rPFS HR 0.48 (95% CI 0.36-0.65), p<0.001; 3-y rPFS 77% vs 56%",
+    "pm": "42223064",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Sep 2026 (TALAPRO-3)",
+    "flags": ""
+  },
+  {
     "tumour": "Sarcoma",
     "subsite": "GIST",
     "setting": "",
