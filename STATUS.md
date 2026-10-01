@@ -1,12 +1,12 @@
 # Landmark Trials — status
 
-Last updated: 30 September 2026 (gastric/esophageal named-trial batch)
+Last updated: 30 September 2026 (ovarian named-trial batch)
 
 ## Where things stand
 
-- **957 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **964 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **218 entries carry a PMID** (was 28). The rest have no reference yet.
+- **228 entries carry a PMID** (was 28). The rest have no reference yet.
 - **8 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -654,6 +654,49 @@ yet published).
 
 The rest of this site (~50 entries, mostly without PMID) still needs a full `verify-site`
 pass - this round only touched the trials from David's pasted research.
+
+## Ovarian named-trial batch (30 September 2026)
+
+David pasted a pre-researched PICO breakdown of phase 3 ovarian trials (Oct 2024-Sep 2026,
+plus two Sep 2024 trials flagged as borderline), covering first-line/maintenance,
+platinum-resistant recurrence, and platinum-sensitive recurrence/surgery. Like gastric, this
+site had not been through a verification pass - the three touched existing rows had no
+PMID, and one had a mislabeled figure.
+
+Verified and corrected (now with PMID and `pe`):
+- **PRIMA** (original primary PMID 31562799, final OS PMID 39284381): the existing
+  "BRCA/HRD" and "BRCA+" PFS figures were a garbled mix of the real HRD+ subgroup result -
+  corrected to PFS 14 vs 8 mo overall (HR 0.62), HRD+ 22 vs 10 mo (HR 0.43). Added the final
+  OS update: HR 1.01 overall and 0.95 in HRD+, both NS - a front-line PARP inhibitor with a
+  neutral OS result outside BRCA.
+- **KEYNOTE-B96** (PMID 41974150): the existing PFS HR (0.73) and OS HR (0.76) were
+  actually the CPS-subgroup figures - corrected to overall PFS HR 0.70 and final overall OS
+  HR 0.82 (the first positive IO trial in ovarian cancer).
+- **SOLO3** (original primary PMID 32073956, final OS PMID 39668137): PFS/ORR figures were
+  already accurate. Added the final OS update: HR 1.07 overall (NS), but a possible
+  detrimental effect after ≥3 prior lines (HR 1.33).
+
+New entries - a consistent theme runs through the three front-line trials: PD-(L)1 blockade
+added nothing on its own in any of them; benefit came entirely from the PARP inhibitor.
+- **KEYLYNK-001** (PMID 42705254): pembro+olaparib maintenance PFS HR 0.71 ITT;
+  pembrolizumab alone did not beat control.
+- **DUO-O** (PMID 41380962): durvalumab+olaparib PFS HR 0.49 in HRD+; durvalumab alone HR
+  0.87, NS; OS still immature.
+- **FIRST** (PMID 40461381): dostarlimab added to niraparib maintenance - PFS HR 0.85
+  (barely significant), OS HR 1.01, NS.
+- **ROSELLA** (PFS PMID 40473448, final OS PMID 41974149): relacorilant + nab-paclitaxel in
+  platinum-resistant disease, no biomarker selection needed - PFS HR 0.70, final OS HR 0.65.
+- **CHIPOR** (PMID 39549720) and **HORSE/MITO-18** (PMID 39571127): a genuine conflicting
+  pair on HIPEC at secondary cytoreductive surgery - CHIPOR (first relapse) showed an OS
+  benefit (HR 0.73), HORSE (platinum-sensitive relapse) showed no PFS benefit.
+- **ARIEL4** (PMID 39914419): final OS favoured chemotherapy over rucaparib in BRCA-mutated
+  relapse after ≥2 prior lines (HR 1.3) - led to withdrawal of that treatment indication.
+  Pairs with SOLO3's update above as a cautionary pair on late-line PARP inhibitor
+  sequencing.
+
+Not pursued this round (optional/low-priority items from the same pasted research, or
+non-randomised): ATHENA-MONO, AGO-OVAR 2.29, EPIK-O, NRG-GY005, ANITA (borderline date,
+numbers unconfirmed), and OPINION (single-arm, not randomised, so out of scope by design).
 
 ## Planned order
 
