@@ -1,17 +1,18 @@
 # Landmark Trials — status
 
-Last updated: 30 September 2026 (bladder named-trial batch)
+Last updated: 30 September 2026 (gastric/esophageal named-trial batch)
 
 ## Where things stand
 
-- **955 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **957 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **209 entries carry a PMID** (was 28). The rest have no reference yet.
-- **7 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
+- **218 entries carry a PMID** (was 28). The rest have no reference yet.
+- **8 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
-  reported); and TESAR (colorectal, underpowered/inconclusive) - see below and Open items.
-  There were 64 before the kidney/bladder flag pass.
+  reported); TESAR (colorectal, underpowered/inconclusive); and ARMANI (gastric, OS figures
+  unconfirmed from the primary abstract) - see below and Open items. There were 64 before
+  the kidney/bladder flag pass.
 - **Bladder verified**: all 44 entries.
 - **Kidney**: all 25 entries have a PMID; 23 verified and 2 flagged (KEYNOTE-B61, Motzer
   lenvatinib +/- everolimus).
@@ -606,6 +607,53 @@ Separate toxicity report (PMID 39353477) cited in comment.
 Not added, per existing project standard (peer-reviewed primary publication only): VOLGA
 (press release only) and SunRISe-4/TAR-200 (discontinuation announcement, not a results
 entry).
+
+## Gastric/esophageal named-trial batch (30 September 2026)
+
+David pasted a pre-researched PICO breakdown of phase 3 gastric/GEJ/esophageal trials (Oct
+2024-Sep 2026), covering resectable gastric/GEJ, resectable esophageal, advanced HER2+ and
+HER2- gastroesophageal, and advanced ESCC. This site had never been through a verification
+pass - most of its 60 entries had no PMID, and several that were already present had
+figures that turned out not to match their primary publication once checked.
+
+Verified and corrected (now with PMID and `pe`):
+- **MATTERHORN** (PMID 40454643, final OS PMID 42716074): EFS HR 0.71 (2-y 67 vs 59%,
+  p<0.001); final OS HR 0.78 (0.63-0.96), p=0.021.
+- **TOPGEAR** (PMID 39282905): primary endpoint not met - OS HR 1.05, despite higher pCR
+  (17 vs 8%) with added preoperative chemoradiotherapy.
+- **ESOPEC** (PMID 39842010): the existing figures ("OS 66 vs 37 mo", "PFS 38 vs 16 mo",
+  "5-y OS 51 vs 39%") did not match the primary publication - corrected to 3-y OS 57 vs 51%
+  (HR 0.70) and 3-y PFS 52 vs 35% (HR 0.66), the actual reported endpoints.
+- **HERIZON-GEA-01** (PMID 42202319): trial name was misspelled "HORIZON-GEA-01" throughout
+  - corrected. Added PFS data; OS significance holds only for the zanidatamab+tislelizumab
+  arm at this interim, not zanidatamab alone.
+- **DESTINY-Gastric04** (PMID 40454632): the existing OS HR (0.74) was actually the PFS
+  HR - corrected OS to its true value, HR 0.70.
+- **GASTFOX/PRODIGE 51-FFCD-GASTFOX** (PMID 40286809): figures were already accurate;
+  added PMID.
+- **ARMANI** (PMID 39557058): PFS medians were wrong (7 vs 5 mo instead of the correct 6.6
+  vs 3.5 mo, rounds to 7 vs 4). The previously listed OS figures (12.6 vs 10.4 mo, HR 0.75)
+  do not appear in the primary abstract and I don't have full-text access to confirm them -
+  removed from `results` and flagged rather than guessed.
+- **CheckMate-649**: added the 5-y update to `comment` (OS/PFS HR 0.71 sustained in CPS
+  ≥5; 5-y OS 16 vs 6%; PMID 41687718) and rounded pre-existing decimal months in `results`.
+  Still missing `pm` for the original primary publication - open item.
+
+New entries:
+- **SANO** (PMID 40112851): active surveillance noninferior to standard esophagectomy after
+  a clinical complete response to neoadjuvant chemoradiotherapy (2-y OS 74 vs 71%, mITT).
+- **PERISCOPE II** (PMID 42419336): negative HIPEC trial - gastrectomy + cytoreductive
+  surgery + HIPEC did not improve OS over continued systemic therapy in gastric cancer with
+  limited peritoneal metastases (HR 1.10, NS); closed early for futility.
+
+Not pursued this round (optional/low-priority items from the same pasted research, or
+presented-not-published): KEYNOTE-585, ASTRUM-006, RESOLVE, DRAGON IV, IP paclitaxel,
+JCOG1409/MONET, RAMIE, KC-WISE, GEMSTONE-303, COMPASSION-15, LEAP-015, INTEGRATE IIa,
+RINDBeRG, SKYSCRAPER-08, JUPITER-06, and FORTITUDE-101 (ESMO 2025 presentation only, not
+yet published).
+
+The rest of this site (~50 entries, mostly without PMID) still needs a full `verify-site`
+pass - this round only touched the trials from David's pasted research.
 
 ## Planned order
 
