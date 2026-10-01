@@ -1,12 +1,12 @@
 # Landmark Trials — status
 
-Last updated: 30 September 2026
+Last updated: 30 September 2026 (bladder named-trial batch)
 
 ## Where things stand
 
-- **953 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **954 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **207 entries carry a PMID** (was 28). The rest have no reference yet.
+- **208 entries carry a PMID** (was 28). The rest have no reference yet.
 - **7 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -564,6 +564,47 @@ STAMPEDE tE2 (PMID 41880608), AMPLITUDE (PMID 41057655), ARANOTE (PMID 39279580)
 2026;395:427-439) - PubMed search alone hadn't surfaced it. Talazoparib+enzalutamide vs
 placebo+enzalutamide in mCSPC with HRR gene alterations: 3-y rPFS 77 vs 56%, HR 0.48,
 p<0.001; OS still immature (HR 0.77). Companion to TALAPRO-2 (CRPC setting).
+
+## Bladder named-trial batch (30 September 2026)
+
+David pasted a pre-researched PICO breakdown of bladder/urothelial phase 3 trials (Oct
+2024-Sep 2026), organised by NMIBC / MIBC perioperative / advanced urothelial, with a
+shortlist and sources. As before, every citation was independently re-verified against
+PubMed before writing anything.
+
+Most of the shortlist (POTOMAC, CREST, AMBASSADOR, IMVIGOR 011, NIAGARA, KEYNOTE-905/
+EV-303, KEYNOTE-B15/EV-304, RC48-C016, TROPiCS-04, BOND-003 Cohort C) and two of the three
+"updates you likely already have" (CheckMate 274 5-y/ctDNA update PMID 41110694, JAVELIN
+Bladder 100 2-y update PMID 37071838) were already in the CSV, correctly cited, from an
+earlier session - no action needed.
+
+New entry: **ALBAN** (GETUG-AFU 37, PMID 41110692) - atezolizumab + BCG vs BCG alone in
+BCG-naive high-risk NMIBC, n=517. Negative: EFS HR 0.98 (0.71-1.36), p=0.91, in contrast to
+CREST and POTOMAC (durvalumab/sasanlimab), suggesting any PD-(L)1+BCG benefit is
+agent-specific rather than a class effect.
+
+Existing-row update: **EV-302** updated to its 2.5-y follow-up (PMID 40460988) - OS 33.8 vs
+15.9 mo, HR 0.51; PFS HR 0.48, up from the primary analysis's HR 0.47/0.45. `pm` kept as the
+original primary publication (38446675).
+
+Found during verification but not added (not on David's shortlist, or not yet resolvable):
+- **ANZUP 1301** (PMID 41633899): BCG+mitomycin vs BCG alone, BCG-naive NMIBC - negative,
+  DFS HR 0.87 (0.65-1.16), p=0.3, though 39% fewer BCG doses used.
+- **JCOG1019** (PMID 41571573) - took several search strategies to surface (PubMed's
+  automatic term expansion kept missing it): active surveillance vs BCG for high-grade T1
+  with a negative 2nd TURBT. Positive: iRFS HR 0.69 (90% CI 0.44-1.08), noninferiority met.
+- **LEA long-term update** (PMID 40967930): would need the original LEA trial added first
+  (not currently in the CSV) - extended vs standard lymph node dissection at cystectomy,
+  n=401; primary endpoint (RFS) negative, a secondary (CSS) positive.
+- **BART**: the only PMID findable by search (37208232) was a 2023 trial protocol, not
+  results - flagged to David, who supplied the actual citation (JCO 2025;44(19):1812-1821,
+  DOI 10.1200/JCO-25-02093 -> PMID 42166701). Primary endpoint met: 2-y LRFS 87.1 vs 76.0%,
+  HR 0.43 (0.20-0.96), p=0.04. Not added yet - David said "just EV-302 and ALBAN" for this
+  round; PMID is resolved and ready whenever he wants it added.
+
+Not added, per existing project standard (peer-reviewed primary publication only): VOLGA
+(press release only) and SunRISe-4/TAR-200 (discontinuation announcement, not a results
+entry).
 
 ## Planned order
 
