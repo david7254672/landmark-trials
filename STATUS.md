@@ -1,12 +1,12 @@
 # Landmark Trials — status
 
-Last updated: 30 September 2026 (CML named-trial batch)
+Last updated: 30 September 2026 (neuroendocrine tumor named-trial batch)
 
 ## Where things stand
 
-- **973 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **974 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **242 entries carry a PMID** (was 28). The rest have no reference yet.
+- **245 entries carry a PMID** (was 28). The rest have no reference yet.
 - **8 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -789,6 +789,36 @@ New entry:
 Not pursued this round (optional-tier items from the same pasted research): ENESTPath,
 PETALs. JALSG CML212 is already in the CSV but unverified - not touched this round since it
 was "optional" tier, not in David's shortlist.
+
+## Neuroendocrine tumor named-trial batch (30 September 2026)
+
+David pasted a pre-researched breakdown of phase 3 NET trials (Oct 2024-Sep 2026, plus
+CABINET's Sep 2024 primary publication, flagged as borderline).
+
+Found and fixed a duplicate entry along the way: **COMPETE** existed twice - once as an
+unverified placeholder (Neuroendocrine!11, GI NET subsite, no PMID) and once already fully
+verified from an earlier session (Neuroendocrine!25, PMID 42392118, matching the pasted
+figures exactly). Removed the unverified duplicate.
+
+Existing-row fill-in:
+- **CABINET pancreatic cohort** (Neuroendocrine!21, PMID 39282913): was just a placeholder
+  ("Enrolling") with no results - filled in with the published data. PFS 13.8 vs 4.4 mo, HR
+  0.23; ORR 19 vs 0%.
+
+New entries:
+- **CABINET extrapancreatic cohort** (split from the pancreatic cohort, same trial/PMID
+  39282913, per the project's `(split)` convention for a single publication covering two
+  independently randomised cohorts): PFS 8.4 vs 3.9 mo, HR 0.38; ORR 5 vs 0% - a smaller
+  benefit than the pancreatic cohort.
+- **NETTER-2** (original primary PMID 38851203, grade/origin subgroup update PMID
+  42604001): first-line 177Lu-Dotatate + octreotide vs high-dose octreotide alone in
+  advanced G2-3 GEP-NET. PFS 22.8 vs 8.5 mo, HR 0.276. The subgroup update confirms the
+  benefit holds regardless of NET grade (G2/G3) or origin (pancreatic/GI) - this landmark
+  trial was missing from the CSV entirely before this round.
+
+Not pursued this round (optional-tier items from the same pasted research): XT-XTR008-3-01,
+AXINET, SEQTOR's new OS data (SEQTOR itself already verified from an earlier session), SANET
+final OS, and JCOG1205/1206 (lung NEC, a different disease entity).
 
 ## Planned order
 
