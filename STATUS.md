@@ -4,9 +4,9 @@ Last updated: 30 September 2026
 
 ## Where things stand
 
-- **937 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **944 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **180 entries carry a PMID** (was 28). The rest have no reference yet.
+- **193 entries carry a PMID** (was 28). The rest have no reference yet.
 - **7 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -482,6 +482,32 @@ FOWARC (primary PMID 31557064, 10-y update PMID 39671537), ASCOLT (PMID 39824200
 
 Not added - no PubMed-indexed primary publication found despite extensive searching: **ASAC**
 and **ARISTOTLE** (both appear to be unpublished/ongoing aspirin trials as of Sept 2026).
+
+## Hepatobiliary named-trial batch (30 September 2026)
+
+David supplied a specific list of pancreatic/biliary/HCC trials to add/update, overlapping
+partly with the earlier pancreatic/biliary/HCC PubMed sweep (RASolute 302, PANOVA-3, and
+FIGHT-302 were already done - confirmed, no change needed).
+
+Existing-row updates: PACT-21 CASSANDRA (PMID 41275879, second-randomization result in
+comment), ZSAB-neoGOLP (PMID 41780001 - OS HR 0.43 did not meet the prespecified significance
+threshold), CheckMate 9DW (PMID 40349714), TOPAZ-1 (primary PMID 38319896, updated to the
+4-y follow-up PMID 42424063), ESPAC-4 (primary PMID 28129987, long-term PMID 31483448 - also
+cleaned up house-style violations untouched since migration), IMbrave050 (primary PMID
+37871608, update PMID 41580093 confirming the initial RFS benefit was not sustained).
+
+New entries: PREOPANC-2 (PMID 40945523, no OS difference vs PREOPANC's chemoRT-based
+approach - distinct trial, same acronym family), EMERALD-1 (PMID 39798579) and LEAP-012
+(PMID 39798578, both add IO to TACE in embolization-eligible HCC, PFS met in both, OS
+maturing), EMERALD-3 (PMID 42636832, STRIDE+lenvatinib+TACE, PFS met), SWOG S1815
+(PMID 39671534, negative - nab-paclitaxel added no OS benefit in biliary tract cancer),
+CARES-310 (primary PMID 37499670, final PMID 41308676, camrelizumab+rivoceranib vs sorafenib
+in 1L HCC), ASCOT (primary PMID 36681415, 5-y update PMID 42777180, adjuvant S-1 in resected
+BTC - S-1 not US-available).
+
+Not found despite extensive PubMed searching: **GENERATE** - likely refers to a pancreatic
+cancer germline-risk/surveillance study, but no matching primary publication could be
+confidently identified. Not added.
 
 ## Planned order
 
