@@ -4,9 +4,9 @@ Last updated: 30 September 2026
 
 ## Where things stand
 
-- **944 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **946 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **193 entries carry a PMID** (was 28). The rest have no reference yet.
+- **195 entries carry a PMID** (was 28). The rest have no reference yet.
 - **7 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -508,6 +508,32 @@ BTC - S-1 not US-available).
 Not found despite extensive PubMed searching: **GENERATE** - likely refers to a pancreatic
 cancer germline-risk/surveillance study, but no matching primary publication could be
 confidently identified. Not added.
+
+## Kidney named-trial batch (30 September 2026)
+
+David pasted a pre-researched PICO table of RCC phase 3 trials (Oct 2024-Sep 2026) from
+another source, with PMIDs/DOIs. Verified every citation independently against PubMed before
+touching the CSV, since pasted/external research is treated as a lead to confirm, not a
+source to copy - one citation in it (a candidate PMID for the KEYNOTE-426 update) turned out
+to be an unrelated cost-effectiveness paper on the same trials, caught by checking rather
+than trusting the search ranking.
+
+- **LITESPARK-022** and **LITESPARK-011**: already fully in the CSV from an earlier session,
+  matching the pasted figures almost exactly. No change needed.
+- **CheckMate 214, CheckMate 9ER, JAVELIN Renal 101, COSMIC-313 "final analysis" updates**:
+  all four were also already captured in `comment` from an earlier verification pass, with
+  matching PMIDs and figures. No change needed.
+- **KEYNOTE-426**: genuinely missing a newer update - added the 5-y follow-up (PMID 40750932,
+  *Nat Med* 2025; OS HR 0.84), appended to the existing 43-mo update (PMID 37500340) already
+  in comment.
+- **TiNivo-2** added (PMID 39284329, *Lancet* 2024) - tivozanib+nivolumab did not beat
+  tivozanib alone post-ICI progression; key evidence against ICI rechallenge.
+- **CheckMate 914 Part B** added (PMID 39303200, *JCO* 2024) - adjuvant nivolumab
+  monotherapy did not improve DFS vs placebo in resected high-risk RCC.
+- Declined per David ("your call" items, not taken up): CheckMate 67T (SC vs IV nivo
+  bioequivalence, not practice-changing), ETER100 (benmelstobart/anlotinib not
+  US-available), RAMPART and LITESPARK-012 (press-release/abstract only, no peer-reviewed
+  publication yet - revisit once published).
 
 ## Planned order
 
