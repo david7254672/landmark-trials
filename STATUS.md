@@ -1,12 +1,12 @@
 # Landmark Trials — status
 
-Last updated: 30 September 2026 (AML unfit/no-transplant named-trial batch)
+Last updated: 30 September 2026 (CML named-trial batch)
 
 ## Where things stand
 
-- **972 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **973 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **239 entries carry a PMID** (was 28). The rest have no reference yet.
+- **242 entries carry a PMID** (was 28). The rest have no reference yet.
 - **8 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -764,6 +764,31 @@ age/frailty post hoc, EORTC AML21 long-term, and COMMODORE (R/R FLT3+, redundant
 existing ADMIRAL entry per David's own instruction). Noted in passing: the existing ADMIRAL
 entry (Myeloid!16) still has no PMID and a stray "Test" left in its comment field - not
 touched this round since it wasn't part of this batch, but worth a verification pass.
+
+## CML named-trial batch (30 September 2026)
+
+David pasted a pre-researched breakdown of phase 3 CML trials (Oct 2024-Sep 2026): the
+ASC4FIRST 96-week update plus three TFR/interferon trials.
+
+Existing-row corrections:
+- **ASCEMBL** (original primary PMID 34407542, ~4-y update PMID 40334072): the existing
+  entry mislabeled week-24 and week-96/156 data as "24 month" and "36 mo" - the real primary
+  analysis was MMR 25.5% vs 13.2% at WEEK 24, not month 24. Corrected the timepoints and
+  added the ~4-year update (week 156 MMR 33.8% vs 10.5%).
+- **ASC4FIRST** (original primary PMID 38820078, 96-wk update PMID 41397287): figures were
+  already accurate for the week-48 primary analysis. Updated to the 96-week data, which for
+  the first time shows asciminib's benefit over 2nd-generation TKIs too (72.0% vs 56.9%
+  MMR), not just over imatinib - though direct comparison with 2G TKIs was not a primary
+  objective of the trial.
+
+New entry:
+- **ENDURE/CML-IX** (PMID 41526617): ropeginterferon alfa-2b did not improve treatment-free
+  remission after stopping a TKI (25-mo molecular relapse-free survival 56% vs 59% with
+  observation alone, HR 1.02, NS) - interferon maintenance doesn't help TFR.
+
+Not pursued this round (optional-tier items from the same pasted research): ENESTPath,
+PETALs. JALSG CML212 is already in the CSV but unverified - not touched this round since it
+was "optional" tier, not in David's shortlist.
 
 ## Planned order
 
