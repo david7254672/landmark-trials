@@ -4,9 +4,9 @@ Last updated: 4 October 2026 (thrombosis named-trial batch)
 
 ## Where things stand
 
-- **1005 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **1006 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **279 entries carry a PMID** (was 28). The rest have no reference yet.
+- **280 entries carry a PMID** (was 28). The rest have no reference yet.
 - **8 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -835,16 +835,15 @@ Existing rows updated (previously unverified): SELECT-D (PMID 29746227, 12-mo fo
 renamed Hokusai VTE Cancer (29231094; flagged - GI bleeding attribution not in abstract),
 CARAVAGGIO (32223112; recurrent VTE 5.7 -> 5.6%).
 
-31 new entries: EINSTEIN-DVT, EINSTEIN-PE, AMPLIFY (apixaban VTE; renamed to avoid the CLL
+32 new entries (RIPORT added later the same day): EINSTEIN-DVT, EINSTEIN-PE, AMPLIFY (apixaban VTE; renamed to avoid the CLL
 AMPLIFY), Hokusai-VTE, RE-COVER, AMPLIFY-EXT, EINSTEIN-CHOICE, RE-MEDY/RE-SONATE, CACTUS,
 RIDTS, ONCO DVT, CALISTO, SURPRISE, ATTRACT, SOX, CLOT, CATCH, ADAM VTE, API-CAT, ONCO PE,
-Crowther, WAPS, RAPS, TRAPS, Ordi-Ros, ASTRO-APS, RE-SPECT CVT, SECRET, PEITHO, PREPIC, PREPIC2.
+Crowther, WAPS, RAPS, TRAPS, Ordi-Ros, ASTRO-APS, RE-SPECT CVT, SECRET, PEITHO, PREPIC, PREPIC2, RIPORT.
 RE-COVER II pooled analysis (24344086) is in the RE-COVER comment.
 
-Not added: **RIPORT** (chronic noncirrhotic PVT, NEJM Evidence) - not found in PubMed through
-the available tools, so PMID and figures unconfirmed; add once the citation is supplied.
+RIPORT (PMID 38319842, NEJM Evid 2022): not in the PubMed search tool; David supplied the DOI, PMID found via Europe PMC and confirmed in PubMed (DOI matches). Interim analysis only.
 Subsite vocabulary introduced: Acute VTE, Distal DVT, Superficial vein thrombosis,
-Antiphospholipid syndrome, Cerebral venous thrombosis, Pulmonary embolism.
+Antiphospholipid syndrome, Cerebral venous thrombosis, Pulmonary embolism, Portal vein thrombosis.
 
 ## Planned order
 

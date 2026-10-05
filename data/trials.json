@@ -19920,6 +19920,26 @@
     "flags": ""
   },
   {
+    "tumour": "Thrombosis",
+    "subsite": "Portal vein thrombosis",
+    "setting": "Chronic, noncirrhotic",
+    "line": "",
+    "subgroup": "",
+    "trial": "RIPORT",
+    "phase": "",
+    "population": "Chronic noncirrhotic PVT without major thrombotic risk factors (no major thrombophilia); n=111",
+    "intervention": "Rivaroxaban 15 mg daily vs no anticoagulation",
+    "results": "Interim (median 12 mo): thrombosis 0 vs 19.7 per 100 person-y, p<0.001; DSMB switched controls to anticoagulation; major bleeding 2 vs 1 at median 30 mo",
+    "comment": "Stopped at an unplanned DSMB interim analysis after 10 thrombotic events, so the planned 2-y primary endpoint was not reached. Does not address acute PVT or cirrhotic PVT.",
+    "pe": "Thrombosis incidence 0 vs 19.71 per 100 person-years (95% CI 7.49-31.92); log-rank P=0.0008 at median follow-up 11.8 mo (planned primary endpoint: 2-y thrombosis-free survival)",
+    "pm": "38319842",
+    "rf": "",
+    "extra": "",
+    "link": "",
+    "src": "new entry, Oct 2026 (RIPORT)",
+    "flags": ""
+  },
+  {
     "tumour": "Tissue Agnostic",
     "subsite": "",
     "setting": "",
