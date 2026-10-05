@@ -1,12 +1,12 @@
 # Landmark Trials — status
 
-Last updated: 30 September 2026 (neuroendocrine tumor named-trial batch)
+Last updated: 4 October 2026 (thrombosis named-trial batch)
 
 ## Where things stand
 
-- **974 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
+- **1005 entries**, 25 tumour sites. Migrated from a 25-sheet workbook where section headings
   carried the setting and line; those are now real fields.
-- **245 entries carry a PMID** (was 28). The rest have no reference yet.
+- **279 entries carry a PMID** (was 28). The rest have no reference yet.
 - **8 entries flagged**: KEYNOTE-B61 and Motzer (lenvatinib +/- everolimus), both kidney;
   MAJIC (CLL, design-only - no results published yet); VERIFY (MPN, rusfertide); UNION
   (colorectal, EFS/OS immature at publication); STAR-TREC (colorectal, only 12-mo interim
@@ -819,6 +819,32 @@ New entries:
 Not pursued this round (optional-tier items from the same pasted research): XT-XTR008-3-01,
 AXINET, SEQTOR's new OS data (SEQTOR itself already verified from an earlier session), SANET
 final OS, and JCOG1205/1206 (lung NEC, a different disease entity).
+
+## Thrombosis named-trial batch (4 October 2026)
+
+David pasted a pre-researched PICO table of landmark thrombosis trials (DVT/PE, extended
+treatment, distal DVT, SVT, cancer-associated thrombosis, APS, CVT, PE, IVC filters). Every PMID
+was re-verified against PubMed rather than copied from the table's links, and figures were
+checked against the abstracts. The table's figures were accurate; two source issues:
+the PubMed link given for PREPIC was the 8-y follow-up (PMID 16009794), so the primary 1998
+paper (9459643) is `pm` and the follow-up is in `comment`; EINSTEIN-CHOICE n=3396 is
+randomised, 3365 analysed. Phase set from David's table or the abstract, blank otherwise.
+
+Existing rows updated (previously unverified): SELECT-D (PMID 29746227, 12-mo follow-up
+31995662 in comment; flagged - oesophageal/GEJ bleeding signal not in abstract), Hokusai VTE
+renamed Hokusai VTE Cancer (29231094; flagged - GI bleeding attribution not in abstract),
+CARAVAGGIO (32223112; recurrent VTE 5.7 -> 5.6%).
+
+31 new entries: EINSTEIN-DVT, EINSTEIN-PE, AMPLIFY (apixaban VTE; renamed to avoid the CLL
+AMPLIFY), Hokusai-VTE, RE-COVER, AMPLIFY-EXT, EINSTEIN-CHOICE, RE-MEDY/RE-SONATE, CACTUS,
+RIDTS, ONCO DVT, CALISTO, SURPRISE, ATTRACT, SOX, CLOT, CATCH, ADAM VTE, API-CAT, ONCO PE,
+Crowther, WAPS, RAPS, TRAPS, Ordi-Ros, ASTRO-APS, RE-SPECT CVT, SECRET, PEITHO, PREPIC, PREPIC2.
+RE-COVER II pooled analysis (24344086) is in the RE-COVER comment.
+
+Not added: **RIPORT** (chronic noncirrhotic PVT, NEJM Evidence) - not found in PubMed through
+the available tools, so PMID and figures unconfirmed; add once the citation is supplied.
+Subsite vocabulary introduced: Acute VTE, Distal DVT, Superficial vein thrombosis,
+Antiphospholipid syndrome, Cerebral venous thrombosis, Pulmonary embolism.
 
 ## Planned order
 
